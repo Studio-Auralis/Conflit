@@ -39,7 +39,7 @@
       evRiot: 'Émeute',
       evHumanitarian: 'Catastrophe humanitaire',
       evCeasefire: 'Cessez-le-feu',
-      evCoup: "Coup d'État",
+      evCoup: 'Politique',
       hzCamp: 'Camp de réfugiés',
       hzFamine: 'Famine',
       hzHealth: 'Crise sanitaire',
@@ -129,7 +129,16 @@
       comparaisonDuration: 'Ce conflit dure depuis {n} ans \u2014 {ref}',
       temoignagesTitle: 'T\u00e9moignages',
       quizTitle: 'Quiz — Testez vos connaissances',
-      glossaryTitle: 'Glossaire'
+      glossaryTitle: 'Glossaire',
+      layersTitle: 'Couches',
+      layerConflicts: 'Conflits',
+      layerEvents: 'Événements',
+      layerGdelt: 'GDELT Live',
+      layerRefugees: 'Flux réfugiés',
+      layerHumanitarian: 'Zones humanitaires',
+      layerHeatmap: 'Heatmap',
+      filterMore: 'Filtres avancés',
+      filterLess: 'Masquer les filtres'
     },
     en: {
       headerDate: 'Real-time data — February 2026',
@@ -163,7 +172,7 @@
       evRiot: 'Riot',
       evHumanitarian: 'Humanitarian crisis',
       evCeasefire: 'Ceasefire',
-      evCoup: 'Coup d\'état',
+      evCoup: 'Political',
       hzCamp: 'Refugee camp',
       hzFamine: 'Famine',
       hzHealth: 'Health crisis',
@@ -253,7 +262,16 @@
       comparaisonDuration: 'This conflict has lasted {n} years \u2014 {ref}',
       temoignagesTitle: 'Testimonials',
       quizTitle: 'Quiz \u2014 Test your knowledge',
-      glossaryTitle: 'Glossary'
+      glossaryTitle: 'Glossary',
+      layersTitle: 'Layers',
+      layerConflicts: 'Conflicts',
+      layerEvents: 'Events',
+      layerGdelt: 'GDELT Live',
+      layerRefugees: 'Refugee flows',
+      layerHumanitarian: 'Humanitarian zones',
+      layerHeatmap: 'Heatmap',
+      filterMore: 'Advanced filters',
+      filterLess: 'Hide filters'
     }
   };
 
@@ -311,6 +329,7 @@
   var map;
   var tileLayer;
   var searchTimer = null;
+  var showConflicts = true;
   var showEvents = true;
   var activeTab = 'conflicts';
   var timelineDays = 30;
@@ -463,7 +482,7 @@
       getLocalizedField: getLocalizedField,
       formatNumber: formatNumber,
       esc: esc,
-      educationMode: educationMode,
+      educationMode: false,
       childrenMode: childrenMode,
       TICKER_DATA: TICKER_DATA
     };
@@ -563,6 +582,7 @@
   function renderMarkers(data) {
     clearMarkers();
     if (showHeatmap) return;
+    if (!showConflicts) return;
     for (var i = 0; i < data.length; i++) {
       var c = data[i];
       var icon = L.divIcon({
@@ -645,9 +665,12 @@
   // ============================================================
   function toggleHeatmap() {
     showHeatmap = !showHeatmap;
-    document.getElementById('btn-heatmap').classList.toggle('active', showHeatmap);
+    var btn = document.getElementById('btn-heatmap');
+    if (btn) btn.classList.toggle('active', showHeatmap);
     var mob = document.getElementById('mob-heatmap');
     if (mob) mob.classList.toggle('active', showHeatmap);
+    var cb = document.getElementById('layer-heatmap');
+    if (cb) cb.checked = showHeatmap;
 
     if (showHeatmap) {
       clearMarkers();
@@ -712,9 +735,9 @@
     timelapsePlaying = true;
 
     // Disable other features during timelapse
-    document.getElementById('btn-heatmap').disabled = true;
+    var _bh = document.getElementById('btn-heatmap'); if (_bh) _bh.disabled = true;
     document.getElementById('btn-refugees').disabled = true;
-    document.getElementById('btn-humanitarian').disabled = true;
+    var _bhu = document.getElementById('btn-humanitarian'); if (_bhu) _bhu.disabled = true;
     document.querySelectorAll('#filters-section select').forEach(function(s) { s.disabled = true; });
 
     var overlay = document.getElementById('timelapse-overlay');
@@ -807,9 +830,9 @@
     timelapseRAF = null;
 
     document.getElementById('timelapse-overlay').style.display = 'none';
-    document.getElementById('btn-heatmap').disabled = false;
+    var _bh2 = document.getElementById('btn-heatmap'); if (_bh2) _bh2.disabled = false;
     document.getElementById('btn-refugees').disabled = false;
-    document.getElementById('btn-humanitarian').disabled = false;
+    var _bhu2 = document.getElementById('btn-humanitarian'); if (_bhu2) _bhu2.disabled = false;
     document.querySelectorAll('#filters-section select').forEach(function(s) { s.disabled = false; });
 
     document.getElementById('btn-timelapse').classList.remove('active');
@@ -830,6 +853,8 @@
     document.getElementById('btn-refugees').classList.toggle('active', showRefugees);
     var mob = document.getElementById('mob-refugees');
     if (mob) mob.classList.toggle('active', showRefugees);
+    var cb = document.getElementById('layer-refugees');
+    if (cb) cb.checked = showRefugees;
 
     // Show/hide full button
     var fullBtn = document.getElementById('btn-refugees-full');
@@ -977,9 +1002,12 @@
   // ============================================================
   function toggleHumanitarian() {
     showHumanitarian = !showHumanitarian;
-    document.getElementById('btn-humanitarian').classList.toggle('active', showHumanitarian);
+    var btn = document.getElementById('btn-humanitarian');
+    if (btn) btn.classList.toggle('active', showHumanitarian);
     var mob = document.getElementById('mob-humanitarian');
     if (mob) mob.classList.toggle('active', showHumanitarian);
+    var cb = document.getElementById('layer-humanitarian');
+    if (cb) cb.checked = showHumanitarian;
 
     // Toggle legend items
     var show = showHumanitarian ? '' : 'none';
@@ -1091,12 +1119,12 @@
   var GDELT_GEO = 'https://api.gdeltproject.org/api/v2/geo/geo';
 
   var GDELT_QUERIES = [
-    { q: '(attack OR bombing OR airstrike OR missile OR strike)', dt: 'attentat' },
-    { q: '(protest OR demonstration OR rally OR uprising)', dt: 'manifestation' },
-    { q: '(riot OR clashes OR unrest)', dt: 'emeute' },
-    { q: '(ceasefire OR truce OR peace talks OR treaty)', dt: 'cessez_le_feu' },
-    { q: '(humanitarian OR famine OR refugee OR displacement)', dt: 'catastrophe_humanitaire' },
-    { q: '(coup OR junta OR overthrow)', dt: 'coup_etat' }
+    { q: '(bombing OR airstrike OR "suicide attack" OR "terrorist attack" OR shelling OR "car bomb" OR "missile strike")', dt: 'attentat' },
+    { q: '(protest OR "mass demonstration" OR "anti-government" OR uprising OR "popular mobilization")', dt: 'manifestation' },
+    { q: '(riot OR "violent clashes" OR "civil unrest" OR looting)', dt: 'emeute' },
+    { q: '("ceasefire agreement" OR "peace agreement" OR "truce declaration" OR "peace negotiation" OR "peace deal")', dt: 'cessez_le_feu' },
+    { q: '("humanitarian crisis" OR famine OR "refugee camp" OR "mass displacement" OR "food shortage")', dt: 'catastrophe_humanitaire' },
+    { q: '("coup attempt" OR "military coup" OR junta OR "martial law" OR overthrow)', dt: 'coup_etat' }
   ];
 
   function startGdelt() {
@@ -1135,8 +1163,11 @@
           var articles = parseGdeltHtml(props.html);
           var firstArticle = articles[0] || {};
 
+          var classifiedType = classifyGdelt(firstArticle.title || props.name || '', res.dt);
+          if (classifiedType === null) continue;
+
           raw.push({
-            type: classifyGdelt(firstArticle.title || props.name || '', res.dt),
+            type: classifiedType,
             name: firstArticle.title || props.name || 'Événement',
             location: props.name || '',
             lat: coords[1],
@@ -1189,13 +1220,37 @@
 
   function classifyGdelt(title, fallback) {
     var t2 = (title || '').toLowerCase();
-    if (/protest|demonstrat|rally|march|uprising|mobiliz/.test(t2)) return 'manifestation';
-    if (/attack|bomb|shoot|terror|explo|kill|strike|missile|assault|deadly/.test(t2)) return 'attentat';
-    if (/riot|unrest|clash|violen|loot|mob/.test(t2)) return 'emeute';
-    if (/humanitarian|famine|refugee|displace|flood|earthquake|drought|hunger/.test(t2)) return 'catastrophe_humanitaire';
-    if (/ceasefire|peace|negoti|truce|talk|treaty|accord|deal|diplomat/.test(t2)) return 'cessez_le_feu';
-    if (/coup|overthrow|seize|takeover|junta|martial law/.test(t2)) return 'coup_etat';
-    return fallback;
+
+    // ---- Negative filter: skip non-conflict content (EN + FR) ----
+    // Sports
+    if (/\b(nfl|nba|nhl|mlb|fifa|premier league|champions league|world cup|super bowl|tennis|golf|cricket|boxing|mma|ufc|ligue 1|ligue des champions|coupe du monde|rugby|olympi|ballon d.or|transfert|match nul|victoire .* but|football|basket|handball)\b/.test(t2)) return null;
+    // Entertainment / celebrity
+    if (/\b(movie|film|album|concert|grammy|oscar|emmy|celebrity|hollywood|broadway|netflix|spotify|acteur|actrice|cin[ée]ma|chanson|chanteur|chanteuse|spectacle|festival|s[ée]rie t[ée]l[ée])\b/.test(t2)) return null;
+    // Business / finance
+    if (/\b(stock market|wall street|nasdaq|dow jones|ipo|quarterly earnings|startup|venture capital|cryptocurrency|bitcoin|bourse|cac 40|action en bourse|chiffre d.affaires|b[ée]n[ée]fice net|introduction en bourse)\b/.test(t2)) return null;
+    // Obituary / natural death / general news
+    if (/\b(d[ée]c[èe]d[ée]|mort .{0,15}(ans|[âa]ge)|doyenne?|obituary|passed away|dies at|dead at|fun[ée]railles|obs[èe]ques|hommage .{0,10}(d[ée]c[èe]s|mort)|repose en paix|rip)\b/.test(t2)) return null;
+    // Weather / lifestyle / misc
+    if (/\b(weather forecast|recipe|fashion|diet|fitness|real estate|mortgage|m[ée]t[ée]o|recette|immobilier|horoscope|soldes|vacances)\b/.test(t2)) return null;
+    // Politics without conflict (elections, debates, polls)
+    if (/\b(sondage|poll results|approval rating|debate|primary election|campagne [ée]lectorale|r[ée]forme|projet de loi|vote de confiance)\b/.test(t2) && !/\b(violen|protest|[ée]meute|riot|clash|attack|attentat|bomb)\b/.test(t2)) return null;
+
+    // ---- Positive classification: specific conflict terms (EN + FR) ----
+    // Protests
+    if (/\b(protest|demonstrat|anti-government|uprising|mobiliz|manifestation|cort[èe]ge|gr[èe]ve g[ée]n[ée]rale|soul[èe]vement|mouvement populaire)\b/.test(t2)) return 'manifestation';
+    // Attacks
+    if (/\b(bombing|airstrike|shelling|terrorist|suicide attack|car bomb|missile strike|gunmen|insurgent attack|ambush|attentat|bombardement|frappe a[ée]rienne|kamikaze|tir de roquette|embuscade|explosion meurtri[èe]re|attaque arm[ée]e|fusillade)\b/.test(t2)) return 'attentat';
+    // Riots
+    if (/\b(riot|civil unrest|violent clash|loot|[ée]meute|violences urbaines|pillage|affrontements violents)\b/.test(t2)) return 'emeute';
+    // Humanitarian
+    if (/\b(humanitarian crisis|famine|refugee|displaced|food shortage|drought|mass displacement|crise humanitaire|r[ée]fugi[ée]|d[ée]plac[ée]s|p[ée]nurie alimentaire|s[ée]cheresse)\b/.test(t2)) return 'catastrophe_humanitaire';
+    // Ceasefire
+    if (/\b(ceasefire|peace agreement|peace deal|truce|peace negotiation|peace accord|cessez.le.feu|accord de paix|tr[êe]ve|n[ée]gociation de paix)\b/.test(t2)) return 'cessez_le_feu';
+    // Political / coup
+    if (/\b(coup|overthrow|junta|martial law|military takeover|seize power|coup d.[ée]tat|junte|loi martiale|putsch|prise de pouvoir)\b/.test(t2)) return 'coup_etat';
+
+    // Passed negative filter but no specific match → trust the GDELT query category
+    return fallback || null;
   }
 
   function todayStr() {
@@ -1814,6 +1869,13 @@
       if (window.GCT_Pages) window.GCT_Pages.openSupport();
     });
 
+    // ---- Sponsor CTA ----
+    var sponsorCta = document.getElementById('sponsor-cta');
+    if (sponsorCta) sponsorCta.addEventListener('click', function (e) {
+      e.preventDefault();
+      if (window.GCT_Pages) window.GCT_Pages.openContact();
+    });
+
     // ---- Minimal footer links ----
     var footerAbout = document.getElementById('footer-about');
     if (footerAbout) footerAbout.addEventListener('click', function (e) {
@@ -1881,6 +1943,16 @@
     if (casMinSlider) casMinSlider.addEventListener('input', applyFiltersDebounced);
     if (casMaxSlider) casMaxSlider.addEventListener('input', applyFiltersDebounced);
 
+    // ---- Advanced filter toggle ----
+    var filterToggle = document.getElementById('filter-toggle-btn');
+    var filterAdvanced = document.getElementById('filter-advanced');
+    if (filterToggle && filterAdvanced) {
+      filterToggle.addEventListener('click', function () {
+        var open = filterAdvanced.classList.toggle('open');
+        filterToggle.textContent = open ? '− ' + t('filterLess') : '+ ' + t('filterMore');
+      });
+    }
+
     var resetBtn = document.getElementById('filter-reset');
     if (resetBtn) {
       resetBtn.addEventListener('click', function () {
@@ -1897,7 +1969,6 @@
     }
 
     // ---- Header action buttons ----
-    document.getElementById('btn-heatmap').addEventListener('click', toggleHeatmap);
     document.getElementById('btn-timelapse').addEventListener('click', function () {
       if (timelapseActive) { stopTimelapse(); }
       else {
@@ -1909,8 +1980,6 @@
     });
     document.getElementById('btn-refugees').addEventListener('click', toggleRefugees);
     document.getElementById('btn-refugees-full').addEventListener('click', toggleRefugeesFull);
-    document.getElementById('btn-humanitarian').addEventListener('click', toggleHumanitarian);
-
     document.getElementById('btn-lang').addEventListener('click', function () {
       currentLang = currentLang === 'fr' ? 'en' : 'fr';
       localStorage.setItem('lang', currentLang);
@@ -1961,9 +2030,6 @@
       else { toggleNotifications(); }
     });
 
-    var mobHeatmap = document.getElementById('mob-heatmap');
-    if (mobHeatmap) mobHeatmap.addEventListener('click', toggleHeatmap);
-
     var mobTimelapse = document.getElementById('mob-timelapse');
     if (mobTimelapse) mobTimelapse.addEventListener('click', function () {
       if (timelapseActive) stopTimelapse();
@@ -1980,9 +2046,6 @@
     var mobRefugeesFull = document.getElementById('mob-refugees-full');
     if (mobRefugeesFull) mobRefugeesFull.addEventListener('click', toggleRefugeesFull);
 
-    var mobHumanitarian = document.getElementById('mob-humanitarian');
-    if (mobHumanitarian) mobHumanitarian.addEventListener('click', toggleHumanitarian);
-
     var mobLang = document.getElementById('mob-lang');
     if (mobLang) mobLang.addEventListener('click', function () {
       currentLang = currentLang === 'fr' ? 'en' : 'fr';
@@ -1996,6 +2059,43 @@
     var mobExport = document.getElementById('mob-export');
     if (mobExport) mobExport.addEventListener('click', function () {
       exportPdf();
+    });
+
+    // ---- Layer toggle checkboxes ----
+    var layerConflicts = document.getElementById('layer-conflicts');
+    if (layerConflicts) layerConflicts.addEventListener('change', function () {
+      showConflicts = this.checked;
+      if (showConflicts) renderMarkers(filteredConflicts);
+      else clearMarkers();
+    });
+
+    var layerEvents = document.getElementById('layer-events');
+    if (layerEvents) layerEvents.addEventListener('change', function () {
+      showEvents = this.checked;
+      if (showEvents) renderEventMarkers(filterEventsByTimeline(events));
+      else clearEventMarkers();
+    });
+
+    var layerGdelt = document.getElementById('layer-gdelt');
+    if (layerGdelt) layerGdelt.addEventListener('change', function () {
+      showGdelt = this.checked;
+      if (showGdelt) renderGdeltMarkers(gdeltEvents);
+      else clearGdeltMarkers();
+    });
+
+    var layerRefugees = document.getElementById('layer-refugees');
+    if (layerRefugees) layerRefugees.addEventListener('change', function () {
+      if (this.checked !== showRefugees) toggleRefugees();
+    });
+
+    var layerHumanitarian = document.getElementById('layer-humanitarian');
+    if (layerHumanitarian) layerHumanitarian.addEventListener('change', function () {
+      if (this.checked !== showHumanitarian) toggleHumanitarian();
+    });
+
+    var layerHeatmap = document.getElementById('layer-heatmap');
+    if (layerHeatmap) layerHeatmap.addEventListener('change', function () {
+      if (this.checked !== showHeatmap) toggleHeatmap();
     });
   }
 
@@ -2215,22 +2315,35 @@
   };
 
   function initTicker() {
-    // Animate ticker numbers
+    // Set final values directly on originals BEFORE duplicating
     var displacedEl = document.getElementById('ticker-displaced');
     var childrenEl = document.getElementById('ticker-children');
     var schoolsEl = document.getElementById('ticker-schools');
     var hospitalsEl = document.getElementById('ticker-hospitals');
 
-    if (displacedEl) animateTickerValue(displacedEl, 0, TICKER_DATA.displaced, 2500, true);
-    if (childrenEl) animateTickerValue(childrenEl, 0, TICKER_DATA.children, 2200, true);
-    if (schoolsEl) animateTickerValue(schoolsEl, 0, TICKER_DATA.schools, 2000, false);
-    if (hospitalsEl) animateTickerValue(hospitalsEl, 0, TICKER_DATA.hospitals, 1800, false);
+    // Write final values so clones get them too
+    if (displacedEl) displacedEl.textContent = TICKER_DATA.displaced.toFixed(1);
+    if (childrenEl) childrenEl.textContent = TICKER_DATA.children.toFixed(1);
+    if (schoolsEl) schoolsEl.textContent = formatNumber(TICKER_DATA.schools);
+    if (hospitalsEl) hospitalsEl.textContent = formatNumber(TICKER_DATA.hospitals);
 
     // Duplicate ticker content for seamless loop
     var track = document.getElementById('ticker-track');
     if (track) {
-      var clone = track.innerHTML;
-      track.innerHTML = clone + clone;
+      var items = track.innerHTML;
+      track.innerHTML = items + items;
+    }
+
+    // Now animate the first set (originals are first children after innerHTML reset)
+    var allNums = track ? track.querySelectorAll('.ticker-num') : [];
+    var half = allNums.length / 2;
+    for (var i = 0; i < allNums.length; i++) {
+      var el = allNums[i];
+      var idx = i % half;
+      if (idx === 0) animateTickerValue(el, 0, TICKER_DATA.displaced, 2500, true);
+      else if (idx === 1) animateTickerValue(el, 0, TICKER_DATA.children, 2200, true);
+      else if (idx === 2) animateTickerValue(el, 0, TICKER_DATA.schools, 2000, false);
+      else if (idx === 3) animateTickerValue(el, 0, TICKER_DATA.hospitals, 1800, false);
     }
   }
 
@@ -2254,41 +2367,18 @@
   // ============================================================
   // ---- Education Mode ----
   // ============================================================
-  var educationMode = localStorage.getItem('educationMode') === 'true';
+  var educationMode = false;
 
   function toggleEducation() {
-    educationMode = !educationMode;
-    localStorage.setItem('educationMode', educationMode);
-    document.body.classList.toggle('education-mode', educationMode);
-    document.getElementById('btn-education').classList.toggle('active', educationMode);
-
-    var banner = document.getElementById('education-banner');
-    if (educationMode) {
-      if (!banner) {
-        banner = document.createElement('div');
-        banner.id = 'education-banner';
-        banner.className = 'education-banner';
-        banner.innerHTML = '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="14" height="14"><path d="M22 10v6M2 10l10-5 10 5-10 5z"/><path d="M6 12v5c0 1.7 2.7 3 6 3s6-1.3 6-3v-5"/></svg><span data-i18n="educationBanner">' + t('educationBanner') + '</span>';
-        document.body.appendChild(banner);
-      }
-      banner.style.display = '';
-    } else if (banner) {
-      banner.style.display = 'none';
-    }
-
-    if (window.GCT) window.GCT.educationMode = educationMode;
+    // Education mode disabled — feature removed
   }
 
   function applyEducationOnLoad() {
-    if (educationMode) {
-      document.body.classList.add('education-mode');
-      document.getElementById('btn-education').classList.add('active');
-      var banner = document.createElement('div');
-      banner.id = 'education-banner';
-      banner.className = 'education-banner';
-      banner.innerHTML = '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="14" height="14"><path d="M22 10v6M2 10l10-5 10 5-10 5z"/><path d="M6 12v5c0 1.7 2.7 3 6 3s6-1.3 6-3v-5"/></svg><span data-i18n="educationBanner">' + t('educationBanner') + '</span>';
-      document.body.appendChild(banner);
-    }
+    // Clean up any previous localStorage state
+    localStorage.removeItem('educationMode');
+    document.body.classList.remove('education-mode');
+    var banner = document.getElementById('education-banner');
+    if (banner) banner.remove();
   }
 
   // ============================================================
@@ -2299,7 +2389,8 @@
   function toggleChildrenMode() {
     childrenMode = !childrenMode;
     document.body.classList.toggle('children-mode', childrenMode);
-    document.getElementById('btn-children').classList.toggle('active', childrenMode);
+    var btn = document.getElementById('btn-children');
+    if (btn) btn.classList.toggle('active', childrenMode);
 
     var banner = document.getElementById('children-banner');
     if (childrenMode) {
