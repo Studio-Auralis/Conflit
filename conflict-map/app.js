@@ -588,24 +588,26 @@
   // ---- Event Markers (static from events.json) ----
   // ============================================================
   var EVENT_ICON_DATA = {
-    manifestation: { color: '#8e72b8',
-      icon: '<circle cx="10" cy="6.5" r="1.8" fill="#fff"/><path d="M7.2 9.5h5.6v1.5c0 2-1.3 3-2.8 3s-2.8-1-2.8-3V9.5z" fill="#fff"/>' },
-    attentat: { color: '#c94a4a',
-      icon: '<circle cx="10" cy="10" r="2.5" stroke="#fff" stroke-width="1.4" fill="none"/><path d="M10 5v2.5m0 5V15M5 10h2.5m5 0H15" stroke="#fff" stroke-width="1.4"/>' },
-    emeute: { color: '#cb843e',
-      icon: '<path d="M10 4.5c-.5 2.2-2.8 3.2-2.8 5.8 0 1.7 1.2 2.7 2.8 2.7s2.8-1 2.8-2.7c0-2.6-2.3-3.6-2.8-5.8z" fill="#fff"/>' },
-    catastrophe_humanitaire: { color: '#5a85ad',
-      icon: '<path d="M9 5.5h2v3.5h3.5v2H11v3.5H9V11H5.5V9H9V5.5z" fill="#fff"/>' },
-    cessez_le_feu: { color: '#5a9668',
-      icon: '<path d="M4.5 11h2.3l1.2-1.5L10 11l2-1.5 1.5 1.5h2" stroke="#fff" stroke-width="1.4" fill="none" stroke-linecap="round" stroke-linejoin="round"/>' },
-    coup_etat: { color: '#8e96a2',
-      icon: '<path d="M11.5 5L8.5 10H11l-2 5 5-6H11l2.5-4z" fill="#fff"/>' }
+    manifestation: { bg: 'rgba(139,92,246,0.2)', stroke: '#a78bfa',
+      icon: '<path d="m3 11 18-5v12L3 13v-2z"/><path d="M11.6 16.8a3 3 0 1 1-5.8-1.6"/>' },
+    attentat: { bg: 'rgba(239,68,68,0.2)', stroke: '#f87171',
+      icon: '<circle cx="9" cy="12" r="1"/><circle cx="15" cy="12" r="1"/><path d="M8 20v2h8v-2"/><path d="m12.5 17-.5-1-.5 1h1z"/><path d="M16 20a2 2 0 0 0 1.56-3.25 8 8 0 1 0-11.12 0A2 2 0 0 0 8 20"/>' },
+    emeute: { bg: 'rgba(249,115,22,0.2)', stroke: '#fb923c',
+      icon: '<path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/><path d="M8.5 8.5L15.5 15.5M15.5 8.5L8.5 15.5" style="stroke:#fbbf24;stroke-width:2"/>' },
+    catastrophe_humanitaire: { bg: 'rgba(59,130,246,0.2)', stroke: '#60a5fa',
+      icon: '<path d="M10 10H6"/><path d="M14 18V6a2 2 0 0 0-2-2H4a2 2 0 0 0-2 2v11a1 1 0 0 0 1 1h2"/><path d="M19 18h2a1 1 0 0 0 1-1v-3.28a1 1 0 0 0-.684-.948l-1.923-.641a1 1 0 0 1-.578-.502l-1.539-3.076A1 1 0 0 0 16.382 8H14"/><path d="M8 8v4"/><circle cx="7" cy="18" r="2"/><circle cx="17" cy="18" r="2"/>' },
+    cessez_le_feu: { bg: 'rgba(34,197,94,0.2)', stroke: '#4ade80',
+      icon: '<path d="m11 17 2 2a1 1 0 1 0 3-3"/><path d="m14 14 2.5 2.5a1 1 0 1 0 3-3l-3.88-3.88a3 3 0 0 0-4.24 0l-.88.88a1 1 0 1 1-3-3l2.81-2.81a5.79 5.79 0 0 1 7.06-.87l.47.28a2 2 0 0 0 1.42.25L21 4"/><path d="m21 3 1 11h-2"/><path d="M3 3 2 14l6.5 6.5a1 1 0 1 0 3-3"/><path d="M3 4h8"/>' },
+    coup_etat: { bg: 'rgba(226,232,240,0.12)', stroke: '#e2e8f0',
+      icon: '<line x1="3" x2="21" y1="22" y2="22"/><line x1="6" x2="6" y1="18" y2="11"/><line x1="10" x2="10" y1="18" y2="11"/><line x1="14" x2="14" y1="18" y2="11"/><line x1="18" x2="18" y1="18" y2="11"/><polygon points="12 2 20 7 4 7"/><line x1="2" x2="22" y1="18" y2="18"/>' }
   };
 
   function eventIconSvg(type, size) {
-    var d = EVENT_ICON_DATA[type] || { color: '#8e96a2', icon: '<circle cx="10" cy="10" r="3" fill="#fff"/>' };
-    return '<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" width="' + size + '" height="' + size + '">' +
-      '<circle cx="10" cy="10" r="9.5" fill="' + d.color + '" stroke="rgba(0,0,0,0.25)" stroke-width="0.5"/>' + d.icon + '</svg>';
+    var d = EVENT_ICON_DATA[type] || { bg: 'rgba(148,163,178,0.2)', stroke: '#94a3b8', icon: '<circle cx="12" cy="12" r="3"/>' };
+    var svgSize = Math.round(size * 0.5);
+    var radius = Math.round(size * 0.16);
+    return '<div style="width:' + size + 'px;height:' + size + 'px;transform:rotate(45deg);border-radius:' + radius + 'px;background:' + d.bg + ';display:flex;align-items:center;justify-content:center;">' +
+      '<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="' + svgSize + '" height="' + svgSize + '" style="transform:rotate(-45deg);fill:none;stroke:' + d.stroke + ';stroke-width:2;stroke-linecap:round;stroke-linejoin:round;">' + d.icon + '</svg></div>';
   }
 
   function renderEventMarkers(data) {
