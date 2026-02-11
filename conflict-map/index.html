@@ -1,0 +1,511 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="color-scheme" content="dark light">
+  <meta name="description" content="Plateforme francophone interactive montrant l'impact humain des conflits armés. Données en temps réel, chronologies, fiches éducatives. Comprendre les crises pour mieux agir.">
+  <meta name="keywords" content="conflits armés, carte du monde, temps réel, guerre, crise humanitaire, réfugiés, GDELT, géopolitique, ACLED, suivi">
+  <meta name="author" content="Studio Auralis">
+  <meta name="robots" content="index, follow">
+  <meta name="theme-color" content="#0f1419">
+  <link rel="canonical" href="https://conflit.studio-auralis.com">
+  <link rel="alternate" hreflang="fr" href="https://conflit.studio-auralis.com" />
+  <link rel="alternate" hreflang="en" href="https://conflit.studio-auralis.com?lang=en" />
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="Global Conflict Tracker — Les conflits du monde, expliqués et visualisés">
+  <meta property="og:description" content="Plateforme francophone interactive montrant l'impact humain des conflits armés. Données en temps réel, chronologies, fiches éducatives.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://conflit.studio-auralis.com">
+  <meta property="og:image" content="https://studio-auralis.com/og-image.png">
+  <meta property="og:locale" content="fr_FR">
+  <meta property="og:site_name" content="Global Conflict Tracker">
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Global Conflict Tracker — Les conflits du monde, expliqués et visualisés">
+  <meta name="twitter:description" content="Plateforme francophone interactive montrant l'impact humain des conflits armés. Données en temps réel, chronologies, fiches éducatives.">
+  <meta name="twitter:image" content="https://studio-auralis.com/og-image.png">
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/svg+xml" href="favicon.svg">
+  <link rel="icon" type="image/x-icon" href="favicon.ico" sizes="16x16 32x32 48x48">
+  <link rel="apple-touch-icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%237a9bb5' stroke-width='1.5'%3E%3Ccircle cx='12' cy='12' r='10'/%3E%3Cpath d='M2 12h20'/%3E%3Cpath d='M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z'/%3E%3C/svg%3E">
+
+  <title>Global Conflict Tracker — Les conflits du monde, expliqués et visualisés</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" crossorigin>
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="preconnect" href="https://unpkg.com" crossorigin>
+  <link rel="preconnect" href="https://a.basemaps.cartocdn.com" crossorigin>
+  <link rel="preconnect" href="https://b.basemaps.cartocdn.com" crossorigin>
+  <link rel="preconnect" href="https://c.basemaps.cartocdn.com" crossorigin>
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+  <link rel="preload" href="data.json" as="fetch" crossorigin>
+  <link rel="preload" href="events.json" as="fetch" crossorigin>
+</head>
+<body>
+  <!-- Header -->
+  <header id="header">
+    <div class="header-left">
+      <div class="header-logo">
+        <svg class="logo-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true">
+          <circle cx="12" cy="12" r="10"/><path d="M2 12h20"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/>
+        </svg>
+        <div>
+          <h1>GLOBAL CONFLICT TRACKER</h1>
+          <span class="header-slogan" data-i18n="headerSlogan">Les conflits du monde, expliqués et visualisés</span>
+        </div>
+      </div>
+    </div>
+    <div class="header-stats">
+      <div class="stat-box">
+        <span class="stat-number" id="conflict-count">0</span>
+        <span class="stat-label" data-i18n="statConflicts">Conflits actifs</span>
+      </div>
+      <div class="stat-separator"></div>
+      <div class="stat-box">
+        <span class="stat-number stat-casualties" id="casualty-count">0</span>
+        <span class="stat-label" data-i18n="statCasualties">Victimes estimées</span>
+      </div>
+      <div class="stat-separator"></div>
+      <div class="stat-box stat-box-live">
+        <div class="stat-live-row">
+          <span class="stat-number stat-events" id="event-count">0</span>
+          <button class="live-badge" id="live-badge" title="Activer/désactiver GDELT temps réel">
+            <span class="live-dot"></span>
+            <span>LIVE</span>
+          </button>
+        </div>
+        <span class="stat-label" data-i18n="statEvents">Événements temps réel</span>
+        <span class="stat-update" id="last-update"></span>
+      </div>
+    </div>
+    <div class="header-actions" id="header-actions">
+      <!-- Dashboard -->
+      <button class="header-btn" id="btn-dashboard" title="Dashboard Analytics">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="16" height="16">
+          <rect x="3" y="3" width="7" height="7"/><rect x="14" y="3" width="7" height="7"/><rect x="3" y="14" width="7" height="7"/><rect x="14" y="14" width="7" height="7"/>
+        </svg>
+        <span class="header-btn-label" data-i18n="btnDashboard">Dashboard</span>
+      </button>
+      <!-- Notifications -->
+      <button class="header-btn notif-btn" id="btn-notif" title="Notifications">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="16" height="16">
+          <path d="M18 8A6 6 0 0 0 6 8c0 7-3 9-3 9h18s-3-2-3-9"/><path d="M13.73 21a2 2 0 0 1-3.46 0"/>
+        </svg>
+        <span class="notif-badge" id="notif-badge" style="display:none">0</span>
+      </button>
+      <!-- Heatmap -->
+      <button class="header-btn" id="btn-heatmap" title="Heatmap">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="16" height="16">
+          <path d="M12 2c-4 4-7 7-7 11a7 7 0 0 0 14 0c0-4-3-7-7-11z"/><path d="M12 13a2 2 0 0 0 2-2c0-1.5-2-3-2-3s-2 1.5-2 3a2 2 0 0 0 2 2z"/>
+        </svg>
+        <span class="header-btn-label" data-i18n="btnHeatmap">Heatmap</span>
+      </button>
+      <!-- Timelapse -->
+      <button class="header-btn" id="btn-timelapse" title="Timelapse">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="16" height="16">
+          <circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/>
+        </svg>
+        <span class="header-btn-label" data-i18n="btnTimelapse">Timelapse</span>
+      </button>
+      <!-- Refugees -->
+      <div class="refugee-btn-group">
+        <button class="header-btn" id="btn-refugees" title="Réfugiés">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="16" height="16">
+            <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/>
+          </svg>
+          <span class="header-btn-label" data-i18n="btnRefugees">Réfugiés</span>
+        </button>
+        <button class="header-btn refugee-full-btn" id="btn-refugees-full" title="Tous les flux" style="display:none" data-i18n="btnRefugeesFull">100%</button>
+      </div>
+      <!-- Humanitarian zones -->
+      <button class="header-btn" id="btn-humanitarian" title="Zones humanitaires">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="16" height="16">
+          <path d="M12 2v8m0 4v8m-4-12h8"/><rect x="3" y="3" width="18" height="18" rx="2"/>
+        </svg>
+        <span class="header-btn-label" data-i18n="btnHumanitarian">Zones</span>
+      </button>
+      <!-- Education Mode -->
+      <button class="header-btn" id="btn-education" title="Mode Éducation">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="16" height="16">
+          <path d="M22 10v6M2 10l10-5 10 5-10 5z"/><path d="M6 12v5c0 1.7 2.7 3 6 3s6-1.3 6-3v-5"/>
+        </svg>
+        <span class="header-btn-label" data-i18n="btnEducation">Éducation</span>
+      </button>
+      <!-- Quiz -->
+      <button class="header-btn" id="btn-quiz" title="Quiz">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="16" height="16">
+          <circle cx="12" cy="12" r="10"/><path d="M9.09 9a3 3 0 0 1 5.83 1c0 2-3 3-3 3"/><line x1="12" y1="17" x2="12.01" y2="17"/>
+        </svg>
+        <span class="header-btn-label" data-i18n="btnQuiz">Quiz</span>
+      </button>
+      <!-- Children Impact -->
+      <button class="header-btn" id="btn-children" title="Impact enfants">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="16" height="16">
+          <circle cx="12" cy="8" r="4"/><path d="M6 21v-2a4 4 0 0 1 4-4h4a4 4 0 0 1 4 4v2"/>
+        </svg>
+        <span class="header-btn-label" data-i18n="btnChildren">Enfants</span>
+      </button>
+      <!-- About -->
+      <button class="header-btn" id="btn-about" title="À propos">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="16" height="16">
+          <circle cx="12" cy="12" r="10"/><line x1="12" y1="16" x2="12" y2="12"/><line x1="12" y1="8" x2="12.01" y2="8"/>
+        </svg>
+        <span class="header-btn-label" data-i18n="btnAbout">À propos</span>
+      </button>
+      <!-- Support -->
+      <button class="header-btn header-btn-support" id="btn-support" title="Soutenir le projet">
+        <span class="support-coffee-icon">&#9749;</span>
+        <span class="header-btn-label" data-i18n="btnSupport">Soutenir</span>
+      </button>
+      <!-- Theme -->
+      <button class="header-btn" id="btn-theme" title="Thème">
+        <svg class="icon-moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="16" height="16">
+          <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/>
+        </svg>
+        <svg class="icon-sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="16" height="16" style="display:none">
+          <circle cx="12" cy="12" r="5"/><path d="M12 1v2m0 18v2M4.22 4.22l1.42 1.42m12.73 12.73l1.42 1.42M1 12h2m18 0h2M4.22 19.78l1.42-1.42M18.36 5.64l1.42-1.42"/>
+        </svg>
+        <span class="header-btn-label" data-i18n="btnTheme">Thème</span>
+      </button>
+      <!-- Export -->
+      <div class="export-wrapper" id="export-wrapper">
+        <button class="header-btn" id="btn-export" title="Exporter">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="16" height="16">
+            <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/>
+          </svg>
+          <span class="header-btn-label" data-i18n="btnExport">Exporter</span>
+        </button>
+        <div class="export-dropdown" id="export-dropdown">
+          <button class="export-option" id="export-pdf">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="14" height="14"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/></svg>
+            <span data-i18n="exportPdf">Export PDF</span>
+          </button>
+          <button class="export-option" id="export-twitter">
+            <svg viewBox="0 0 24 24" fill="currentColor" width="14" height="14"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
+            <span>Twitter / X</span>
+          </button>
+          <button class="export-option" id="export-linkedin">
+            <svg viewBox="0 0 24 24" fill="currentColor" width="14" height="14"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 0 1-2.063-2.065 2.064 2.064 0 1 1 2.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
+            <span>LinkedIn</span>
+          </button>
+          <button class="export-option" id="export-link">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="14" height="14"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"/><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"/></svg>
+            <span data-i18n="exportLink">Copier le lien</span>
+          </button>
+        </div>
+      </div>
+    </div>
+    <button class="sidebar-toggle" id="sidebar-toggle" aria-label="Ouvrir le panneau">
+      <span></span><span></span><span></span>
+    </button>
+  </header>
+
+  <!-- Intensity Bar -->
+  <div class="intensity-bar" id="intensity-bar">
+    <div class="intensity-fill haute" id="bar-haute" title="Haute intensité"></div>
+    <div class="intensity-fill moyenne" id="bar-moyenne" title="Moyenne intensité"></div>
+    <div class="intensity-fill basse" id="bar-basse" title="Basse intensité"></div>
+  </div>
+
+  <!-- Human Impact Ticker -->
+  <div class="human-ticker" id="human-ticker">
+    <div class="ticker-track" id="ticker-track">
+      <div class="ticker-item"><svg class="ticker-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" width="16" height="16"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg><span class="ticker-num" id="ticker-displaced">0</span> <span data-i18n="tickerDisplaced">millions de personnes déplacées dans le monde</span></div>
+      <div class="ticker-sep"></div>
+      <div class="ticker-item"><svg class="ticker-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" width="16" height="16"><circle cx="12" cy="8" r="4"/><path d="M6 21v-2a4 4 0 0 1 4-4h4a4 4 0 0 1 4 4v2"/></svg><span class="ticker-num" id="ticker-children">0</span> <span data-i18n="tickerChildren">millions d'enfants affectés par les conflits</span></div>
+      <div class="ticker-sep"></div>
+      <div class="ticker-item"><svg class="ticker-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" width="16" height="16"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V9z"/><path d="M9 22V12h6v10"/></svg><span class="ticker-num" id="ticker-schools">0</span> <span data-i18n="tickerSchools">écoles détruites ou endommagées</span></div>
+      <div class="ticker-sep"></div>
+      <div class="ticker-item"><svg class="ticker-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" width="16" height="16"><path d="M22 12h-4l-3 9L9 3l-3 9H2"/></svg><span class="ticker-num" id="ticker-hospitals">0</span> <span data-i18n="tickerHospitals">hôpitaux attaqués</span></div>
+    </div>
+  </div>
+
+  <!-- Sidebar -->
+  <aside id="sidebar" class="sidebar" role="navigation" aria-label="Panneau de navigation des conflits">
+    <!-- Mobile actions (visible <=900px) -->
+    <div class="mobile-actions" id="mobile-actions">
+      <button class="mobile-action-btn" id="mob-dashboard" title="Dashboard">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="16" height="16"><rect x="3" y="3" width="7" height="7"/><rect x="14" y="3" width="7" height="7"/><rect x="3" y="14" width="7" height="7"/><rect x="14" y="14" width="7" height="7"/></svg>
+      </button>
+      <button class="mobile-action-btn notif-btn" id="mob-notif" title="Notifications">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="16" height="16"><path d="M18 8A6 6 0 0 0 6 8c0 7-3 9-3 9h18s-3-2-3-9"/><path d="M13.73 21a2 2 0 0 1-3.46 0"/></svg>
+        <span class="notif-badge mob-notif-badge" id="mob-notif-badge" style="display:none">0</span>
+      </button>
+      <button class="mobile-action-btn" id="mob-heatmap" title="Heatmap">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="16" height="16"><path d="M12 2c-4 4-7 7-7 11a7 7 0 0 0 14 0c0-4-3-7-7-11z"/><path d="M12 13a2 2 0 0 0 2-2c0-1.5-2-3-2-3s-2 1.5-2 3a2 2 0 0 0 2 2z"/></svg>
+      </button>
+      <button class="mobile-action-btn" id="mob-timelapse" title="Timelapse">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="16" height="16"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+      </button>
+      <button class="mobile-action-btn" id="mob-refugees" title="Réfugiés">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="16" height="16"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
+      </button>
+      <button class="mobile-action-btn mob-refugees-full" id="mob-refugees-full" title="Tous les flux" style="display:none">100%</button>
+      <button class="mobile-action-btn" id="mob-humanitarian" title="Zones">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="16" height="16"><path d="M12 2v8m0 4v8m-4-12h8"/><rect x="3" y="3" width="18" height="18" rx="2"/></svg>
+      </button>
+      <button class="mobile-action-btn" id="mob-lang" title="Langue">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="16" height="16"><circle cx="12" cy="12" r="10"/><path d="M2 12h20"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg>
+      </button>
+      <button class="mobile-action-btn" id="mob-theme" title="Thème">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="16" height="16"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
+      </button>
+      <button class="mobile-action-btn" id="mob-export" title="Exporter">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="16" height="16"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+      </button>
+    </div>
+
+    <div class="sidebar-header">
+      <nav class="sidebar-tabs" aria-label="Onglets de contenu">
+        <button class="sidebar-tab active" id="tab-conflicts" data-tab="conflicts" data-i18n="tabConflicts">Conflits</button>
+        <button class="sidebar-tab" id="tab-news" data-tab="news" data-i18n="tabNews">Actualités</button>
+        <button class="sidebar-tab" id="tab-gdelt" data-tab="gdelt"><span class="tab-live-dot"></span>Live</button>
+      </nav>
+      <button class="sidebar-close" id="sidebar-close" aria-label="Fermer">&times;</button>
+    </div>
+
+    <div class="search-box">
+      <svg class="search-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+        <circle cx="11" cy="11" r="8"/><path d="m21 21-4.35-4.35"/>
+      </svg>
+      <input type="text" id="search-input" placeholder="Rechercher un conflit..." aria-label="Rechercher un conflit" data-i18n-placeholder="searchPlaceholder">
+    </div>
+
+    <div class="filters" id="filters-section">
+      <div class="filter-group">
+        <label data-i18n="filterRegion">Région</label>
+        <select id="filter-region" aria-label="Filtrer par région">
+          <option value="all" data-i18n="filterAllRegions">Toutes les régions</option>
+          <option value="Afrique">Afrique</option>
+          <option value="Moyen-Orient">Moyen-Orient</option>
+          <option value="Asie">Asie</option>
+          <option value="Europe">Europe</option>
+          <option value="Amériques">Amériques</option>
+        </select>
+      </div>
+      <div class="filter-group">
+        <label data-i18n="filterType">Type</label>
+        <select id="filter-type" aria-label="Filtrer par type de conflit">
+          <option value="all" data-i18n="filterAllTypes">Tous les types</option>
+          <option value="Guerre civile" data-i18n="typeCivilWar">Guerre civile</option>
+          <option value="Conflit international" data-i18n="typeInternational">Conflit international</option>
+          <option value="Insurrection" data-i18n="typeInsurgency">Insurrection</option>
+          <option value="Conflit interethnique" data-i18n="typeEthnic">Conflit interethnique</option>
+        </select>
+      </div>
+      <div class="filter-group">
+        <label data-i18n="filterIntensity">Intensité</label>
+        <select id="filter-intensity" aria-label="Filtrer par intensité">
+          <option value="all" data-i18n="filterAll">Toutes</option>
+          <option value="haute" data-i18n="intensityHigh">Haute</option>
+          <option value="moyenne" data-i18n="intensityMedium">Moyenne</option>
+          <option value="basse" data-i18n="intensityLow">Basse</option>
+        </select>
+      </div>
+      <!-- Advanced filters -->
+      <div class="filter-advanced" id="filter-advanced">
+        <div class="filter-group filter-full">
+          <label data-i18n="filterDateRange">Début du conflit</label>
+          <div class="filter-range-wrap">
+            <input type="range" id="filter-date-min" min="1945" max="2026" value="1945" step="1" class="filter-slider">
+            <input type="range" id="filter-date-max" min="1945" max="2026" value="2026" step="1" class="filter-slider">
+            <span class="filter-range-label" id="filter-date-label">1945 — 2026</span>
+          </div>
+        </div>
+        <div class="filter-group filter-full">
+          <label data-i18n="filterCasualties">Victimes</label>
+          <div class="filter-range-wrap">
+            <input type="range" id="filter-cas-min" min="0" max="600000" value="0" step="1000" class="filter-slider">
+            <input type="range" id="filter-cas-max" min="0" max="600000" value="600000" step="1000" class="filter-slider">
+            <span class="filter-range-label" id="filter-cas-label">0 — 600 000+</span>
+          </div>
+        </div>
+        <button class="filter-reset-btn" id="filter-reset" data-i18n="filterReset">Réinitialiser</button>
+      </div>
+    </div>
+
+    <div class="conflict-list" id="conflict-list"></div>
+    <div class="news-list" id="news-list" style="display:none"></div>
+    <div class="gdelt-list" id="gdelt-list" style="display:none"></div>
+  </aside>
+
+  <!-- Map -->
+  <main>
+    <div id="map"></div>
+    <!-- Timelapse Overlay -->
+    <div class="timelapse-overlay" id="timelapse-overlay" style="display:none">
+      <div class="timelapse-date" id="timelapse-date">Janvier 2020</div>
+      <div class="timelapse-progress-bar">
+        <div class="timelapse-progress-fill" id="timelapse-progress"></div>
+      </div>
+      <div class="timelapse-controls">
+        <button class="timelapse-btn" id="timelapse-play" title="Play">
+          <svg viewBox="0 0 24 24" fill="currentColor" width="16" height="16"><polygon points="5 3 19 12 5 21 5 3"/></svg>
+        </button>
+        <button class="timelapse-btn" id="timelapse-pause" title="Pause" style="display:none">
+          <svg viewBox="0 0 24 24" fill="currentColor" width="16" height="16"><rect x="6" y="4" width="4" height="16"/><rect x="14" y="4" width="4" height="16"/></svg>
+        </button>
+        <button class="timelapse-btn" id="timelapse-stop" title="Stop">
+          <svg viewBox="0 0 24 24" fill="currentColor" width="16" height="16"><rect x="6" y="6" width="12" height="12"/></svg>
+        </button>
+        <div class="timelapse-speed">
+          <button class="timelapse-speed-btn active" data-speed="1">x1</button>
+          <button class="timelapse-speed-btn" data-speed="2">x2</button>
+          <button class="timelapse-speed-btn" data-speed="5">x5</button>
+        </div>
+      </div>
+    </div>
+    <!-- SEO Content -->
+    <section class="seo-section" id="seo-section">
+      <p class="seo-text" data-i18n="seoIntro">Global Conflict Tracker est une plateforme indépendante qui cartographie les conflits armés, les crises humanitaires et leurs impacts sur les populations civiles. Mis à jour en temps réel grâce aux données de GDELT, UNHCR et ReliefWeb.</p>
+    </section>
+  </main>
+
+  <!-- Legend -->
+  <div class="legend glass" id="legend">
+    <h3 data-i18n="legendIntensity">Intensité des conflits</h3>
+    <div class="legend-item">
+      <span class="legend-dot haute"></span>
+      <span data-i18n="legendHigh">Guerre majeure</span>
+    </div>
+    <div class="legend-item">
+      <span class="legend-dot moyenne"></span>
+      <span data-i18n="legendMedium">Conflit actif</span>
+    </div>
+    <div class="legend-item">
+      <span class="legend-dot basse"></span>
+      <span data-i18n="legendLow">Basse intensité</span>
+    </div>
+    <div class="legend-separator"></div>
+    <h3 data-i18n="legendEvents">Événements</h3>
+    <div class="legend-item">
+      <svg class="legend-icon" viewBox="0 0 20 20"><circle cx="10" cy="10" r="9.5" fill="#8e72b8"/><circle cx="10" cy="6.5" r="1.8" fill="#fff"/><path d="M7.2 9.5h5.6v1.5c0 2-1.3 3-2.8 3s-2.8-1-2.8-3V9.5z" fill="#fff"/></svg>
+      <span data-i18n="evProtest">Manifestation</span>
+    </div>
+    <div class="legend-item">
+      <svg class="legend-icon" viewBox="0 0 20 20"><circle cx="10" cy="10" r="9.5" fill="#c94a4a"/><circle cx="10" cy="10" r="2.5" stroke="#fff" stroke-width="1.4" fill="none"/><path d="M10 5v2.5m0 5V15M5 10h2.5m5 0H15" stroke="#fff" stroke-width="1.4"/></svg>
+      <span data-i18n="evAttack">Attentat / Attaque</span>
+    </div>
+    <div class="legend-item">
+      <svg class="legend-icon" viewBox="0 0 20 20"><circle cx="10" cy="10" r="9.5" fill="#cb843e"/><path d="M10 4.5c-.5 2.2-2.8 3.2-2.8 5.8 0 1.7 1.2 2.7 2.8 2.7s2.8-1 2.8-2.7c0-2.6-2.3-3.6-2.8-5.8z" fill="#fff"/></svg>
+      <span data-i18n="evRiot">Émeute</span>
+    </div>
+    <div class="legend-item">
+      <svg class="legend-icon" viewBox="0 0 20 20"><circle cx="10" cy="10" r="9.5" fill="#5a85ad"/><path d="M9 5.5h2v3.5h3.5v2H11v3.5H9V11H5.5V9H9V5.5z" fill="#fff"/></svg>
+      <span data-i18n="evHumanitarian">Catastrophe humanitaire</span>
+    </div>
+    <div class="legend-item">
+      <svg class="legend-icon" viewBox="0 0 20 20"><circle cx="10" cy="10" r="9.5" fill="#5a9668"/><path d="M4.5 11h2.3l1.2-1.5L10 11l2-1.5 1.5 1.5h2" stroke="#fff" stroke-width="1.4" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg>
+      <span data-i18n="evCeasefire">Cessez-le-feu</span>
+    </div>
+    <div class="legend-item">
+      <svg class="legend-icon" viewBox="0 0 20 20"><circle cx="10" cy="10" r="9.5" fill="#8e96a2"/><path d="M11.5 5L8.5 10H11l-2 5 5-6H11l2.5-4z" fill="#fff"/></svg>
+      <span data-i18n="evCoup">Coup d'État</span>
+    </div>
+    <div class="legend-separator" id="legend-sep-humanitarian" style="display:none"></div>
+    <h3 id="legend-title-humanitarian" style="display:none" data-i18n="legendHumanitarian">Zones humanitaires</h3>
+    <div class="legend-item" id="legend-camp" style="display:none">
+      <span class="legend-square-hz hz-camp"></span>
+      <span data-i18n="hzCamp">Camp de réfugiés</span>
+    </div>
+    <div class="legend-item" id="legend-famine" style="display:none">
+      <span class="legend-square-hz hz-famine"></span>
+      <span data-i18n="hzFamine">Famine</span>
+    </div>
+    <div class="legend-item" id="legend-health" style="display:none">
+      <span class="legend-square-hz hz-health"></span>
+      <span data-i18n="hzHealth">Crise sanitaire</span>
+    </div>
+  </div>
+
+  <!-- Focus Mode -->
+  <button class="focus-toggle glass" id="focus-toggle" title="Mode concentration (F)">
+    <svg class="icon-expand" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="16" height="16">
+      <path d="M8 3H5a2 2 0 0 0-2 2v3m18 0V5a2 2 0 0 0-2-2h-3m0 18h3a2 2 0 0 0 2-2v-3M3 16v3a2 2 0 0 0 2 2h3"/>
+    </svg>
+    <svg class="icon-compress" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="16" height="16">
+      <path d="M4 14h6v6m10-10h-6V4m0 6l7-7M3 21l7-7"/>
+    </svg>
+  </button>
+
+  <!-- Timeline -->
+  <div class="timeline glass" id="timeline">
+    <label class="timeline-label" id="timeline-label" data-i18n="timelineLast30">30 derniers jours</label>
+    <input type="range" id="timeline-slider" min="1" max="1825" value="30" step="1" aria-label="Période temporelle des événements">
+    <div class="timeline-marks">
+      <span>24h</span>
+      <span>7j</span>
+      <span>30j</span>
+      <span>90j</span>
+      <span>1an</span>
+      <span>2a</span>
+      <span>5a</span>
+    </div>
+  </div>
+
+  <!-- Copied feedback -->
+  <div class="copy-feedback" id="copy-feedback" data-i18n="linkCopied">Lien copié !</div>
+
+  <!-- Minimal Footer Bar -->
+  <footer id="footer" class="site-footer-mini">
+    <span data-i18n="footerCopyright">&copy; 2026 Studio Auralis</span>
+    <nav class="footer-mini-links">
+      <a href="#" id="footer-about" data-i18n="footerAbout">À propos</a>
+      <a href="mailto:contact@studio-auralis.com" id="footer-contact" data-i18n="footerContact">Contact</a>
+      <a href="#" id="footer-glossary" data-i18n="footerGlossary">Glossaire</a>
+      <a href="#" id="footer-teachers" data-i18n="footerTeachers">Espace Enseignants</a>
+      <a href="#" id="footer-support" data-i18n="footerSupport">&#9749; Soutenir</a>
+    </nav>
+  </footer>
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "WebSite",
+        "name": "Global Conflict Tracker",
+        "url": "https://conflit.studio-auralis.com",
+        "description": "Carte interactive des conflits armés dans le monde en temps réel. Données ACLED, GDELT et sources humanitaires.",
+        "inLanguage": "fr"
+      },
+      {
+        "@type": "WebApplication",
+        "name": "Global Conflict Tracker",
+        "url": "https://conflit.studio-auralis.com",
+        "applicationCategory": "ReferenceApplication",
+        "operatingSystem": "Web",
+        "offers": {
+          "@type": "Offer",
+          "price": "0",
+          "priceCurrency": "EUR"
+        }
+      }
+    ]
+  }
+  </script>
+  <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+  <script src="https://unpkg.com/leaflet.heat/dist/leaflet-heat.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <script src="app.js?v=5"></script>
+  <script src="dashboard.js?v=2"></script>
+  <script src="conflict-page.js?v=2"></script>
+  <script src="pages.js?v=2"></script>
+  <script src="quiz.js?v=1"></script>
+  <script src="glossaire.js?v=1"></script>
+
+  <!-- Language Switch — bottom right -->
+  <button class="lang-switch" id="btn-lang" title="Langue / Language" aria-label="Changer de langue">
+    <span class="lang-switch-option" data-lang="fr">FR</span>
+    <span class="lang-switch-sep">|</span>
+    <span class="lang-switch-option" data-lang="en">EN</span>
+  </button>
+</body>
+</html>

@@ -1,0 +1,3814 @@
+[
+  {
+    "name": "Guerre Russie-Ukraine",
+    "lat": 48.3794,
+    "lng": 31.1656,
+    "region": "Europe",
+    "type": "Conflit international",
+    "intensity": "haute",
+    "parties": [
+      "Russie",
+      "Ukraine",
+      "Volontaires internationaux"
+    ],
+    "startDate": "2022-02-24",
+    "casualties": 500000,
+    "summary": "Invasion de l'Ukraine par la Russie, devenue la guerre la plus meurtrière en Europe depuis 1945. En février 2026, la Russie gagne 123 miles² en 4 semaines. La plus grande attaque aérienne de l'année (450 drones, 71 missiles) frappe le réseau énergétique ukrainien le 3 février 2026. Des négociations aux EAU n'aboutissent pas.",
+    "name_en": "Russia-Ukraine War",
+    "summary_en": "Russia's invasion of Ukraine has become the deadliest war in Europe since 1945. In February 2026, Russia gained 123 square miles in 4 weeks. The largest aerial attack of the year (450 drones, 71 missiles) struck Ukraine's energy grid on February 3, 2026. Negotiations in the UAE failed to produce results.",
+    "news": [
+      {
+        "title": "Frappe massive russe : 450 drones et 71 missiles sur l'Ukraine",
+        "date": "2026-02-03",
+        "source": "Kyiv Independent",
+        "url": "https://kyivindependent.com/ukraine-war-latest-update-2026-02-03/"
+      },
+      {
+        "title": "Négociations Ukraine-Russie aux EAU sans percée",
+        "date": "2026-02-05",
+        "source": "Al Jazeera",
+        "url": "https://www.aljazeera.com/news/2026/2/5/russia-ukraine-talks-end-with-agreement-on-prisoner-swap"
+      },
+      {
+        "title": "La Russie gagne du terrain : bilan février 2026",
+        "date": "2026-02-04",
+        "source": "Russia Matters",
+        "url": "https://www.russiamatters.org/news/russia-ukraine-war-report-card/russia-ukraine-war-report-card-feb-4-2026"
+      }
+    ],
+    "timeline": [
+      {
+        "date": "2022-02-24",
+        "event": "Invasion russe de l'Ukraine",
+        "event_en": "Russian invasion of Ukraine"
+      },
+      {
+        "date": "2022-03-16",
+        "event": "Siège de Marioupol",
+        "event_en": "Siege of Mariupol"
+      },
+      {
+        "date": "2022-09-21",
+        "event": "Mobilisation partielle russe (300 000 réservistes)",
+        "event_en": "Partial Russian mobilization (300,000 reservists)"
+      },
+      {
+        "date": "2022-11-11",
+        "event": "Libération de Kherson par l'Ukraine",
+        "event_en": "Liberation of Kherson by Ukraine"
+      },
+      {
+        "date": "2023-06-06",
+        "event": "Destruction du barrage de Kakhovka",
+        "event_en": "Destruction of Kakhovka dam"
+      },
+      {
+        "date": "2024-02-17",
+        "event": "Chute d'Avdiivka aux mains des Russes",
+        "event_en": "Fall of Avdiivka to Russian forces"
+      },
+      {
+        "date": "2025-01-20",
+        "event": "Offensive russe majeure dans le Donbass",
+        "event_en": "Major Russian offensive in Donbass"
+      },
+      {
+        "date": "2026-02-03",
+        "event": "Plus grande attaque aérienne de l'année (450 drones, 71 missiles)",
+        "event_en": "Largest aerial attack of the year (450 drones, 71 missiles)"
+      }
+    ],
+    "temoignages": [
+      {
+        "texte": "Nous vivions dans le métro depuis trois jours. Ma fille de six ans me demandait chaque matin si les bombes avaient fini.",
+        "texte_en": "We had been living in the metro for three days. My six-year-old daughter asked me every morning if the bombs were over.",
+        "source": "UNHCR",
+        "profil": "Olena, mère de famille, Kharkiv",
+        "profil_en": "Olena, mother, Kharkiv"
+      },
+      {
+        "texte": "J'étais professeur d'université. Maintenant je suis réfugié en Pologne, je travaille dans un entrepôt.",
+        "texte_en": "I was a university professor. Now I'm a refugee in Poland, working in a warehouse.",
+        "source": "HRW",
+        "profil": "Dmytro, 52 ans, réfugié en Pologne",
+        "profil_en": "Dmytro, 52, refugee in Poland"
+      }
+    ],
+    "fiche_educative": {
+      "qui": "La Russie a envahi l'Ukraine, un pays souverain d'Europe de l'Est. L'Ukraine résiste avec le soutien occidental.",
+      "qui_en": "Russia invaded Ukraine, a sovereign country in Eastern Europe. Ukraine resists with Western support.",
+      "pourquoi": "La Russie s'oppose à l'élargissement de l'OTAN et revendique des liens historiques avec l'Ukraine. L'Ukraine veut rejoindre l'UE et l'OTAN.",
+      "pourquoi_en": "Russia opposes NATO expansion and claims historical ties to Ukraine. Ukraine wants to join the EU and NATO.",
+      "depuis_quand": "L'invasion a commencé le 24 février 2022, mais le conflit dans le Donbass dure depuis 2014.",
+      "depuis_quand_en": "The invasion began on February 24, 2022, but conflict in Donbas has lasted since 2014.",
+      "consequences": "Plus de 500 000 morts, 6 millions de réfugiés, destruction massive d'infrastructures, crise énergétique européenne.",
+      "consequences_en": "Over 500,000 dead, 6 million refugees, massive infrastructure destruction, European energy crisis.",
+      "solutions": "Négociations diplomatiques, cessez-le-feu, garanties de sécurité internationales, reconstruction.",
+      "solutions_en": "Diplomatic negotiations, ceasefire, international security guarantees, reconstruction."
+    },
+    "comparaison_population": {
+      "deplaces": 6000000,
+      "victimes": 500000
+    }
+  },
+  {
+    "name": "Guerre de Gaza (Israël-Palestine)",
+    "lat": 31.3547,
+    "lng": 34.3088,
+    "region": "Moyen-Orient",
+    "type": "Conflit international",
+    "intensity": "haute",
+    "parties": [
+      "Israël",
+      "Hamas",
+      "Jihad islamique palestinien"
+    ],
+    "startDate": "2023-10-07",
+    "casualties": 73600,
+    "summary": "Offensive israélienne sur Gaza après l'attaque du 7 octobre 2023. Plus de 72 000 Palestiniens et 2 000 Israéliens tués. Un cessez-le-feu en janvier 2025, régulièrement violé. 90% des infrastructures civiles détruites. Les Houthis ont réduit leurs attaques en mer Rouge suite au cessez-le-feu.",
+    "name_en": "Gaza War (Israel-Palestine)",
+    "summary_en": "Israeli offensive on Gaza following the October 7, 2023 attack. Over 72,000 Palestinians and 2,000 Israelis killed. A ceasefire in January 2025 has been regularly violated. 90% of civilian infrastructure destroyed. The Houthis have scaled back their Red Sea attacks following the ceasefire.",
+    "news": [
+      {
+        "title": "Cessez-le-feu à Gaza : bilan un an après",
+        "date": "2026-01-16",
+        "source": "Al Jazeera",
+        "url": "https://www.aljazeera.com/news/middle-east/"
+      },
+      {
+        "title": "488 tués depuis le cessez-le-feu de janvier 2025",
+        "date": "2026-01-20",
+        "source": "Reuters",
+        "url": "https://www.reuters.com/world/middle-east/"
+      },
+      {
+        "title": "Reconstruction de Gaza : un défi colossal",
+        "date": "2026-02-01",
+        "source": "BBC News",
+        "url": "https://www.bbc.com/news/world-middle-east"
+      }
+    ],
+    "timeline": [
+      {
+        "date": "2023-10-07",
+        "event": "Attaque du Hamas sur Israël — 1 200 tués",
+        "event_en": "Hamas attack on Israel — 1,200 killed"
+      },
+      {
+        "date": "2023-10-27",
+        "event": "Début de l'invasion terrestre de Gaza",
+        "event_en": "Start of ground invasion of Gaza"
+      },
+      {
+        "date": "2024-01-26",
+        "event": "Ordonnance de la CIJ contre Israël",
+        "event_en": "ICJ ruling against Israel"
+      },
+      {
+        "date": "2024-05-07",
+        "event": "Offensive israélienne sur Rafah",
+        "event_en": "Israeli offensive on Rafah"
+      },
+      {
+        "date": "2024-11-21",
+        "event": "CPI émet des mandats d'arrêt",
+        "event_en": "ICC issues arrest warrants"
+      },
+      {
+        "date": "2025-01-15",
+        "event": "Cessez-le-feu entré en vigueur",
+        "event_en": "Ceasefire enters into force"
+      },
+      {
+        "date": "2026-01-20",
+        "event": "488 tués depuis le cessez-le-feu",
+        "event_en": "488 killed since ceasefire"
+      }
+    ],
+    "temoignages": [
+      {
+        "texte": "Il n'y a plus rien à Gaza. Pas d'eau, pas de nourriture, pas de maison. On survit, on ne vit plus.",
+        "texte_en": "There is nothing left in Gaza. No water, no food, no home. We survive, we no longer live.",
+        "source": "MSF",
+        "profil": "Ahmad, père de famille, Gaza",
+        "profil_en": "Ahmad, father, Gaza"
+      },
+      {
+        "texte": "J'ai perdu 23 membres de ma famille en une seule frappe. Comment expliquer ça à mes enfants survivants ?",
+        "texte_en": "I lost 23 family members in a single strike. How do I explain that to my surviving children?",
+        "source": "UNICEF",
+        "profil": "Fatima, 38 ans, nord de Gaza",
+        "profil_en": "Fatima, 38, northern Gaza"
+      }
+    ],
+    "fiche_educative": {
+      "qui": "Israël mène une offensive militaire contre le Hamas à Gaza. Les civils palestiniens sont les premières victimes.",
+      "qui_en": "Israel is conducting a military offensive against Hamas in Gaza. Palestinian civilians are the primary victims.",
+      "pourquoi": "Après l'attaque du Hamas le 7 octobre 2023 (1 200 morts, 250 otages), Israël a lancé une opération militaire massive.",
+      "pourquoi_en": "After Hamas's attack on October 7, 2023 (1,200 dead, 250 hostages), Israel launched a massive military operation.",
+      "depuis_quand": "La phase actuelle depuis le 7 octobre 2023, mais le conflit israélo-palestinien dure depuis 1948.",
+      "depuis_quand_en": "The current phase since October 7, 2023, but the Israeli-Palestinian conflict has lasted since 1948.",
+      "consequences": "Plus de 73 000 morts, 90% des infrastructures détruites, famine, déplacement de 1,9 million de personnes.",
+      "consequences_en": "Over 73,000 dead, 90% of infrastructure destroyed, famine, displacement of 1.9 million people.",
+      "solutions": "Cessez-le-feu permanent, solution à deux États, aide humanitaire d'urgence, reconstruction.",
+      "solutions_en": "Permanent ceasefire, two-state solution, emergency humanitarian aid, reconstruction."
+    },
+    "comparaison_population": {
+      "deplaces": 1900000,
+      "victimes": 73600
+    }
+  },
+  {
+    "name": "Conflit en Cisjordanie",
+    "lat": 31.9522,
+    "lng": 35.2332,
+    "region": "Moyen-Orient",
+    "type": "Conflit international",
+    "intensity": "moyenne",
+    "parties": [
+      "Israël (armée et colons)",
+      "Groupes armés palestiniens",
+      "Autorité palestinienne"
+    ],
+    "startDate": "2023-10-07",
+    "casualties": 1500,
+    "summary": "Escalade de la violence en Cisjordanie avec raids militaires israéliens réguliers, violences de colons et attaques de groupes armés palestiniens. Les opérations militaires se sont intensifiées dans les camps de réfugiés de Jénine et Tulkarem tout au long de 2025.",
+    "name_en": "West Bank Conflict",
+    "summary_en": "Escalating violence in the West Bank with regular Israeli military raids, settler violence, and attacks by Palestinian armed groups. Military operations intensified in the Jenin and Tulkarem refugee camps throughout 2025.",
+    "news": [
+      {
+        "title": "Raids intensifiés dans les camps de Jénine",
+        "date": "2026-01-28",
+        "source": "Al Jazeera",
+        "url": "https://www.aljazeera.com/news/middle-east/"
+      },
+      {
+        "title": "Violences de colons en hausse en Cisjordanie",
+        "date": "2026-01-15",
+        "source": "BBC News",
+        "url": "https://www.bbc.com/news/world-middle-east"
+      },
+      {
+        "title": "L'AP perd le contrôle de zones en Cisjordanie",
+        "date": "2026-02-03",
+        "source": "Reuters",
+        "url": "https://www.reuters.com/world/middle-east/"
+      }
+    ],
+    "timeline": [],
+    "temoignages": [
+      {
+        "texte": "Les colons sont venus avec l'armée. Ils ont détruit notre oliveraie, 200 arbres centenaires.",
+        "texte_en": "The settlers came with the army. They destroyed our olive grove, 200 century-old trees.",
+        "source": "HRW",
+        "profil": "Ibrahim, agriculteur, Naplouse",
+        "profil_en": "Ibrahim, farmer, Nablus"
+      }
+    ],
+    "fiche_educative": {
+      "qui": "L'armée israélienne et les colons face aux Palestiniens de Cisjordanie. L'Autorité palestinienne administre partiellement le territoire.",
+      "qui_en": "The Israeli army and settlers versus Palestinians in the West Bank. The Palestinian Authority partially administers the territory.",
+      "pourquoi": "Expansion des colonies israéliennes, raids militaires fréquents, tensions autour de l'accès aux ressources et aux terres.",
+      "pourquoi_en": "Expansion of Israeli settlements, frequent military raids, tensions over access to resources and land.",
+      "depuis_quand": "Occupation depuis 1967, intensification depuis octobre 2023.",
+      "depuis_quand_en": "Occupation since 1967, intensification since October 2023.",
+      "consequences": "Des centaines de morts, destructions de maisons, restrictions de mouvement, économie paralysée.",
+      "consequences_en": "Hundreds dead, home demolitions, movement restrictions, paralyzed economy.",
+      "solutions": "Fin de l'occupation, gel des colonies, protection internationale des civils.",
+      "solutions_en": "End of occupation, settlement freeze, international civilian protection."
+    },
+    "comparaison_population": {
+      "deplaces": 200000,
+      "victimes": 850
+    }
+  },
+  {
+    "name": "Conflit Israël-Liban (Hezbollah)",
+    "lat": 33.8547,
+    "lng": 35.8623,
+    "region": "Moyen-Orient",
+    "type": "Conflit international",
+    "intensity": "moyenne",
+    "parties": [
+      "Israël",
+      "Hezbollah",
+      "Armée libanaise"
+    ],
+    "startDate": "2023-10-08",
+    "casualties": 4500,
+    "summary": "Escalade entre Israël et le Hezbollah liée au conflit de Gaza. Bombardements massifs israéliens sur le sud du Liban et la banlieue de Beyrouth en 2024. Un cessez-le-feu fin 2024, mais les tensions restent vives et Israël gère de multiples fronts actifs en 2026.",
+    "name_en": "Israel-Lebanon Conflict (Hezbollah)",
+    "summary_en": "Escalation between Israel and Hezbollah linked to the Gaza conflict. Massive Israeli bombardments on southern Lebanon and Beirut's suburbs in 2024. A ceasefire was reached in late 2024, but tensions remain high and Israel is managing multiple active fronts in 2026.",
+    "news": [
+      {
+        "title": "Tensions persistantes à la frontière libano-israélienne",
+        "date": "2026-01-25",
+        "source": "Reuters",
+        "url": "https://www.reuters.com/world/middle-east/"
+      },
+      {
+        "title": "Le Hezbollah se réarme malgré le cessez-le-feu",
+        "date": "2026-02-01",
+        "source": "Al Jazeera",
+        "url": "https://www.aljazeera.com/news/middle-east/"
+      },
+      {
+        "title": "Liban : reconstruction lente dans le sud",
+        "date": "2026-01-18",
+        "source": "BBC News",
+        "url": "https://www.bbc.com/news/world-middle-east"
+      }
+    ],
+    "timeline": [],
+    "temoignages": [
+      {
+        "texte": "Notre village à la frontière est devenu une zone de tirs croisés. On a fui avec juste nos papiers.",
+        "texte_en": "Our village on the border became a crossfire zone. We fled with just our documents.",
+        "source": "UNHCR",
+        "profil": "Miriam, 45 ans, sud-Liban",
+        "profil_en": "Miriam, 45, southern Lebanon"
+      }
+    ],
+    "fiche_educative": {
+      "qui": "Israël contre le Hezbollah libanais, milice chiite soutenue par l'Iran.",
+      "qui_en": "Israel versus Lebanese Hezbollah, a Shiite militia backed by Iran.",
+      "pourquoi": "Échanges de tirs transfrontaliers en solidarité avec Gaza, escalade militaire israélienne au Liban.",
+      "pourquoi_en": "Cross-border fire exchanges in solidarity with Gaza, Israeli military escalation in Lebanon.",
+      "depuis_quand": "Escalade depuis octobre 2023, rivalité historique depuis 1982.",
+      "depuis_quand_en": "Escalation since October 2023, historical rivalry since 1982.",
+      "consequences": "Des milliers de morts, déplacements massifs au sud-Liban, destruction d'infrastructures.",
+      "consequences_en": "Thousands dead, mass displacement in southern Lebanon, infrastructure destruction.",
+      "solutions": "Application de la résolution 1701 de l'ONU, diplomatie régionale, désarmement des milices.",
+      "solutions_en": "Implementation of UN Resolution 1701, regional diplomacy, militia disarmament."
+    },
+    "comparaison_population": {
+      "deplaces": 500000,
+      "victimes": 4500
+    }
+  },
+  {
+    "name": "Guerre civile au Soudan",
+    "lat": 15.5007,
+    "lng": 32.5599,
+    "region": "Afrique",
+    "type": "Guerre civile",
+    "intensity": "haute",
+    "parties": [
+      "Forces armées soudanaises (SAF)",
+      "Forces de soutien rapide (RSF)"
+    ],
+    "startDate": "2023-04-15",
+    "casualties": 150000,
+    "summary": "Guerre entre l'armée soudanaise et les RSF, l'une des pires crises humanitaires au monde. Le massacre d'El Fasher (oct. 2025) fait jusqu'à 60 000 morts. Famine au Darfour. En février 2026, 90 civils tués par drones en 2 semaines. Session spéciale du Conseil des droits de l'homme le 9 février.",
+    "name_en": "Sudanese Civil War",
+    "summary_en": "War between the Sudanese army and the RSF, one of the worst humanitarian crises in the world. The El Fasher massacre (Oct. 2025) killed up to 60,000 people. Famine in Darfur. In February 2026, 90 civilians were killed by drones in 2 weeks. A special session of the Human Rights Council was held on February 9.",
+    "news": [
+      {
+        "title": "Session spéciale ONU sur El Fasher",
+        "date": "2026-02-09",
+        "source": "OHCHR",
+        "url": "https://europeantimes.news/2026/02/un-special-session-on-el-fasher-spotlights-sudans-humanitarian-crisis-fueled-by-arms-and-commerce/"
+      },
+      {
+        "title": "Famine étendue à Umm Baru et Kernoi",
+        "date": "2026-02-06",
+        "source": "NBC News",
+        "url": "https://www.nbcnews.com/world/africa/famine-spreads-towns-sudans-darfur-region-hunger-experts-warn-war-rcna257561"
+      },
+      {
+        "title": "Enquête sur la chute d'El Fasher",
+        "date": "2026-02-05",
+        "source": "Human Rights Watch",
+        "url": "https://www.hrw.org/news/2026/02/05/interview-investigating-the-downfall-of-el-fasher-sudan"
+      }
+    ],
+    "timeline": [
+      {
+        "date": "2023-04-15",
+        "event": "Début des combats RSF vs SAF à Khartoum",
+        "event_en": "RSF vs SAF fighting begins in Khartoum"
+      },
+      {
+        "date": "2023-06-15",
+        "event": "Massacres ethniques à El Geneina (Darfour)",
+        "event_en": "Ethnic massacres in El Geneina (Darfur)"
+      },
+      {
+        "date": "2024-01-01",
+        "event": "Expansion du conflit au Darfour",
+        "event_en": "Conflict expands to Darfur"
+      },
+      {
+        "date": "2024-06-15",
+        "event": "Famine déclarée dans plusieurs régions",
+        "event_en": "Famine declared in several regions"
+      },
+      {
+        "date": "2025-10-15",
+        "event": "Chute d'El Fasher — massacre de 60 000 personnes",
+        "event_en": "Fall of El Fasher — 60,000 massacred"
+      },
+      {
+        "date": "2026-02-06",
+        "event": "Famine étendue à Umm Baru et Kernoi",
+        "event_en": "Famine spreads to Umm Baru and Kernoi"
+      },
+      {
+        "date": "2026-02-09",
+        "event": "Session spéciale du Conseil des droits de l'homme",
+        "event_en": "Special session of the Human Rights Council"
+      }
+    ],
+    "temoignages": [
+      {
+        "texte": "Les RSF sont entrées dans notre quartier à Khartoum. Ils ont tout pris, tout brûlé. Nous avons marché 5 jours pour atteindre le Tchad.",
+        "texte_en": "The RSF entered our neighborhood in Khartoum. They took everything, burned everything. We walked 5 days to reach Chad.",
+        "source": "UNHCR",
+        "profil": "Amina, 29 ans, réfugiée au Tchad",
+        "profil_en": "Amina, 29, refugee in Chad"
+      },
+      {
+        "texte": "Au Darfour, c'est un génocide qui se répète. Le monde regarde ailleurs, encore une fois.",
+        "texte_en": "In Darfur, it's a genocide repeating itself. The world looks away, once again.",
+        "source": "HRW",
+        "profil": "Moussa, activiste soudanais",
+        "profil_en": "Moussa, Sudanese activist"
+      }
+    ],
+    "fiche_educative": {
+      "qui": "L'armée soudanaise (SAF) contre les Forces de soutien rapide (RSF), deux anciennes factions alliées.",
+      "qui_en": "The Sudanese Armed Forces (SAF) versus the Rapid Support Forces (RSF), two formerly allied factions.",
+      "pourquoi": "Lutte de pouvoir entre les généraux Burhan (SAF) et Hemetti (RSF) après le coup d'État de 2021.",
+      "pourquoi_en": "Power struggle between generals Burhan (SAF) and Hemetti (RSF) after the 2021 coup.",
+      "depuis_quand": "Guerre ouverte depuis le 15 avril 2023, instabilité chronique depuis l'indépendance (1956).",
+      "depuis_quand_en": "Open war since April 15, 2023, chronic instability since independence (1956).",
+      "consequences": "Plus de 150 000 morts, 10 millions de déplacés, famine au Darfour, pire crise humanitaire au monde.",
+      "consequences_en": "Over 150,000 dead, 10 million displaced, famine in Darfur, worst humanitarian crisis in the world.",
+      "solutions": "Cessez-le-feu, négociations à Djeddah, aide humanitaire, protection des civils.",
+      "solutions_en": "Ceasefire, Jeddah negotiations, humanitarian aid, civilian protection."
+    },
+    "comparaison_population": {
+      "deplaces": 10000000,
+      "victimes": 150000
+    }
+  },
+  {
+    "name": "Guerre civile au Myanmar",
+    "lat": 19.7633,
+    "lng": 96.0785,
+    "region": "Asie",
+    "type": "Guerre civile",
+    "intensity": "haute",
+    "parties": [
+      "Junte militaire (Tatmadaw)",
+      "Gouvernement d'unité nationale (NUG)",
+      "Organisations ethniques armées",
+      "Forces de défense du peuple"
+    ],
+    "startDate": "2021-02-01",
+    "casualties": 85000,
+    "summary": "Cinq ans après le coup d'État, la crise s'approfondit. La junte a organisé des élections fictives (déc. 2025 - jan. 2026) dans 263 des 330 townships. La résistance armée reste vigoureuse avec 85 000 combattants PDF. Un quart de la population en insécurité alimentaire aiguë.",
+    "name_en": "Myanmar Civil War",
+    "summary_en": "Five years after the coup, the crisis deepens. The junta held sham elections (Dec. 2025 - Jan. 2026) in 263 of 330 townships. The armed resistance remains strong with 85,000 PDF fighters. A quarter of the population faces acute food insecurity.",
+    "news": [
+      {
+        "title": "Élections fictives au Myanmar dénoncées par l'ONU",
+        "date": "2026-01-25",
+        "source": "PBS News",
+        "url": "https://www.pbs.org/newshour/show/critics-call-myanmars-first-elections-since-military-coup-a-sham-as-civil-war-rages-on"
+      },
+      {
+        "title": "5 ans après le coup : la crise s'aggrave",
+        "date": "2026-02-01",
+        "source": "UN News",
+        "url": "https://news.un.org/en/story/2026/01/1166866"
+      },
+      {
+        "title": "Myanmar : la junte perd du terrain face à la résistance",
+        "date": "2026-02-03",
+        "source": "East Asia Forum",
+        "url": "https://eastasiaforum.org/2026/02/03/five-years-after-the-coup-where-does-myanmar-find-its-future/"
+      }
+    ],
+    "timeline": [
+      {
+        "date": "2021-02-01",
+        "event": "Coup d'État militaire contre Aung San Suu Kyi",
+        "event_en": "Military coup against Aung San Suu Kyi"
+      },
+      {
+        "date": "2021-03-27",
+        "event": "Massacres de manifestants — plus de 100 tués en un jour",
+        "event_en": "Massacre of protesters — over 100 killed in one day"
+      },
+      {
+        "date": "2023-10-27",
+        "event": "Offensive des Trois Fraternités dans le Shan",
+        "event_en": "Three Brotherhood Alliance offensive in Shan"
+      },
+      {
+        "date": "2024-01-11",
+        "event": "Cessez-le-feu entre la junte et les Trois Fraternités",
+        "event_en": "Ceasefire between junta and Three Brotherhood Alliance"
+      },
+      {
+        "date": "2024-06-01",
+        "event": "La résistance contrôle 60% du territoire",
+        "event_en": "Resistance controls 60% of territory"
+      },
+      {
+        "date": "2025-12-01",
+        "event": "Élections fictives organisées par la junte",
+        "event_en": "Sham elections organized by junta"
+      },
+      {
+        "date": "2026-02-01",
+        "event": "5 ans du coup — crise humanitaire majeure",
+        "event_en": "5 years since coup — major humanitarian crisis"
+      }
+    ],
+    "temoignages": [
+      {
+        "texte": "Depuis le coup d'État, l'armée bombarde nos villages. Mon école a été détruite. J'étudie maintenant dans la jungle.",
+        "texte_en": "Since the coup, the army bombs our villages. My school was destroyed. I now study in the jungle.",
+        "source": "UNICEF",
+        "profil": "Min, 14 ans, État Kayah",
+        "profil_en": "Min, 14, Kayah State"
+      }
+    ],
+    "fiche_educative": {
+      "qui": "La junte militaire (Tatmadaw) contre les forces de résistance civile et les groupes ethniques armés.",
+      "qui_en": "The military junta (Tatmadaw) versus civilian resistance forces and armed ethnic groups.",
+      "pourquoi": "Coup d'État militaire du 1er février 2021 renversant le gouvernement élu d'Aung San Suu Kyi.",
+      "pourquoi_en": "Military coup on February 1, 2021, overthrowing Aung San Suu Kyi's elected government.",
+      "depuis_quand": "Guerre civile depuis février 2021, conflits ethniques depuis l'indépendance (1948).",
+      "depuis_quand_en": "Civil war since February 2021, ethnic conflicts since independence (1948).",
+      "consequences": "Plus de 50 000 morts, 2,7 millions de déplacés, économie effondrée, crise des Rohingya aggravée.",
+      "consequences_en": "Over 50,000 dead, 2.7 million displaced, collapsed economy, worsened Rohingya crisis.",
+      "solutions": "Restauration de la démocratie, fédéralisme, dialogue avec les groupes ethniques.",
+      "solutions_en": "Restoration of democracy, federalism, dialogue with ethnic groups."
+    },
+    "comparaison_population": {
+      "deplaces": 2700000,
+      "victimes": 50000
+    }
+  },
+  {
+    "name": "Conflit au Tigré et tensions Éthiopie",
+    "lat": 13.4967,
+    "lng": 39.4753,
+    "region": "Afrique",
+    "type": "Guerre civile",
+    "intensity": "moyenne",
+    "parties": [
+      "Éthiopie",
+      "Érythrée",
+      "TPLF",
+      "Milices Amhara (Fano)",
+      "OLA (Oromo)"
+    ],
+    "startDate": "2020-11-04",
+    "casualties": 600000,
+    "summary": "Malgré l'accord de paix de Pretoria, les tensions persistent. Les insurrections Fano (Amhara) et OLA (Oromo) ont intensifié leurs activités en 2025. L'Éthiopie fait face à des tensions avec la Somalie et l'Érythrée. Le risque de conflit régional dans la Corne de l'Afrique reste élevé.",
+    "name_en": "Tigray Conflict and Ethiopian Tensions",
+    "summary_en": "Despite the Pretoria peace agreement, tensions persist. The Fano (Amhara) and OLA (Oromo) insurgencies intensified their activities in 2025. Ethiopia faces tensions with Somalia and Eritrea. The risk of regional conflict in the Horn of Africa remains high.",
+    "news": [
+      {
+        "title": "Insurrection Fano : escalade en région Amhara",
+        "date": "2026-01-20",
+        "source": "ACLED",
+        "url": "https://acleddata.com/region/conflict-horn-africa"
+      },
+      {
+        "title": "Éthiopie-Somalie : accord sur l'accès à la mer",
+        "date": "2025-12-28",
+        "source": "African Arguments",
+        "url": "https://africanarguments.org/2026/01/the-horn-and-the-gulf-how-a-new-geopolitical-confluence-is-emerging/"
+      },
+      {
+        "title": "OLA intensifie ses opérations en Oromia",
+        "date": "2026-02-02",
+        "source": "Reuters",
+        "url": "https://www.reuters.com/world/africa/"
+      }
+    ],
+    "timeline": [
+      {
+        "date": "2020-11-04",
+        "event": "Début de la guerre au Tigré",
+        "event_en": "Start of Tigray war"
+      },
+      {
+        "date": "2021-06-28",
+        "event": "Le TPLF reprend Mekelle",
+        "event_en": "TPLF recaptures Mekelle"
+      },
+      {
+        "date": "2022-11-02",
+        "event": "Accord de paix de Pretoria",
+        "event_en": "Pretoria Peace Agreement"
+      },
+      {
+        "date": "2023-09-01",
+        "event": "Insurrection Fano en région Amhara",
+        "event_en": "Fano insurgency in Amhara region"
+      },
+      {
+        "date": "2025-01-01",
+        "event": "Escalade des violences OLA en Oromia",
+        "event_en": "OLA violence escalation in Oromia"
+      },
+      {
+        "date": "2026-01-20",
+        "event": "Insurrection Fano intensifiée",
+        "event_en": "Fano insurgency intensified"
+      }
+    ],
+    "temoignages": [
+      {
+        "texte": "Pendant deux ans, le Tigré était coupé du monde. Pas d'internet, pas de médicaments, pas de nourriture.",
+        "texte_en": "For two years, Tigray was cut off from the world. No internet, no medicine, no food.",
+        "source": "MSF",
+        "profil": "Gebremichael, médecin, Mekelle",
+        "profil_en": "Gebremichael, doctor, Mekelle"
+      }
+    ],
+    "fiche_educative": {
+      "qui": "Le gouvernement fédéral éthiopien et l'Érythrée contre le TPLF (Front de libération du Tigré).",
+      "qui_en": "The Ethiopian federal government and Eritrea versus the TPLF (Tigray People's Liberation Front).",
+      "pourquoi": "Tensions politiques entre le Premier ministre Abiy Ahmed et le TPLF, marginalisé après 2018.",
+      "pourquoi_en": "Political tensions between PM Abiy Ahmed and the TPLF, marginalized after 2018.",
+      "depuis_quand": "Guerre de novembre 2020 à novembre 2022, tensions résiduelles depuis.",
+      "depuis_quand_en": "War from November 2020 to November 2022, residual tensions since.",
+      "consequences": "Estimation de 600 000 morts, famine utilisée comme arme, violences sexuelles massives.",
+      "consequences_en": "Estimated 600,000 dead, famine used as weapon, mass sexual violence.",
+      "solutions": "Application de l'accord de Pretoria (2022), justice transitionnelle, reconstruction.",
+      "solutions_en": "Implementation of the Pretoria Agreement (2022), transitional justice, reconstruction."
+    },
+    "comparaison_population": {
+      "deplaces": 2000000,
+      "victimes": 600000
+    }
+  },
+  {
+    "name": "Insurrection au Mali",
+    "lat": 17.5707,
+    "lng": -3.9962,
+    "region": "Afrique",
+    "type": "Insurrection",
+    "intensity": "haute",
+    "parties": [
+      "Junte militaire malienne",
+      "Wagner/Africa Corps",
+      "JNIM (al-Qaïda)",
+      "État islamique au Sahel",
+      "Rebelles touaregs"
+    ],
+    "startDate": "2012-01-16",
+    "casualties": 25000,
+    "summary": "Le régime militaire malien, appuyé par le groupe Wagner, n'a pas réussi à endiguer les groupes djihadistes. Le JNIM a imposé un blocus partiel sur Bamako en 2025. Le Sahel représente 55% des décès liés à la violence islamiste en Afrique.",
+    "name_en": "Mali Insurgency",
+    "summary_en": "Mali's military regime, backed by the Wagner Group, has failed to contain jihadist groups. JNIM imposed a partial blockade on Bamako in 2025. The Sahel accounts for 55% of deaths linked to Islamist violence in Africa.",
+    "news": [
+      {
+        "title": "Le JNIM renforce son emprise autour de Bamako",
+        "date": "2026-01-30",
+        "source": "Crisis Group",
+        "url": "https://www.crisisgroup.org/cmt/global/10-conflicts-watch-2026"
+      },
+      {
+        "title": "Wagner échoue à sécuriser le nord du Mali",
+        "date": "2026-01-15",
+        "source": "ACLED",
+        "url": "https://acleddata.com/series/conflict-watchlist-2026"
+      },
+      {
+        "title": "Mali : le Sahel en proie à la violence jihadiste",
+        "date": "2026-02-05",
+        "source": "BBC Afrique",
+        "url": "https://www.bbc.com/afrique"
+      }
+    ],
+    "timeline": [
+      {
+        "date": "2012-01-16",
+        "event": "Début de la rébellion touareg",
+        "event_en": "Start of Tuareg rebellion"
+      },
+      {
+        "date": "2013-01-11",
+        "event": "Intervention française (Opération Serval)",
+        "event_en": "French intervention (Operation Serval)"
+      },
+      {
+        "date": "2021-05-24",
+        "event": "Coup d'État militaire",
+        "event_en": "Military coup"
+      },
+      {
+        "date": "2023-12-14",
+        "event": "Départ de la MINUSMA",
+        "event_en": "MINUSMA withdrawal"
+      },
+      {
+        "date": "2024-07-01",
+        "event": "Wagner défait par les rebelles à Tinzaouaten",
+        "event_en": "Wagner defeated by rebels at Tinzaouaten"
+      },
+      {
+        "date": "2025-06-01",
+        "event": "Le JNIM impose un blocus partiel sur Bamako",
+        "event_en": "JNIM imposes partial blockade on Bamako"
+      }
+    ],
+    "temoignages": [
+      {
+        "texte": "Les djihadistes ont interdit l'école. Mes enfants n'ont pas été scolarisés depuis trois ans.",
+        "texte_en": "The jihadists banned school. My children haven't attended school for three years.",
+        "source": "UNICEF",
+        "profil": "Kadiatou, mère, région de Mopti",
+        "profil_en": "Kadiatou, mother, Mopti region"
+      },
+      {
+        "texte": "L'armée malienne et Wagner sont venus « libérer » notre village. Ils ont exécuté 20 hommes.",
+        "texte_en": "The Malian army and Wagner came to 'liberate' our village. They executed 20 men.",
+        "source": "HRW",
+        "profil": "Témoin anonyme, centre du Mali",
+        "profil_en": "Anonymous witness, central Mali"
+      }
+    ],
+    "fiche_educative": {
+      "qui": "Groupes djihadistes (JNIM, EIGS) contre l'armée malienne, soutenue par le groupe Wagner/Africa Corps russe.",
+      "qui_en": "Jihadist groups (JNIM, ISGS) versus the Malian army, supported by Russia's Wagner/Africa Corps.",
+      "pourquoi": "Expansion djihadiste au Sahel, défaillance de l'État, retrait de la France (Barkhane), rivalités communautaires.",
+      "pourquoi_en": "Jihadist expansion in the Sahel, state failure, French withdrawal (Barkhane), communal rivalries.",
+      "depuis_quand": "Insurrection depuis 2012, aggravation depuis le coup d'État de 2020.",
+      "depuis_quand_en": "Insurgency since 2012, worsened since the 2020 coup.",
+      "consequences": "Des milliers de morts, 400 000 déplacés, écoles fermées, économie dévastée.",
+      "consequences_en": "Thousands dead, 400,000 displaced, schools closed, devastated economy.",
+      "solutions": "Dialogue communautaire, renforcement de l'État, développement économique, coopération régionale.",
+      "solutions_en": "Community dialogue, state strengthening, economic development, regional cooperation."
+    },
+    "comparaison_population": {
+      "deplaces": 400000,
+      "victimes": 12000
+    }
+  },
+  {
+    "name": "Insurrection au Burkina Faso",
+    "lat": 12.3714,
+    "lng": -1.5197,
+    "region": "Afrique",
+    "type": "Insurrection",
+    "intensity": "haute",
+    "parties": [
+      "Junte militaire",
+      "JNIM",
+      "État islamique au Sahel"
+    ],
+    "startDate": "2015-01-01",
+    "casualties": 20000,
+    "summary": "La situation sécuritaire continue de se détériorer malgré les promesses de la junte. Les attaques djihadistes sont quasi-quotidiennes. Le Burkina Faso est l'épicentre de la violence islamiste au Sahel, avec les taux de mortalité les plus élevés de la région.",
+    "name_en": "Burkina Faso Insurgency",
+    "summary_en": "The security situation continues to deteriorate despite the junta's promises. Jihadist attacks occur almost daily. Burkina Faso is the epicenter of Islamist violence in the Sahel, with the highest mortality rates in the region.",
+    "news": [
+      {
+        "title": "Burkina : attaques jihadistes quotidiennes",
+        "date": "2026-02-01",
+        "source": "ACLED",
+        "url": "https://acleddata.com/series/conflict-watchlist-2026"
+      },
+      {
+        "title": "La junte militaire perd le contrôle de provinces entières",
+        "date": "2026-01-22",
+        "source": "Crisis Group",
+        "url": "https://www.crisisgroup.org/cmt/global/10-conflicts-watch-2026"
+      },
+      {
+        "title": "Crise humanitaire au Burkina : 2 millions de déplacés",
+        "date": "2026-01-18",
+        "source": "ICRC",
+        "url": "https://www.icrc.org/en/article/humanitarian-outlook-2026"
+      }
+    ],
+    "timeline": [],
+    "temoignages": [
+      {
+        "texte": "Notre marché a été attaqué par des hommes armés. 60 personnes sont mortes. Personne n'est venu nous aider.",
+        "texte_en": "Our market was attacked by armed men. 60 people died. Nobody came to help us.",
+        "source": "HRW",
+        "profil": "Hamidou, commerçant, Sahel burkinabè",
+        "profil_en": "Hamidou, merchant, Burkinabe Sahel"
+      }
+    ],
+    "fiche_educative": {
+      "qui": "Groupes djihadistes (JNIM, EIGS) contre l'armée burkinabè et les Volontaires pour la défense de la patrie (VDP).",
+      "qui_en": "Jihadist groups (JNIM, ISGS) versus the Burkinabe army and Volunteers for the Defense of the Homeland (VDP).",
+      "pourquoi": "Extension de l'insurrection sahélienne, faiblesse de l'État, rivalités communautaires instrumentalisées.",
+      "pourquoi_en": "Extension of the Sahel insurgency, state weakness, instrumentalized communal rivalries.",
+      "depuis_quand": "Depuis 2015, aggravation depuis les coups d'État de 2022.",
+      "depuis_quand_en": "Since 2015, worsened since the 2022 coups.",
+      "consequences": "Plus de 10 000 morts, 2 millions de déplacés, 40% du territoire hors contrôle étatique.",
+      "consequences_en": "Over 10,000 dead, 2 million displaced, 40% of territory outside state control.",
+      "solutions": "Dialogue national, renforcement des forces de sécurité, développement des zones rurales.",
+      "solutions_en": "National dialogue, security force strengthening, rural area development."
+    },
+    "comparaison_population": {
+      "deplaces": 2000000,
+      "victimes": 10000
+    }
+  },
+  {
+    "name": "Insurrection au Niger",
+    "lat": 13.5116,
+    "lng": 2.1254,
+    "region": "Afrique",
+    "type": "Insurrection",
+    "intensity": "haute",
+    "parties": [
+      "Junte militaire nigérienne",
+      "État islamique Province du Sahel (ISSP)",
+      "JNIM"
+    ],
+    "startDate": "2015-01-01",
+    "casualties": 6200,
+    "summary": "La région de Tillabéri est la plus meurtrière du Sahel central en 2025, avec plus de 1 200 morts. L'ISSP est le groupe le plus létal de la région, surpassant le JNIM et les forces armées nigériennes.",
+    "name_en": "Niger Insurgency",
+    "summary_en": "The Tillaberi region is the deadliest area in the central Sahel in 2025, with over 1,200 killed. ISSP is the most lethal group in the region, surpassing both JNIM and the Nigerien armed forces.",
+    "news": [
+      {
+        "title": "Tillabéri : zone la plus meurtrière du Sahel",
+        "date": "2026-01-28",
+        "source": "ACLED",
+        "url": "https://acleddata.com/series/conflict-watchlist-2026"
+      },
+      {
+        "title": "L'ISSP étend ses opérations au Niger",
+        "date": "2026-02-03",
+        "source": "Crisis Group",
+        "url": "https://www.crisisgroup.org/cmt/global/10-conflicts-watch-2026"
+      },
+      {
+        "title": "Niger : la junte face à une crise sécuritaire croissante",
+        "date": "2026-01-10",
+        "source": "Reuters",
+        "url": "https://www.reuters.com/world/africa/"
+      }
+    ],
+    "timeline": [],
+    "temoignages": [
+      {
+        "texte": "Depuis le coup d'État, les sanctions nous affament. Pas de courant, pas d'argent, les djihadistes en profitent.",
+        "texte_en": "Since the coup, sanctions are starving us. No electricity, no money, the jihadists take advantage.",
+        "source": "UNHCR",
+        "profil": "Moussa, 35 ans, Niamey",
+        "profil_en": "Moussa, 35, Niamey"
+      }
+    ],
+    "fiche_educative": {
+      "qui": "Groupes djihadistes contre la junte militaire nigérienne qui a renversé le président Bazoum en 2023.",
+      "qui_en": "Jihadist groups versus the Niger military junta that overthrew President Bazoum in 2023.",
+      "pourquoi": "Instabilité sahélienne, coup d'État de juillet 2023, retrait des forces françaises et américaines.",
+      "pourquoi_en": "Sahel instability, July 2023 coup, withdrawal of French and American forces.",
+      "depuis_quand": "Insurrection djihadiste depuis 2015, crise politique depuis le coup d'État de 2023.",
+      "depuis_quand_en": "Jihadist insurgency since 2015, political crisis since the 2023 coup.",
+      "consequences": "Des milliers de morts, 700 000 déplacés, crise alimentaire, isolement diplomatique.",
+      "consequences_en": "Thousands dead, 700,000 displaced, food crisis, diplomatic isolation.",
+      "solutions": "Retour à l'ordre constitutionnel, coopération régionale, aide au développement.",
+      "solutions_en": "Return to constitutional order, regional cooperation, development aid."
+    },
+    "comparaison_population": {
+      "deplaces": 700000,
+      "victimes": 5000
+    }
+  },
+  {
+    "name": "Conflit au Nigeria (Boko Haram et banditisme)",
+    "lat": 9.082,
+    "lng": 8.6753,
+    "region": "Afrique",
+    "type": "Insurrection",
+    "intensity": "haute",
+    "parties": [
+      "Armée nigériane",
+      "Boko Haram/ISWAP",
+      "Bandits armés",
+      "Milices communautaires"
+    ],
+    "startDate": "2009-07-01",
+    "casualties": 100000,
+    "summary": "Le Nigeria fait face à une triple menace : insurrection Boko Haram/ISWAP au nord-est, banditisme de masse au nord-ouest, et conflits communautaires dans la Middle Belt. Le pays figure parmi les 10 conflits les plus meurtriers au monde en 2025.",
+    "name_en": "Nigeria Conflict (Boko Haram and Banditry)",
+    "summary_en": "Nigeria faces a triple threat: Boko Haram/ISWAP insurgency in the northeast, mass banditry in the northwest, and communal conflicts in the Middle Belt. The country ranks among the 10 deadliest conflicts in the world in 2025.",
+    "news": [
+      {
+        "title": "Nigeria : top 10 des conflits les plus violents",
+        "date": "2026-01-25",
+        "source": "ACLED",
+        "url": "https://acleddata.com/series/acled-conflict-index"
+      },
+      {
+        "title": "Banditisme de masse dans le nord-ouest nigérian",
+        "date": "2026-02-04",
+        "source": "Reuters",
+        "url": "https://www.reuters.com/world/africa/"
+      },
+      {
+        "title": "ISWAP renforce sa présence au nord-est",
+        "date": "2026-01-15",
+        "source": "Crisis Group",
+        "url": "https://www.crisisgroup.org/cmt/global/10-conflicts-watch-2026"
+      }
+    ],
+    "timeline": [
+      {
+        "date": "2009-07-26",
+        "event": "Début de l'insurrection Boko Haram",
+        "event_en": "Start of Boko Haram insurgency"
+      },
+      {
+        "date": "2014-04-14",
+        "event": "Enlèvement de Chibok (276 lycéennes)",
+        "event_en": "Chibok kidnapping (276 schoolgirls)"
+      },
+      {
+        "date": "2016-08-01",
+        "event": "Scission Boko Haram / ISWAP",
+        "event_en": "Boko Haram / ISWAP split"
+      },
+      {
+        "date": "2023-01-01",
+        "event": "Banditisme de masse au nord-ouest",
+        "event_en": "Mass banditry in northwest"
+      },
+      {
+        "date": "2025-06-01",
+        "event": "Le Nigeria parmi les 10 conflits les plus meurtriers",
+        "event_en": "Nigeria among the 10 deadliest conflicts"
+      },
+      {
+        "date": "2026-01-25",
+        "event": "ISWAP renforce sa présence au nord-est",
+        "event_en": "ISWAP strengthens presence in northeast"
+      }
+    ],
+    "temoignages": [
+      {
+        "texte": "Boko Haram a enlevé mes deux filles. Cela fait quatre ans. Je ne sais même pas si elles sont vivantes.",
+        "texte_en": "Boko Haram kidnapped my two daughters. It's been four years. I don't even know if they're alive.",
+        "source": "UNICEF",
+        "profil": "Hauwa, mère, État de Borno",
+        "profil_en": "Hauwa, mother, Borno State"
+      }
+    ],
+    "fiche_educative": {
+      "qui": "Boko Haram et ISWAP (État islamique) au nord-est, bandits armés au nord-ouest, contre les forces nigérianes.",
+      "qui_en": "Boko Haram and ISWAP (Islamic State) in the northeast, armed bandits in the northwest, versus Nigerian forces.",
+      "pourquoi": "Extrémisme religieux, pauvreté extrême, défaillance de la gouvernance, trafic d'armes.",
+      "pourquoi_en": "Religious extremism, extreme poverty, governance failure, arms trafficking.",
+      "depuis_quand": "Insurrection Boko Haram depuis 2009, banditisme massif depuis 2018.",
+      "depuis_quand_en": "Boko Haram insurgency since 2009, mass banditry since 2018.",
+      "consequences": "Plus de 40 000 morts, 3 millions de déplacés, enlèvements de masse, famine dans le nord-est.",
+      "consequences_en": "Over 40,000 dead, 3 million displaced, mass kidnappings, famine in the northeast.",
+      "solutions": "Approche sécuritaire et développement, éducation, dialogue communautaire.",
+      "solutions_en": "Security and development approach, education, community dialogue."
+    },
+    "comparaison_population": {
+      "deplaces": 3000000,
+      "victimes": 40000
+    }
+  },
+  {
+    "name": "Guerre en RD Congo (M23 et groupes armés)",
+    "lat": -1.6596,
+    "lng": 29.222,
+    "region": "Afrique",
+    "type": "Guerre civile",
+    "intensity": "haute",
+    "parties": [
+      "Armée congolaise (FARDC)",
+      "M23",
+      "Rwanda",
+      "ADF",
+      "Milices Maï-Maï"
+    ],
+    "startDate": "2004-01-01",
+    "casualties": 130000,
+    "summary": "Un an après la chute de Goma (jan. 2025), le M23 soutenu par le Rwanda contrôle de vastes territoires. Bukavu et Uvira capturés en 2025. Les Accords de Washington (déc. 2025) n'ont pas stoppé les combats. 7 millions de déplacés, plus de 7 000 tués rien qu'en 2025.",
+    "name_en": "War in DR Congo (M23 and Armed Groups)",
+    "summary_en": "One year after the fall of Goma (Jan. 2025), the Rwanda-backed M23 controls vast territories. Bukavu and Uvira were captured in 2025. The Washington Accords (Dec. 2025) failed to stop the fighting. 7 million displaced, over 7,000 killed in 2025 alone.",
+    "news": [
+      {
+        "title": "Goma un an après : banques fermées, avenir incertain",
+        "date": "2026-01-29",
+        "source": "Al Jazeera",
+        "url": "https://www.aljazeera.com/features/2026/1/29/banks-shut-futures-uncertain-one-year-after-m23-rebels-seized-drcs-goma"
+      },
+      {
+        "title": "L'ONU voit des progrès mais met en garde sur la violence",
+        "date": "2026-02-07",
+        "source": "UN News",
+        "url": "https://news.un.org/en/story/2026/02/1166899"
+      },
+      {
+        "title": "Les USA accusent le Rwanda de nourrir la guerre",
+        "date": "2025-12-12",
+        "source": "CNN",
+        "url": "https://www.cnn.com/2025/12/12/africa/trump-rwanda-war-drc-m23-latam-intl"
+      }
+    ],
+    "timeline": [
+      {
+        "date": "2022-03-28",
+        "event": "Résurgence du M23 au Nord-Kivu",
+        "event_en": "M23 resurgence in North Kivu"
+      },
+      {
+        "date": "2024-02-07",
+        "event": "Le M23 avance vers Goma",
+        "event_en": "M23 advances towards Goma"
+      },
+      {
+        "date": "2025-01-27",
+        "event": "Chute de Goma aux mains du M23",
+        "event_en": "Fall of Goma to M23"
+      },
+      {
+        "date": "2025-06-01",
+        "event": "Capture de Bukavu et Uvira",
+        "event_en": "Capture of Bukavu and Uvira"
+      },
+      {
+        "date": "2025-12-01",
+        "event": "Accords de Washington — combats persistent",
+        "event_en": "Washington Accords — fighting persists"
+      },
+      {
+        "date": "2026-01-29",
+        "event": "Un an après Goma — 7 millions de déplacés",
+        "event_en": "One year after Goma — 7 million displaced"
+      }
+    ],
+    "temoignages": [
+      {
+        "texte": "Le M23 a pris notre ville. Les soldats violent les femmes. L'ONU regarde. Le monde nous a oubliés.",
+        "texte_en": "The M23 took our town. Soldiers rape women. The UN watches. The world has forgotten us.",
+        "source": "MSF",
+        "profil": "Consolée, 25 ans, Nord-Kivu",
+        "profil_en": "Consolée, 25, North Kivu"
+      },
+      {
+        "texte": "Mes enfants travaillent dans les mines de coltan au lieu d'aller à l'école. C'est ça, la guerre des minerais.",
+        "texte_en": "My children work in coltan mines instead of going to school. That's what the mineral war is.",
+        "source": "UNICEF",
+        "profil": "Patient, père, Sud-Kivu",
+        "profil_en": "Patient, father, South Kivu"
+      }
+    ],
+    "fiche_educative": {
+      "qui": "Le M23 (soutenu par le Rwanda) et plus de 100 groupes armés contre l'armée congolaise et la MONUSCO (ONU).",
+      "qui_en": "The M23 (backed by Rwanda) and over 100 armed groups versus the Congolese army and MONUSCO (UN).",
+      "pourquoi": "Contrôle des minerais stratégiques (coltan, cobalt), rivalités ethniques, ingérence du Rwanda et de l'Ouganda.",
+      "pourquoi_en": "Control of strategic minerals (coltan, cobalt), ethnic rivalries, interference from Rwanda and Uganda.",
+      "depuis_quand": "Conflits armés continus depuis 1996, crise M23 relancée en 2022.",
+      "depuis_quand_en": "Continuous armed conflict since 1996, M23 crisis relaunched in 2022.",
+      "consequences": "Plus de 6 millions de morts depuis 1996, 7 millions de déplacés, violences sexuelles systématiques.",
+      "consequences_en": "Over 6 million dead since 1996, 7 million displaced, systematic sexual violence.",
+      "solutions": "Pression sur le Rwanda, processus de Nairobi/Luanda, réforme de l'armée congolaise.",
+      "solutions_en": "Pressure on Rwanda, Nairobi/Luanda process, reform of the Congolese army."
+    },
+    "comparaison_population": {
+      "deplaces": 7000000,
+      "victimes": 120000
+    }
+  },
+  {
+    "name": "Conflit en Somalie (Al-Shabaab)",
+    "lat": 5.1521,
+    "lng": 46.1996,
+    "region": "Afrique",
+    "type": "Insurrection",
+    "intensity": "haute",
+    "parties": [
+      "Gouvernement somalien",
+      "AMISOM/ATMIS",
+      "Al-Shabaab",
+      "État islamique en Somalie"
+    ],
+    "startDate": "2006-01-01",
+    "casualties": 50000,
+    "summary": "L'insurrection d'Al-Shabaab persiste malgré les offensives. Les opérations contre l'EI en Somalie ont explosé, passant d'un seul incident en 2024 à plus de 400 en 2025. Les tensions avec l'Éthiopie et la reconnaissance de Somaliland par Israël compliquent la situation.",
+    "name_en": "Somalia Conflict (Al-Shabaab)",
+    "summary_en": "The Al-Shabaab insurgency persists despite offensives. Operations against IS in Somalia surged from a single incident in 2024 to over 400 in 2025. Tensions with Ethiopia and Israel's recognition of Somaliland complicate the situation.",
+    "news": [
+      {
+        "title": "Opérations anti-EI multipliées par 400 en Somalie",
+        "date": "2026-01-18",
+        "source": "ACLED",
+        "url": "https://acleddata.com/series/conflict-watchlist-2026"
+      },
+      {
+        "title": "Israël reconnaît le Somaliland : tensions régionales",
+        "date": "2025-12-26",
+        "source": "Al Jazeera",
+        "url": "https://www.aljazeera.com/news/africa/"
+      },
+      {
+        "title": "Al-Shabaab résiste aux offensives gouvernementales",
+        "date": "2026-02-05",
+        "source": "Crisis Group",
+        "url": "https://www.crisisgroup.org/cmt/global/10-conflicts-watch-2026"
+      }
+    ],
+    "timeline": [
+      {
+        "date": "2006-06-01",
+        "event": "Les tribunaux islamiques prennent Mogadiscio",
+        "event_en": "Islamic Courts seize Mogadishu"
+      },
+      {
+        "date": "2011-08-06",
+        "event": "Al-Shabaab se retire de Mogadiscio",
+        "event_en": "Al-Shabaab withdraws from Mogadishu"
+      },
+      {
+        "date": "2017-10-14",
+        "event": "Attentat de Mogadiscio — 587 morts",
+        "event_en": "Mogadishu bombing — 587 killed"
+      },
+      {
+        "date": "2022-08-01",
+        "event": "Offensive gouvernementale anti-Shabaab",
+        "event_en": "Government anti-Shabaab offensive"
+      },
+      {
+        "date": "2025-01-01",
+        "event": "Opérations anti-EI multipliées par 400",
+        "event_en": "Anti-IS operations multiplied by 400"
+      },
+      {
+        "date": "2025-12-26",
+        "event": "Israël reconnaît le Somaliland",
+        "event_en": "Israel recognizes Somaliland"
+      }
+    ],
+    "temoignages": [
+      {
+        "texte": "Al-Shabaab a attaqué notre camp de déplacés. Ils recrutent nos fils de force. Mon aîné avait 13 ans.",
+        "texte_en": "Al-Shabaab attacked our displacement camp. They forcibly recruit our sons. My eldest was 13.",
+        "source": "UNHCR",
+        "profil": "Halimo, mère, Mogadiscio",
+        "profil_en": "Halimo, mother, Mogadishu"
+      }
+    ],
+    "fiche_educative": {
+      "qui": "Al-Shabaab (affilié à Al-Qaïda) contre le gouvernement somalien et l'ATMIS (force de l'Union africaine).",
+      "qui_en": "Al-Shabaab (Al-Qaeda affiliate) versus the Somali government and ATMIS (African Union force).",
+      "pourquoi": "État failli depuis 1991, extrémisme islamiste, rivalités claniques, piraterie.",
+      "pourquoi_en": "Failed state since 1991, Islamist extremism, clan rivalries, piracy.",
+      "depuis_quand": "Insurrection d'Al-Shabaab depuis 2006, instabilité depuis 1991.",
+      "depuis_quand_en": "Al-Shabaab insurgency since 2006, instability since 1991.",
+      "consequences": "Des milliers de morts par an, 3,8 millions de déplacés, famine récurrente.",
+      "consequences_en": "Thousands dead per year, 3.8 million displaced, recurring famine.",
+      "solutions": "Renforcement de l'État somalien, intégration des milices claniques, aide au développement.",
+      "solutions_en": "Strengthening the Somali state, integration of clan militias, development aid."
+    },
+    "comparaison_population": {
+      "deplaces": 3800000,
+      "victimes": 20000
+    }
+  },
+  {
+    "name": "Conflit au Yémen (Houthis)",
+    "lat": 15.3694,
+    "lng": 44.191,
+    "region": "Moyen-Orient",
+    "type": "Guerre civile",
+    "intensity": "moyenne",
+    "parties": [
+      "Houthis (Ansar Allah)",
+      "Gouvernement reconnu",
+      "Coalition arabe",
+      "Conseil de transition du Sud"
+    ],
+    "startDate": "2014-09-01",
+    "casualties": 377000,
+    "summary": "Les Houthis ont réduit leurs attaques en mer Rouge (7 en 2025 vs 150 en 2024) suite au cessez-le-feu Gaza. Le Conseil de transition du Sud a étendu son contrôle, aggravant les tensions avec l'Arabie saoudite. La crise humanitaire persiste.",
+    "name_en": "Yemen Conflict (Houthis)",
+    "summary_en": "The Houthis have drastically reduced their Red Sea attacks (7 in 2025 vs. 150 in 2024) following the Gaza ceasefire. The Southern Transitional Council has expanded its control, heightening tensions with Saudi Arabia. The humanitarian crisis persists.",
+    "news": [
+      {
+        "title": "Houthis : réduction drastique des attaques maritimes",
+        "date": "2026-01-10",
+        "source": "Soufan Center",
+        "url": "https://thesoufancenter.org/intelbrief-2025-july-8/"
+      },
+      {
+        "title": "ONU prolonge le suivi des attaques en mer Rouge",
+        "date": "2026-01-30",
+        "source": "UN",
+        "url": "https://press.un.org/en/2026/sc16274.doc.htm"
+      },
+      {
+        "title": "Le STC étend son contrôle au sud du Yémen",
+        "date": "2026-02-02",
+        "source": "ACLED",
+        "url": "https://acleddata.com/report/regional-power-struggles-fuel-simmering-tensions-across-red-sea"
+      }
+    ],
+    "timeline": [
+      {
+        "date": "2014-09-21",
+        "event": "Les Houthis prennent Sanaa",
+        "event_en": "Houthis seize Sanaa"
+      },
+      {
+        "date": "2015-03-26",
+        "event": "Intervention de la coalition arabe",
+        "event_en": "Arab coalition intervention"
+      },
+      {
+        "date": "2022-04-02",
+        "event": "Trêve de deux mois",
+        "event_en": "Two-month truce"
+      },
+      {
+        "date": "2023-11-19",
+        "event": "Début des attaques Houthis en mer Rouge",
+        "event_en": "Start of Houthi Red Sea attacks"
+      },
+      {
+        "date": "2024-01-12",
+        "event": "Frappes USA/UK sur le Yémen",
+        "event_en": "US/UK strikes on Yemen"
+      },
+      {
+        "date": "2025-01-15",
+        "event": "Réduction des attaques après cessez-le-feu Gaza",
+        "event_en": "Attacks reduced after Gaza ceasefire"
+      }
+    ],
+    "temoignages": [
+      {
+        "texte": "Mon fils est mort de faim. Il avait deux ans. Il n'y avait pas de lait, pas de médicaments, rien.",
+        "texte_en": "My son died of hunger. He was two years old. There was no milk, no medicine, nothing.",
+        "source": "MSF",
+        "profil": "Samira, mère, Hodeidah",
+        "profil_en": "Samira, mother, Hodeidah"
+      }
+    ],
+    "fiche_educative": {
+      "qui": "Les Houthis (Ansar Allah, soutenus par l'Iran) contre la coalition arabe menée par l'Arabie saoudite.",
+      "qui_en": "The Houthis (Ansar Allah, backed by Iran) versus the Saudi-led Arab coalition.",
+      "pourquoi": "Prise de pouvoir des Houthis en 2014, intervention saoudienne en 2015, rivalité Iran-Arabie saoudite.",
+      "pourquoi_en": "Houthi power seizure in 2014, Saudi intervention in 2015, Iran-Saudi Arabia rivalry.",
+      "depuis_quand": "Guerre civile depuis 2014, intervention de la coalition depuis mars 2015.",
+      "depuis_quand_en": "Civil war since 2014, coalition intervention since March 2015.",
+      "consequences": "377 000 morts, pire crise humanitaire avant le Soudan, 21 millions ayant besoin d'aide.",
+      "consequences_en": "377,000 dead, worst humanitarian crisis before Sudan, 21 million in need of aid.",
+      "solutions": "Négociations sous l'égide de l'ONU, trêve durable, accès humanitaire.",
+      "solutions_en": "UN-brokered negotiations, lasting truce, humanitarian access."
+    },
+    "comparaison_population": {
+      "deplaces": 4500000,
+      "victimes": 377000
+    }
+  },
+  {
+    "name": "Conflit en Syrie (post-Assad)",
+    "lat": 35.248,
+    "lng": 38.9968,
+    "region": "Moyen-Orient",
+    "type": "Guerre civile",
+    "intensity": "moyenne",
+    "parties": [
+      "HTS (Gouvernement de transition)",
+      "Forces démocratiques syriennes (FDS)",
+      "Turquie/ASL",
+      "Daëch (résiduel)"
+    ],
+    "startDate": "2011-03-15",
+    "casualties": 500000,
+    "summary": "La chute du régime Assad en décembre 2024 a mis fin à 13 ans de guerre civile, mais l'instabilité persiste. Des massacres de minorités ont eu lieu en 2025. Les négociations pour intégrer les FDS dans l'armée nationale ont échoué, la Turquie menaçant d'intervenir.",
+    "name_en": "Syria Conflict (Post-Assad)",
+    "summary_en": "The fall of the Assad regime in December 2024 ended 13 years of civil war, but instability persists. Massacres of minorities occurred in 2025. Negotiations to integrate the SDF into the national army have failed, with Turkey threatening to intervene.",
+    "news": [
+      {
+        "title": "Syrie post-Assad : instabilité persistante",
+        "date": "2026-01-20",
+        "source": "Crisis Group",
+        "url": "https://www.crisisgroup.org/cmt/global/10-conflicts-watch-2026"
+      },
+      {
+        "title": "La Turquie menace d'intervenir contre les FDS",
+        "date": "2026-02-01",
+        "source": "Al Jazeera",
+        "url": "https://www.aljazeera.com/news/middle-east/"
+      },
+      {
+        "title": "Violences contre les minorités en Syrie",
+        "date": "2026-01-15",
+        "source": "Human Rights Watch",
+        "url": "https://www.hrw.org/world-report/2026/"
+      }
+    ],
+    "timeline": [
+      {
+        "date": "2011-03-15",
+        "event": "Début des protestations en Syrie",
+        "event_en": "Start of protests in Syria"
+      },
+      {
+        "date": "2014-06-29",
+        "event": "Daech proclame le califat",
+        "event_en": "ISIS proclaims caliphate"
+      },
+      {
+        "date": "2017-10-17",
+        "event": "Chute de Raqqa (capitale de Daech)",
+        "event_en": "Fall of Raqqa (ISIS capital)"
+      },
+      {
+        "date": "2024-12-08",
+        "event": "Chute du régime Assad — HTS prend Damas",
+        "event_en": "Fall of Assad regime — HTS takes Damascus"
+      },
+      {
+        "date": "2025-03-01",
+        "event": "Massacres de minorités signalés",
+        "event_en": "Minority massacres reported"
+      },
+      {
+        "date": "2026-01-15",
+        "event": "Échec des négociations FDS-gouvernement de transition",
+        "event_en": "Failed SDF-transitional government negotiations"
+      }
+    ],
+    "temoignages": [
+      {
+        "texte": "Assad est parti mais la paix n'est pas venue. Les factions se battent pour les ruines de notre pays.",
+        "texte_en": "Assad is gone but peace hasn't come. Factions fight over the ruins of our country.",
+        "source": "UNHCR",
+        "profil": "Youssef, 40 ans, Alep",
+        "profil_en": "Youssef, 40, Aleppo"
+      }
+    ],
+    "fiche_educative": {
+      "qui": "Multiples factions : HTS, forces kurdes (FDS), factions pro-turques, résidus de Daech.",
+      "qui_en": "Multiple factions: HTS, Kurdish forces (SDF), pro-Turkish factions, ISIS remnants.",
+      "pourquoi": "Chute du régime Assad fin 2024, lutte pour le contrôle territorial et politique de la transition.",
+      "pourquoi_en": "Fall of the Assad regime in late 2024, struggle for territorial control and political transition.",
+      "depuis_quand": "Guerre civile depuis 2011, phase post-Assad depuis fin 2024.",
+      "depuis_quand_en": "Civil war since 2011, post-Assad phase since late 2024.",
+      "consequences": "Plus de 500 000 morts au total, 6,8 millions de réfugiés syriens dans le monde.",
+      "consequences_en": "Over 500,000 total dead, 6.8 million Syrian refugees worldwide.",
+      "solutions": "Processus de transition politique inclusif, retour des réfugiés, reconstruction.",
+      "solutions_en": "Inclusive political transition process, refugee return, reconstruction."
+    },
+    "comparaison_population": {
+      "deplaces": 6800000,
+      "victimes": 500000
+    }
+  },
+  {
+    "name": "Violence des gangs en Haïti",
+    "lat": 18.5944,
+    "lng": -72.3074,
+    "region": "Amériques",
+    "type": "Conflit interethnique",
+    "intensity": "haute",
+    "parties": [
+      "Coalitions de gangs (Viv Ansanm)",
+      "Gang Gran Grif",
+      "Forces de sécurité haïtiennes",
+      "Mission multinationale (Kenya)"
+    ],
+    "startDate": "2018-01-01",
+    "casualties": 16000,
+    "summary": "Les gangs contrôlent 90% de Port-au-Prince. Plus de 4 388 tués entre janvier et septembre 2025. 50% des membres de gangs sont des enfants. La force de suppression autorisée par l'ONU n'a pas réussi à endiguer la violence.",
+    "name_en": "Gang Violence in Haiti",
+    "summary_en": "Gangs control 90% of Port-au-Prince. Over 4,388 killed between January and September 2025. 50% of gang members are children. The UN-authorized suppression force has failed to contain the violence.",
+    "news": [
+      {
+        "title": "Haïti : la violence des gangs atteint des records",
+        "date": "2026-01-28",
+        "source": "Crisis Group",
+        "url": "https://www.crisisgroup.org/cmt/global/10-conflicts-watch-2026"
+      },
+      {
+        "title": "Mission multinationale : résultats mitigés",
+        "date": "2026-02-05",
+        "source": "Reuters",
+        "url": "https://www.reuters.com/world/americas/"
+      },
+      {
+        "title": "50% des membres de gangs sont des enfants",
+        "date": "2026-01-12",
+        "source": "ICRC",
+        "url": "https://www.icrc.org/en/article/humanitarian-outlook-2026"
+      }
+    ],
+    "timeline": [
+      {
+        "date": "2021-07-07",
+        "event": "Assassinat du président Jovenel Moïse",
+        "event_en": "Assassination of President Jovenel Moïse"
+      },
+      {
+        "date": "2024-02-29",
+        "event": "Les gangs attaquent des institutions clés",
+        "event_en": "Gangs attack key institutions"
+      },
+      {
+        "date": "2024-06-25",
+        "event": "Déploiement de la force multinationale kényane",
+        "event_en": "Deployment of Kenyan multinational force"
+      },
+      {
+        "date": "2025-01-01",
+        "event": "Les gangs contrôlent 85% de Port-au-Prince",
+        "event_en": "Gangs control 85% of Port-au-Prince"
+      },
+      {
+        "date": "2026-01-20",
+        "event": "Crise humanitaire extrême — famine urbaine",
+        "event_en": "Extreme humanitarian crisis — urban famine"
+      }
+    ],
+    "temoignages": [
+      {
+        "texte": "Les gangs contrôlent tout : l'eau, la nourriture, même l'accès à l'hôpital. Nous sommes prisonniers.",
+        "texte_en": "The gangs control everything: water, food, even hospital access. We are prisoners.",
+        "source": "MSF",
+        "profil": "Jean-Pierre, Port-au-Prince",
+        "profil_en": "Jean-Pierre, Port-au-Prince"
+      }
+    ],
+    "fiche_educative": {
+      "qui": "Coalitions de gangs armés contre la population civile et la police nationale sous-équipée.",
+      "qui_en": "Armed gang coalitions versus civilians and the under-equipped national police.",
+      "pourquoi": "Effondrement de l'État, assassinat du président Moïse (2021), pauvreté extrême, trafic d'armes.",
+      "pourquoi_en": "State collapse, assassination of President Moïse (2021), extreme poverty, arms trafficking.",
+      "depuis_quand": "Crise aiguë depuis 2021, instabilité chronique depuis des décennies.",
+      "depuis_quand_en": "Acute crisis since 2021, chronic instability for decades.",
+      "consequences": "Des milliers de morts, 700 000 déplacés, Port-au-Prince contrôlé à 80% par les gangs.",
+      "consequences_en": "Thousands dead, 700,000 displaced, Port-au-Prince 80% controlled by gangs.",
+      "solutions": "Mission de sécurité multinationale, restauration de l'État, aide humanitaire.",
+      "solutions_en": "Multinational security mission, state restoration, humanitarian aid."
+    },
+    "comparaison_population": {
+      "deplaces": 700000,
+      "victimes": 8000
+    }
+  },
+  {
+    "name": "Conflit armé en Colombie",
+    "lat": 7.1193,
+    "lng": -73.1227,
+    "region": "Amériques",
+    "type": "Guerre civile",
+    "intensity": "moyenne",
+    "parties": [
+      "Armée colombienne",
+      "ELN",
+      "Dissidents FARC (EMC)",
+      "Cartels"
+    ],
+    "startDate": "1964-05-27",
+    "casualties": 450000,
+    "summary": "L'attaque de l'ELN contre les dissidents FARC dans le Catatumbo (jan. 2025) a fait 103 morts et déplacé 300 000 personnes. Le président Petro a suspendu les pourparlers de paix avec l'ELN et déclaré l'état de commotion interne.",
+    "name_en": "Colombian Armed Conflict",
+    "summary_en": "The ELN's attack against FARC dissidents in Catatumbo (Jan. 2025) killed 103 people and displaced 300,000. President Petro suspended peace talks with the ELN and declared a state of internal emergency.",
+    "news": [
+      {
+        "title": "Catatumbo : 103 morts dans les combats ELN-FARC",
+        "date": "2025-01-20",
+        "source": "Reuters",
+        "url": "https://www.reuters.com/world/americas/"
+      },
+      {
+        "title": "Petro suspend les pourparlers avec l'ELN",
+        "date": "2025-02-01",
+        "source": "Al Jazeera",
+        "url": "https://www.aljazeera.com/news/americas/"
+      },
+      {
+        "title": "Colombie : 300 000 déplacés dans le Catatumbo",
+        "date": "2026-01-20",
+        "source": "Crisis Group",
+        "url": "https://www.crisisgroup.org/cmt/global/10-conflicts-watch-2026"
+      }
+    ],
+    "timeline": [
+      {
+        "date": "2016-11-24",
+        "event": "Accord de paix avec les FARC",
+        "event_en": "Peace agreement with FARC"
+      },
+      {
+        "date": "2022-08-07",
+        "event": "Gustavo Petro inaugure la 'Paix totale'",
+        "event_en": "Gustavo Petro inaugurates 'Total Peace'"
+      },
+      {
+        "date": "2025-01-20",
+        "event": "Offensive de l'ELN à Catatumbo — 300 000 déplacés",
+        "event_en": "ELN offensive in Catatumbo — 300,000 displaced"
+      },
+      {
+        "date": "2025-06-01",
+        "event": "Effondrement des négociations avec l'ELN",
+        "event_en": "Collapse of negotiations with ELN"
+      },
+      {
+        "date": "2026-01-15",
+        "event": "Violences persistantes des dissidents FARC",
+        "event_en": "Persistent violence by FARC dissidents"
+      }
+    ],
+    "temoignages": [
+      {
+        "texte": "La paix signée en 2016 n'est jamais arrivée dans notre région. Les dissidents des FARC et l'ELN continuent.",
+        "texte_en": "The peace signed in 2016 never reached our region. FARC dissidents and ELN continue.",
+        "source": "HRW",
+        "profil": "María, leader communautaire, Cauca",
+        "profil_en": "María, community leader, Cauca"
+      }
+    ],
+    "fiche_educative": {
+      "qui": "Dissidents des FARC, ELN, cartels de drogue contre l'armée colombienne. Civils pris entre les feux.",
+      "qui_en": "FARC dissidents, ELN, drug cartels versus the Colombian army. Civilians caught in crossfire.",
+      "pourquoi": "Échec partiel de l'accord de paix de 2016, narcotrafic, inégalités foncières persistantes.",
+      "pourquoi_en": "Partial failure of the 2016 peace agreement, drug trafficking, persistent land inequality.",
+      "depuis_quand": "Conflit armé depuis 1964, phase actuelle post-accord depuis 2016.",
+      "depuis_quand_en": "Armed conflict since 1964, current post-agreement phase since 2016.",
+      "consequences": "450 000 morts depuis 1964, 8 millions de déplacés, leaders sociaux assassinés.",
+      "consequences_en": "450,000 dead since 1964, 8 million displaced, social leaders assassinated.",
+      "solutions": "Application complète de l'accord de paix, réforme agraire, substitution des cultures illicites.",
+      "solutions_en": "Full implementation of the peace agreement, agrarian reform, illicit crop substitution."
+    },
+    "comparaison_population": {
+      "deplaces": 8000000,
+      "victimes": 5000
+    }
+  },
+  {
+    "name": "Guerre des cartels au Mexique",
+    "lat": 23.6345,
+    "lng": -102.5528,
+    "region": "Amériques",
+    "type": "Insurrection",
+    "intensity": "haute",
+    "parties": [
+      "Gouvernement mexicain",
+      "Cartel de Sinaloa",
+      "CJNG",
+      "Autres cartels",
+      "Groupes d'autodéfense"
+    ],
+    "startDate": "2006-12-11",
+    "casualties": 400000,
+    "summary": "Le Mexique figure parmi les 10 pays les plus violents avec 8 616 morts liés au conflit en 2024-2025. Le conflit entre cartels, notamment entre factions du Cartel de Sinaloa et le CJNG, cause des milliers de morts civils chaque année.",
+    "name_en": "Mexican Cartel War",
+    "summary_en": "Mexico ranks among the 10 most violent countries with 8,616 conflict-related deaths in 2024-2025. The war between cartels, particularly between Sinaloa Cartel factions and the CJNG, causes thousands of civilian deaths each year.",
+    "news": [
+      {
+        "title": "Mexique : top 10 des pays les plus violents",
+        "date": "2026-01-25",
+        "source": "ACLED",
+        "url": "https://acleddata.com/series/acled-conflict-index"
+      },
+      {
+        "title": "Guerre de factions au sein du Cartel de Sinaloa",
+        "date": "2026-02-01",
+        "source": "Reuters",
+        "url": "https://www.reuters.com/world/americas/"
+      },
+      {
+        "title": "CJNG : expansion territoriale au sud du Mexique",
+        "date": "2026-01-18",
+        "source": "Crisis Group",
+        "url": "https://www.crisisgroup.org/cmt/global/10-conflicts-watch-2026"
+      }
+    ],
+    "timeline": [],
+    "temoignages": [
+      {
+        "texte": "Mon fils journaliste a été retrouvé assassiné. Il enquêtait sur les cartels. Personne n'a été arrêté.",
+        "texte_en": "My journalist son was found murdered. He was investigating the cartels. Nobody was arrested.",
+        "source": "HRW",
+        "profil": "Rosa, mère, Sinaloa",
+        "profil_en": "Rosa, mother, Sinaloa"
+      }
+    ],
+    "fiche_educative": {
+      "qui": "Cartels de la drogue (Sinaloa, CJNG, etc.) contre l'État mexicain et entre eux.",
+      "qui_en": "Drug cartels (Sinaloa, CJNG, etc.) versus the Mexican state and each other.",
+      "pourquoi": "Narcotrafic vers les États-Unis, corruption systémique, impunité, demande de drogues.",
+      "pourquoi_en": "Drug trafficking to the US, systemic corruption, impunity, drug demand.",
+      "depuis_quand": "Escalade depuis 2006 (guerre contre la drogue du président Calderón).",
+      "depuis_quand_en": "Escalation since 2006 (President Calderón's war on drugs).",
+      "consequences": "Plus de 400 000 morts depuis 2006, 100 000 disparus, journalistes et activistes ciblés.",
+      "consequences_en": "Over 400,000 dead since 2006, 100,000 disappeared, journalists and activists targeted.",
+      "solutions": "Lutte contre la corruption, coopération internationale, politique de réduction des risques.",
+      "solutions_en": "Anti-corruption efforts, international cooperation, harm reduction policy."
+    },
+    "comparaison_population": {
+      "deplaces": 380000,
+      "victimes": 30000
+    }
+  },
+  {
+    "name": "Conflit en Afghanistan (post-Taliban)",
+    "lat": 33.9391,
+    "lng": 67.71,
+    "region": "Asie",
+    "type": "Insurrection",
+    "intensity": "moyenne",
+    "parties": [
+      "Taliban (gouvernement de facto)",
+      "ISKP",
+      "Front national de résistance"
+    ],
+    "startDate": "2021-08-15",
+    "casualties": 8000,
+    "summary": "L'ISKP mène des attaques régulières dont un attentat-suicide à Kaboul en janvier 2026 tuant 7 civils. Les tensions avec le Pakistan s'intensifient avec des attaques transfrontalières. La crise humanitaire reste grave.",
+    "name_en": "Afghanistan Conflict (Post-Taliban Takeover)",
+    "summary_en": "ISKP carries out regular attacks, including a suicide bombing in Kabul in January 2026 that killed 7 civilians. Tensions with Pakistan are escalating with cross-border attacks. The humanitarian crisis remains severe.",
+    "news": [
+      {
+        "title": "Attentat ISKP à Kaboul : 7 morts",
+        "date": "2026-01-19",
+        "source": "Crisis Group",
+        "url": "https://www.crisisgroup.org/crisiswatch/january-trends-and-february-alerts-2026"
+      },
+      {
+        "title": "Tensions croissantes Afghanistan-Pakistan",
+        "date": "2026-01-30",
+        "source": "Al Jazeera",
+        "url": "https://www.aljazeera.com/news/asia/"
+      },
+      {
+        "title": "ISKP reste une menace majeure en Afghanistan",
+        "date": "2026-02-03",
+        "source": "Reuters",
+        "url": "https://www.reuters.com/world/asia-pacific/"
+      }
+    ],
+    "timeline": [
+      {
+        "date": "2021-08-15",
+        "event": "Les Talibans prennent Kaboul",
+        "event_en": "Taliban seize Kabul"
+      },
+      {
+        "date": "2021-08-26",
+        "event": "Attentat à l'aéroport de Kaboul — 183 morts",
+        "event_en": "Kabul airport bombing — 183 killed"
+      },
+      {
+        "date": "2022-08-01",
+        "event": "Élimination d'Al-Zawahiri par les USA",
+        "event_en": "Al-Zawahiri eliminated by the US"
+      },
+      {
+        "date": "2024-01-01",
+        "event": "L'ISKP intensifie ses attaques",
+        "event_en": "ISKP intensifies attacks"
+      },
+      {
+        "date": "2025-06-01",
+        "event": "Crise humanitaire — 6 millions en famine",
+        "event_en": "Humanitarian crisis — 6 million in famine"
+      },
+      {
+        "date": "2026-01-10",
+        "event": "Répression accrue des droits des femmes",
+        "event_en": "Increased repression of women's rights"
+      }
+    ],
+    "temoignages": [
+      {
+        "texte": "J'étais juge. Maintenant les talibans m'interdisent de travailler. Les femmes n'existent plus en Afghanistan.",
+        "texte_en": "I was a judge. Now the Taliban forbid me to work. Women no longer exist in Afghanistan.",
+        "source": "HRW",
+        "profil": "Zarifa, ancienne juge, Kaboul",
+        "profil_en": "Zarifa, former judge, Kabul"
+      }
+    ],
+    "fiche_educative": {
+      "qui": "Les talibans au pouvoir contre la résistance du NRF et l'EIGS (État islamique).",
+      "qui_en": "The Taliban in power versus NRF resistance and ISKP (Islamic State).",
+      "pourquoi": "Prise de pouvoir des talibans en août 2021, résistance persistante, terrorisme de l'EIGS.",
+      "pourquoi_en": "Taliban takeover in August 2021, persistent resistance, ISKP terrorism.",
+      "depuis_quand": "Régime taliban depuis août 2021, conflit afghan depuis 1978.",
+      "depuis_quand_en": "Taliban regime since August 2021, Afghan conflict since 1978.",
+      "consequences": "Crise humanitaire grave, droits des femmes supprimés, 28 millions ayant besoin d'aide.",
+      "consequences_en": "Severe humanitarian crisis, women's rights suppressed, 28 million in need of aid.",
+      "solutions": "Engagement conditionnel, aide humanitaire, pression pour les droits des femmes.",
+      "solutions_en": "Conditional engagement, humanitarian aid, pressure for women's rights."
+    },
+    "comparaison_population": {
+      "deplaces": 6300000,
+      "victimes": 3000
+    }
+  },
+  {
+    "name": "Insurrection au Pakistan (TTP et Baloutchistan)",
+    "lat": 30.3753,
+    "lng": 69.3451,
+    "region": "Asie",
+    "type": "Insurrection",
+    "intensity": "haute",
+    "parties": [
+      "Armée pakistanaise",
+      "TTP",
+      "Armée de libération du Baloutchistan (BLA)",
+      "Groupes séparatistes"
+    ],
+    "startDate": "2004-01-01",
+    "casualties": 80000,
+    "summary": "Le Pakistan figure parmi les zones de conflit « extrêmes » selon ACLED en 2025. L'activité militante du TTP et du BLA a fortement augmenté, causant une instabilité politique croissante. Les affrontements transfrontaliers avec l'Afghanistan se multiplient.",
+    "name_en": "Pakistan Insurgency (TTP and Balochistan)",
+    "summary_en": "Pakistan ranks among \"extreme\" conflict zones according to ACLED in 2025. Militant activity by TTP and BLA has surged, causing growing political instability. Cross-border clashes with Afghanistan are increasing.",
+    "news": [
+      {
+        "title": "Pakistan : zone de conflit extrême selon ACLED",
+        "date": "2026-01-25",
+        "source": "ACLED",
+        "url": "https://acleddata.com/series/acled-conflict-index"
+      },
+      {
+        "title": "BLA intensifie ses attaques au Baloutchistan",
+        "date": "2026-02-01",
+        "source": "Reuters",
+        "url": "https://www.reuters.com/world/asia-pacific/"
+      },
+      {
+        "title": "TTP : recrudescence des attaques au KPK",
+        "date": "2026-01-15",
+        "source": "Al Jazeera",
+        "url": "https://www.aljazeera.com/news/asia/"
+      }
+    ],
+    "timeline": [],
+    "temoignages": [
+      {
+        "texte": "Les attentats-suicides ont repris. Mon frère policier a été tué dans une embuscade au Waziristan.",
+        "texte_en": "Suicide bombings are back. My police officer brother was killed in an ambush in Waziristan.",
+        "source": "HRW",
+        "profil": "Ahmed, 30 ans, Peshawar",
+        "profil_en": "Ahmed, 30, Peshawar"
+      }
+    ],
+    "fiche_educative": {
+      "qui": "Tehrik-i-Taliban Pakistan (TTP) et séparatistes baloutches contre l'armée pakistanaise.",
+      "qui_en": "Tehrik-i-Taliban Pakistan (TTP) and Baloch separatists versus the Pakistani army.",
+      "pourquoi": "Retour des talibans afghans, zones tribales instables, revendications baloutches.",
+      "pourquoi_en": "Return of Afghan Taliban, unstable tribal areas, Baloch demands.",
+      "depuis_quand": "Insurrection TTP depuis 2007, résurgence depuis 2021.",
+      "depuis_quand_en": "TTP insurgency since 2007, resurgence since 2021.",
+      "consequences": "Des milliers de morts par an, déplacements dans les zones tribales.",
+      "consequences_en": "Thousands dead per year, displacement in tribal areas.",
+      "solutions": "Dialogue avec les groupes armés, développement des zones tribales, coopération avec l'Afghanistan.",
+      "solutions_en": "Dialogue with armed groups, development of tribal areas, cooperation with Afghanistan."
+    },
+    "comparaison_population": {
+      "deplaces": 1500000,
+      "victimes": 5000
+    }
+  },
+  {
+    "name": "Crise anglophone au Cameroun",
+    "lat": 5.9527,
+    "lng": 10.146,
+    "region": "Afrique",
+    "type": "Guerre civile",
+    "intensity": "moyenne",
+    "parties": [
+      "Armée camerounaise",
+      "Séparatistes anglophones (Ambazonie)",
+      "Boko Haram (Extrême-Nord)"
+    ],
+    "startDate": "2017-09-01",
+    "casualties": 6000,
+    "summary": "Le conflit entre séparatistes anglophones et forces gouvernementales persiste dans les régions du Nord-Ouest et du Sud-Ouest. Les violences continuent de faire des victimes civiles. Au nord, Boko Haram mène des attaques sporadiques.",
+    "name_en": "Anglophone Crisis in Cameroon",
+    "summary_en": "The conflict between Anglophone separatists and government forces persists in the Northwest and Southwest regions. Violence continues to claim civilian lives. In the north, Boko Haram carries out sporadic attacks.",
+    "news": [
+      {
+        "title": "Cameroun : violences persistantes en zone anglophone",
+        "date": "2026-01-20",
+        "source": "Reuters",
+        "url": "https://www.reuters.com/world/africa/"
+      },
+      {
+        "title": "Ambazonie : le conflit oublié du Cameroun",
+        "date": "2026-02-01",
+        "source": "Crisis Group",
+        "url": "https://www.crisisgroup.org/africa/"
+      },
+      {
+        "title": "Boko Haram dans l'Extrême-Nord camerounais",
+        "date": "2026-01-10",
+        "source": "ACLED",
+        "url": "https://acleddata.com/series/conflict-watchlist-2026"
+      }
+    ],
+    "timeline": [],
+    "temoignages": [
+      {
+        "texte": "L'armée a brûlé notre village parce qu'ils soupçonnaient des séparatistes. Nous avons tout perdu.",
+        "texte_en": "The army burned our village because they suspected separatists. We lost everything.",
+        "source": "HRW",
+        "profil": "Grace, 33 ans, région du Nord-Ouest",
+        "profil_en": "Grace, 33, Northwest region"
+      }
+    ],
+    "fiche_educative": {
+      "qui": "Séparatistes anglophones (Ambazonie) contre l'armée camerounaise du régime de Paul Biya.",
+      "qui_en": "Anglophone separatists (Ambazonia) versus Paul Biya's Cameroonian army.",
+      "pourquoi": "Marginalisation des régions anglophones par le gouvernement francophone, répression des manifestations de 2016-2017.",
+      "pourquoi_en": "Marginalization of Anglophone regions by the Francophone government, repression of 2016-2017 protests.",
+      "depuis_quand": "Crise depuis 2017, racines dans la réunification de 1961.",
+      "depuis_quand_en": "Crisis since 2017, roots in the 1961 reunification.",
+      "consequences": "Plus de 6 000 morts, 770 000 déplacés, écoles fermées pendant des années.",
+      "consequences_en": "Over 6,000 dead, 770,000 displaced, schools closed for years.",
+      "solutions": "Dialogue national inclusif, fédéralisme, fin de la répression militaire.",
+      "solutions_en": "Inclusive national dialogue, federalism, end of military repression."
+    },
+    "comparaison_population": {
+      "deplaces": 770000,
+      "victimes": 6000
+    }
+  },
+  {
+    "name": "Insurrection au Mozambique (Cabo Delgado)",
+    "lat": -12.2392,
+    "lng": 40.1814,
+    "region": "Afrique",
+    "type": "Insurrection",
+    "intensity": "moyenne",
+    "parties": [
+      "Armée mozambicaine",
+      "Troupes rwandaises",
+      "ISMP",
+      "SADC"
+    ],
+    "startDate": "2017-10-05",
+    "casualties": 5500,
+    "summary": "L'insurrection islamiste à Cabo Delgado persiste malgré l'intervention rwandaise. La crise politique post-électorale de fin 2025 aggrave l'instabilité avec des émeutes et violences dans tout le pays.",
+    "name_en": "Mozambique Insurgency (Cabo Delgado)",
+    "summary_en": "The Islamist insurgency in Cabo Delgado persists despite Rwandan intervention. The post-election political crisis of late 2025 has worsened instability with riots and violence across the country.",
+    "news": [
+      {
+        "title": "Mozambique : violences post-électorales aggravant la crise",
+        "date": "2025-12-10",
+        "source": "Al Jazeera",
+        "url": "https://www.aljazeera.com/news/africa/"
+      },
+      {
+        "title": "Affrontements ISMP-troupes rwandaises à Macomia",
+        "date": "2025-12-20",
+        "source": "Reuters",
+        "url": "https://www.reuters.com/world/africa/"
+      },
+      {
+        "title": "Cabo Delgado : l'insurrection persiste",
+        "date": "2026-01-28",
+        "source": "ACLED",
+        "url": "https://acleddata.com/series/conflict-watchlist-2026"
+      }
+    ],
+    "timeline": [],
+    "temoignages": [
+      {
+        "texte": "Les insurgés ont décapité des gens devant nous. Nous avons fui dans la forêt pendant trois jours.",
+        "texte_en": "The insurgents beheaded people in front of us. We fled through the forest for three days.",
+        "source": "UNHCR",
+        "profil": "Ana, 28 ans, Cabo Delgado",
+        "profil_en": "Ana, 28, Cabo Delgado"
+      }
+    ],
+    "fiche_educative": {
+      "qui": "Groupes djihadistes affiliés à l'État islamique contre l'armée mozambicaine et les forces rwandaises/SADC.",
+      "qui_en": "ISIS-affiliated jihadist groups versus the Mozambican army and Rwandan/SADC forces.",
+      "pourquoi": "Pauvreté extrême, marginalisation du nord, présence de ressources gazières.",
+      "pourquoi_en": "Extreme poverty, northern marginalization, presence of gas resources.",
+      "depuis_quand": "Insurrection depuis 2017.",
+      "depuis_quand_en": "Insurgency since 2017.",
+      "consequences": "Plus de 4 000 morts, 1 million de déplacés, projets gaziers suspendus.",
+      "consequences_en": "Over 4,000 dead, 1 million displaced, gas projects suspended.",
+      "solutions": "Développement du nord, forces de sécurité régionales, aide humanitaire.",
+      "solutions_en": "Northern development, regional security forces, humanitarian aid."
+    },
+    "comparaison_population": {
+      "deplaces": 1000000,
+      "victimes": 4000
+    }
+  },
+  {
+    "name": "Instabilité au Tchad",
+    "lat": 15.4542,
+    "lng": 18.7322,
+    "region": "Afrique",
+    "type": "Insurrection",
+    "intensity": "basse",
+    "parties": [
+      "Armée tchadienne",
+      "Groupes rebelles du nord",
+      "Boko Haram"
+    ],
+    "startDate": "2015-01-01",
+    "casualties": 3000,
+    "summary": "Le Tchad fait face aux attaques de Boko Haram dans la région du Lac Tchad et à des menaces de groupes rebelles dans le nord. L'instabilité politique continue sous le régime de Mahamat Déby.",
+    "name_en": "Instability in Chad",
+    "summary_en": "Chad faces Boko Haram attacks in the Lake Chad region and threats from rebel groups in the north. Political instability continues under the Mahamat Deby regime.",
+    "news": [
+      {
+        "title": "Tchad : Boko Haram frappe la région du Lac",
+        "date": "2026-01-15",
+        "source": "Reuters",
+        "url": "https://www.reuters.com/world/africa/"
+      },
+      {
+        "title": "Instabilité politique sous le régime Déby",
+        "date": "2026-02-01",
+        "source": "Crisis Group",
+        "url": "https://www.crisisgroup.org/africa/"
+      },
+      {
+        "title": "Sahel : le Tchad entre insécurité et tensions",
+        "date": "2026-01-22",
+        "source": "ACLED",
+        "url": "https://acleddata.com/series/conflict-watchlist-2026"
+      }
+    ],
+    "timeline": [],
+    "temoignages": [
+      {
+        "texte": "Le Tchad accueille les réfugiés du Soudan mais nous n'avons rien pour eux. Nous-mêmes avons faim.",
+        "texte_en": "Chad hosts refugees from Sudan but we have nothing for them. We ourselves are hungry.",
+        "source": "UNHCR",
+        "profil": "Fatimé, infirmière, Adré",
+        "profil_en": "Fatimé, nurse, Adré"
+      }
+    ],
+    "fiche_educative": {
+      "qui": "Groupes rebelles, tensions communautaires et crise des réfugiés soudanais sous le régime de Mahamat Déby.",
+      "qui_en": "Rebel groups, communal tensions and Sudanese refugee crisis under Mahamat Déby's regime.",
+      "pourquoi": "Transition politique contestée, afflux de réfugiés soudanais, instabilité régionale sahélienne.",
+      "pourquoi_en": "Contested political transition, influx of Sudanese refugees, Sahel regional instability.",
+      "depuis_quand": "Instabilité chronique, aggravée depuis 2021 (mort d'Idriss Déby).",
+      "depuis_quand_en": "Chronic instability, worsened since 2021 (death of Idriss Déby).",
+      "consequences": "1 million de réfugiés soudanais accueillis, insécurité alimentaire, tensions communautaires.",
+      "consequences_en": "1 million Sudanese refugees hosted, food insecurity, communal tensions.",
+      "solutions": "Stabilisation politique, aide internationale, gestion de la crise des réfugiés.",
+      "solutions_en": "Political stabilization, international aid, refugee crisis management."
+    },
+    "comparaison_population": {
+      "deplaces": 1000000,
+      "victimes": 2000
+    }
+  },
+  {
+    "name": "Conflit en Libye",
+    "lat": 32.8872,
+    "lng": 13.1913,
+    "region": "Afrique",
+    "type": "Guerre civile",
+    "intensity": "moyenne",
+    "parties": [
+      "Gouvernement d'unité nationale (GNA)",
+      "Armée nationale libyenne (ANL/Haftar)",
+      "Milices tribales"
+    ],
+    "startDate": "2014-05-01",
+    "casualties": 30000,
+    "summary": "La Libye reste divisée entre le gouvernement de Tripoli et les forces de Haftar à l'est. Les affrontements continuent et le pays est un carrefour de trafic d'armes alimentant les conflits sahéliens.",
+    "name_en": "Libyan Conflict",
+    "summary_en": "Libya remains divided between the Tripoli government and Haftar's forces in the east. Clashes continue and the country is a hub for arms trafficking fueling Sahel conflicts.",
+    "news": [
+      {
+        "title": "Libye : toujours divisée entre est et ouest",
+        "date": "2026-01-20",
+        "source": "Crisis Group",
+        "url": "https://www.crisisgroup.org/africa/"
+      },
+      {
+        "title": "Trafic d'armes libyen alimente les conflits sahéliens",
+        "date": "2026-02-03",
+        "source": "Reuters",
+        "url": "https://www.reuters.com/world/africa/"
+      },
+      {
+        "title": "Élections libyennes : un horizon lointain",
+        "date": "2026-01-10",
+        "source": "Al Jazeera",
+        "url": "https://www.aljazeera.com/news/africa/"
+      }
+    ],
+    "timeline": [],
+    "temoignages": [
+      {
+        "texte": "La Libye est devenue un enfer pour les migrants. J'ai vu des gens vendus comme esclaves.",
+        "texte_en": "Libya has become hell for migrants. I saw people sold as slaves.",
+        "source": "MSF",
+        "profil": "Ibrahim, migrant, Tripoli",
+        "profil_en": "Ibrahim, migrant, Tripoli"
+      }
+    ],
+    "fiche_educative": {
+      "qui": "Gouvernement de Tripoli (ouest) contre forces de Haftar (est), milices locales.",
+      "qui_en": "Tripoli government (west) versus Haftar's forces (east), local militias.",
+      "pourquoi": "Effondrement de l'État après la chute de Kadhafi (2011), rivalités régionales et internationales.",
+      "pourquoi_en": "State collapse after Gaddafi's fall (2011), regional and international rivalries.",
+      "depuis_quand": "Guerre civile depuis 2014, chaos depuis 2011.",
+      "depuis_quand_en": "Civil war since 2014, chaos since 2011.",
+      "consequences": "Milliers de morts, traite des migrants, économie fragmentée.",
+      "consequences_en": "Thousands dead, migrant trafficking, fragmented economy.",
+      "solutions": "Unification politique, élections, démobilisation des milices.",
+      "solutions_en": "Political unification, elections, militia demobilization."
+    },
+    "comparaison_population": {
+      "deplaces": 300000,
+      "victimes": 3000
+    }
+  },
+  {
+    "name": "Violences au Brésil (crime organisé)",
+    "lat": -14.235,
+    "lng": -51.9253,
+    "region": "Amériques",
+    "type": "Insurrection",
+    "intensity": "haute",
+    "parties": [
+      "Forces de sécurité brésiliennes",
+      "PCC",
+      "Comando Vermelho",
+      "Milices"
+    ],
+    "startDate": "2000-01-01",
+    "casualties": 60000,
+    "summary": "Le Brésil figure parmi les 10 pays les plus violents selon ACLED. Les guerres de gangs entre le PCC, le Comando Vermelho et les milices paramilitaires causent des dizaines de milliers de morts chaque année.",
+    "name_en": "Violence in Brazil (Organized Crime)",
+    "summary_en": "Brazil ranks among the 10 most violent countries according to ACLED. Gang wars between the PCC, Comando Vermelho, and paramilitary militias cause tens of thousands of deaths each year.",
+    "news": [
+      {
+        "title": "Brésil : violence record dans les favelas",
+        "date": "2026-01-25",
+        "source": "ACLED",
+        "url": "https://acleddata.com/series/acled-conflict-index"
+      },
+      {
+        "title": "PCC vs Comando Vermelho : guerre des gangs",
+        "date": "2026-02-01",
+        "source": "Reuters",
+        "url": "https://www.reuters.com/world/americas/"
+      },
+      {
+        "title": "Milices paramilitaires : expansion territoriale",
+        "date": "2026-01-15",
+        "source": "BBC News",
+        "url": "https://www.bbc.com/news/world-latin-america"
+      }
+    ],
+    "timeline": [],
+    "temoignages": [
+      {
+        "texte": "Dans la favela, les enfants grandissent avec les fusillades. Mon voisin de 12 ans a été tué par une balle perdue.",
+        "texte_en": "In the favela, children grow up with gunfire. My 12-year-old neighbor was killed by a stray bullet.",
+        "source": "HRW",
+        "profil": "Carla, mère, Rio de Janeiro",
+        "profil_en": "Carla, mother, Rio de Janeiro"
+      }
+    ],
+    "fiche_educative": {
+      "qui": "Factions criminelles (PCC, Comando Vermelho) contre la police et les milices.",
+      "qui_en": "Criminal factions (PCC, Comando Vermelho) versus police and militias.",
+      "pourquoi": "Trafic de drogue, inégalités extrêmes, violences policières, corruption.",
+      "pourquoi_en": "Drug trafficking, extreme inequality, police violence, corruption.",
+      "depuis_quand": "Violence chronique, aggravation depuis les années 1990.",
+      "depuis_quand_en": "Chronic violence, worsened since the 1990s.",
+      "consequences": "Plus de 45 000 homicides par an, violences policières, jeunesse sacrifiée.",
+      "consequences_en": "Over 45,000 homicides per year, police violence, sacrificed youth.",
+      "solutions": "Politiques sociales, réforme policière, légalisation partielle, éducation.",
+      "solutions_en": "Social policies, police reform, partial legalization, education."
+    },
+    "comparaison_population": {
+      "deplaces": 100000,
+      "victimes": 45000
+    }
+  },
+  {
+    "name": "Conflit au Soudan du Sud",
+    "lat": 6.877,
+    "lng": 31.307,
+    "region": "Afrique",
+    "type": "Guerre civile",
+    "intensity": "moyenne",
+    "parties": [
+      "Gouvernement (SPLM)",
+      "Opposition armée (SPLM-IO)",
+      "Milices communautaires"
+    ],
+    "startDate": "2013-12-15",
+    "casualties": 400000,
+    "summary": "Les violences intercommunautaires persistent malgré l'accord de paix de 2018. Le report répété des élections et l'afflux de réfugiés soudanais aggravent l'instabilité du plus jeune État du monde.",
+    "name_en": "South Sudan Conflict",
+    "summary_en": "Intercommunal violence persists despite the 2018 peace agreement. Repeated election postponements and the influx of Sudanese refugees are worsening instability in the world's youngest state.",
+    "news": [
+      {
+        "title": "Soudan du Sud : élections reportées à nouveau",
+        "date": "2026-01-20",
+        "source": "Reuters",
+        "url": "https://www.reuters.com/world/africa/"
+      },
+      {
+        "title": "Afflux de réfugiés soudanais au Soudan du Sud",
+        "date": "2026-02-01",
+        "source": "ICRC",
+        "url": "https://www.icrc.org/en/article/humanitarian-outlook-2026"
+      },
+      {
+        "title": "Violences intercommunautaires dans l'État de Jonglei",
+        "date": "2026-01-28",
+        "source": "UN News",
+        "url": "https://news.un.org/en/"
+      }
+    ],
+    "timeline": [],
+    "temoignages": [
+      {
+        "texte": "La famine a tué plus que les fusils. Mes deux plus jeunes enfants sont morts de malnutrition.",
+        "texte_en": "Famine killed more than guns. My two youngest children died of malnutrition.",
+        "source": "UNICEF",
+        "profil": "Nyamal, mère, Bentiu",
+        "profil_en": "Nyamal, mother, Bentiu"
+      }
+    ],
+    "fiche_educative": {
+      "qui": "Forces du président Kiir contre celles de Machar, violences intercommunautaires.",
+      "qui_en": "Forces of President Kiir versus Machar's, intercommunal violence.",
+      "pourquoi": "Rivalité politique Kiir-Machar, tensions ethniques Dinka-Nuer, pétrole.",
+      "pourquoi_en": "Kiir-Machar political rivalry, Dinka-Nuer ethnic tensions, oil.",
+      "depuis_quand": "Indépendance en 2011, guerre civile depuis 2013.",
+      "depuis_quand_en": "Independence in 2011, civil war since 2013.",
+      "consequences": "400 000 morts, 4 millions de déplacés, famine récurrente.",
+      "consequences_en": "400,000 dead, 4 million displaced, recurring famine.",
+      "solutions": "Application de l'accord de paix de 2018, élections, partage des revenus pétroliers.",
+      "solutions_en": "Implementation of the 2018 peace agreement, elections, oil revenue sharing."
+    },
+    "comparaison_population": {
+      "deplaces": 4000000,
+      "victimes": 400000
+    }
+  },
+  {
+    "name": "Conflit au Sahara occidental",
+    "lat": 24.2155,
+    "lng": -12.8858,
+    "region": "Afrique",
+    "type": "Conflit international",
+    "intensity": "basse",
+    "parties": [
+      "Maroc",
+      "Front Polisario",
+      "République arabe sahraouie"
+    ],
+    "startDate": "2020-11-13",
+    "casualties": 500,
+    "summary": "Le Front Polisario mène des opérations de harcèlement contre les positions marocaines derrière le mur de sable. Le conflit reste de basse intensité mais sans perspective de résolution.",
+    "name_en": "Western Sahara Conflict",
+    "summary_en": "The Polisario Front conducts harassment operations against Moroccan positions behind the sand wall. The conflict remains low intensity with no prospect of resolution.",
+    "news": [
+      {
+        "title": "Sahara occidental : impasse diplomatique",
+        "date": "2026-01-15",
+        "source": "Reuters",
+        "url": "https://www.reuters.com/world/africa/"
+      },
+      {
+        "title": "Polisario poursuit les opérations de harcèlement",
+        "date": "2026-02-01",
+        "source": "Al Jazeera",
+        "url": "https://www.aljazeera.com/news/africa/"
+      },
+      {
+        "title": "ONU : pas de progrès sur le Sahara occidental",
+        "date": "2026-01-28",
+        "source": "UN News",
+        "url": "https://news.un.org/en/"
+      }
+    ],
+    "timeline": [],
+    "temoignages": [
+      {
+        "texte": "Nous vivons dans des camps au milieu du désert algérien depuis 50 ans. Le monde nous a oubliés.",
+        "texte_en": "We've been living in camps in the Algerian desert for 50 years. The world has forgotten us.",
+        "source": "UNHCR",
+        "profil": "Mouloud, réfugié sahraoui, Tindouf",
+        "profil_en": "Mouloud, Sahrawi refugee, Tindouf"
+      }
+    ],
+    "fiche_educative": {
+      "qui": "Front Polisario (soutenu par l'Algérie) contre le Maroc qui occupe le territoire.",
+      "qui_en": "Polisario Front (backed by Algeria) versus Morocco occupying the territory.",
+      "pourquoi": "Décolonisation inachevée, revendications territoriales marocaines, ressources naturelles.",
+      "pourquoi_en": "Incomplete decolonization, Moroccan territorial claims, natural resources.",
+      "depuis_quand": "Conflit depuis 1975, reprise des hostilités en 2020.",
+      "depuis_quand_en": "Conflict since 1975, resumption of hostilities in 2020.",
+      "consequences": "173 000 réfugiés dans les camps de Tindouf, droits humains violés.",
+      "consequences_en": "173,000 refugees in Tindouf camps, human rights violated.",
+      "solutions": "Référendum d'autodétermination, diplomatie ONU.",
+      "solutions_en": "Self-determination referendum, UN diplomacy."
+    },
+    "comparaison_population": {
+      "deplaces": 173000,
+      "victimes": 500
+    }
+  },
+  {
+    "name": "Insurrection dans le Sinaï (Égypte)",
+    "lat": 30.4597,
+    "lng": 33.8074,
+    "region": "Moyen-Orient",
+    "type": "Insurrection",
+    "intensity": "basse",
+    "parties": [
+      "Égypte",
+      "Wilayat Sinaï (État islamique)"
+    ],
+    "startDate": "2011-02-01",
+    "casualties": 7000,
+    "summary": "L'insurrection de l'État islamique dans le nord du Sinaï a été considérablement affaiblie par les opérations militaires égyptiennes, mais des attaques sporadiques continuent.",
+    "name_en": "Sinai Insurgency (Egypt)",
+    "summary_en": "The Islamic State insurgency in northern Sinai has been significantly weakened by Egyptian military operations, but sporadic attacks continue.",
+    "news": [
+      {
+        "title": "Sinaï : opérations anti-EI se poursuivent",
+        "date": "2026-01-20",
+        "source": "Reuters",
+        "url": "https://www.reuters.com/world/middle-east/"
+      },
+      {
+        "title": "Wilayat Sinaï affaibli mais résistant",
+        "date": "2026-02-01",
+        "source": "ACLED",
+        "url": "https://acleddata.com/series/conflict-watchlist-2026"
+      },
+      {
+        "title": "Égypte : restrictions persistantes au Sinaï",
+        "date": "2026-01-10",
+        "source": "BBC News",
+        "url": "https://www.bbc.com/news/world-middle-east"
+      }
+    ],
+    "timeline": [],
+    "temoignages": [
+      {
+        "texte": "L'armée a rasé nos maisons pour créer une zone tampon. Nous sommes devenus des déplacés dans notre propre pays.",
+        "texte_en": "The army razed our homes to create a buffer zone. We became displaced in our own country.",
+        "source": "HRW",
+        "profil": "Bédouin, nord-Sinaï",
+        "profil_en": "Bedouin, North Sinai"
+      }
+    ],
+    "fiche_educative": {
+      "qui": "Wilayat Sinaï (branche de l'État islamique) contre l'armée égyptienne.",
+      "qui_en": "Wilayat Sinai (ISIS branch) versus the Egyptian army.",
+      "pourquoi": "Marginalisation des Bédouins, proximité de Gaza, extrémisme.",
+      "pourquoi_en": "Bedouin marginalization, proximity to Gaza, extremism.",
+      "depuis_quand": "Insurrection depuis 2011, intensifiée depuis 2013.",
+      "depuis_quand_en": "Insurgency since 2011, intensified since 2013.",
+      "consequences": "Milliers de morts, déplacements forcés, zone fermée aux journalistes.",
+      "consequences_en": "Thousands dead, forced displacement, area closed to journalists.",
+      "solutions": "Développement du Sinaï, intégration des Bédouins, approche non-militaire.",
+      "solutions_en": "Sinai development, Bedouin integration, non-military approach."
+    },
+    "comparaison_population": {
+      "deplaces": 100000,
+      "victimes": 3000
+    }
+  },
+  {
+    "name": "Conflit en Irak (résiduel)",
+    "lat": 33.2232,
+    "lng": 43.6793,
+    "region": "Moyen-Orient",
+    "type": "Insurrection",
+    "intensity": "basse",
+    "parties": [
+      "Irak",
+      "Daëch (résiduel)",
+      "Milices chiites pro-iraniennes"
+    ],
+    "startDate": "2017-01-01",
+    "casualties": 5000,
+    "summary": "Des cellules dormantes de Daëch continuent de mener des attaques sporadiques. Les tensions entre milices pro-iraniennes et présence américaine ajoutent une dimension géopolitique au conflit résiduel.",
+    "name_en": "Iraq Conflict (Residual)",
+    "summary_en": "ISIS sleeper cells continue to carry out sporadic attacks. Tensions between pro-Iranian militias and the American presence add a geopolitical dimension to the residual conflict.",
+    "news": [
+      {
+        "title": "Daëch : cellules dormantes actives au nord de l'Irak",
+        "date": "2026-01-22",
+        "source": "Reuters",
+        "url": "https://www.reuters.com/world/middle-east/"
+      },
+      {
+        "title": "Milices pro-iraniennes : tensions avec les USA",
+        "date": "2026-02-03",
+        "source": "Al Jazeera",
+        "url": "https://www.aljazeera.com/news/middle-east/"
+      },
+      {
+        "title": "Irak : stabilité fragile en 2026",
+        "date": "2026-01-15",
+        "source": "Crisis Group",
+        "url": "https://www.crisisgroup.org/middle-east-north-africa/"
+      }
+    ],
+    "timeline": [],
+    "temoignages": [
+      {
+        "texte": "Daech est officiellement vaincu mais des cellules dormantes frappent encore. La peur ne part jamais.",
+        "texte_en": "ISIS is officially defeated but sleeper cells still strike. The fear never leaves.",
+        "source": "UNHCR",
+        "profil": "Karim, 45 ans, Mossoul",
+        "profil_en": "Karim, 45, Mosul"
+      }
+    ],
+    "fiche_educative": {
+      "qui": "Cellules dormantes de Daech contre l'armée irakienne et les milices chiites (PMF).",
+      "qui_en": "ISIS sleeper cells versus the Iraqi army and Shia militias (PMF).",
+      "pourquoi": "Résidus de Daech, tensions confessionnelles, influence iranienne.",
+      "pourquoi_en": "ISIS remnants, sectarian tensions, Iranian influence.",
+      "depuis_quand": "Post-Daech depuis 2017, instabilité depuis 2003.",
+      "depuis_quand_en": "Post-ISIS since 2017, instability since 2003.",
+      "consequences": "Reconstruction lente, 1,2 million de déplacés restants, traumatismes.",
+      "consequences_en": "Slow reconstruction, 1.2 million remaining displaced, trauma.",
+      "solutions": "Réconciliation nationale, reconstruction, réforme des milices.",
+      "solutions_en": "National reconciliation, reconstruction, militia reform."
+    },
+    "comparaison_population": {
+      "deplaces": 1200000,
+      "victimes": 2000
+    }
+  },
+  {
+    "name": "Conflit au Kashmir",
+    "lat": 34.0837,
+    "lng": 74.7973,
+    "region": "Asie",
+    "type": "Conflit international",
+    "intensity": "basse",
+    "parties": [
+      "Inde",
+      "Pakistan",
+      "Groupes séparatistes cachemiris"
+    ],
+    "startDate": "1947-10-22",
+    "casualties": 70000,
+    "summary": "Les tensions entre l'Inde et le Pakistan au Cachemire persistent. Les opérations anti-insurrectionnelles indiennes continuent dans le Cachemire administré par l'Inde.",
+    "name_en": "Kashmir Conflict",
+    "summary_en": "Tensions between India and Pakistan over Kashmir persist. Indian counter-insurgency operations continue in Indian-administered Kashmir.",
+    "news": [
+      {
+        "title": "Kashmir : incidents à la ligne de contrôle",
+        "date": "2026-01-18",
+        "source": "Reuters",
+        "url": "https://www.reuters.com/world/india/"
+      },
+      {
+        "title": "Opérations anti-insurrectionnelles au J&K",
+        "date": "2026-02-01",
+        "source": "Al Jazeera",
+        "url": "https://www.aljazeera.com/news/asia/"
+      },
+      {
+        "title": "Pakistan-Inde : tensions persistantes au Kashmir",
+        "date": "2026-01-25",
+        "source": "BBC News",
+        "url": "https://www.bbc.com/news/world-south-asia"
+      }
+    ],
+    "timeline": [],
+    "temoignages": [
+      {
+        "texte": "Internet est coupé depuis des mois. Nous vivons dans un black-out total, coupés du monde.",
+        "texte_en": "Internet has been cut for months. We live in a total blackout, cut off from the world.",
+        "source": "HRW",
+        "profil": "Bilal, étudiant, Srinagar",
+        "profil_en": "Bilal, student, Srinagar"
+      }
+    ],
+    "fiche_educative": {
+      "qui": "Inde contre Pakistan, groupes séparatistes cachemiris, population civile.",
+      "qui_en": "India versus Pakistan, Kashmiri separatist groups, civilian population.",
+      "pourquoi": "Territoire disputé depuis la partition de 1947, révocation de l'autonomie en 2019.",
+      "pourquoi_en": "Disputed territory since the 1947 partition, autonomy revoked in 2019.",
+      "depuis_quand": "Conflit depuis 1947, insurrection depuis 1989.",
+      "depuis_quand_en": "Conflict since 1947, insurgency since 1989.",
+      "consequences": "Dizaines de milliers de morts, répression, coupures internet régulières.",
+      "consequences_en": "Tens of thousands dead, repression, regular internet shutdowns.",
+      "solutions": "Dialogue Inde-Pakistan, autonomie, respect des droits humains.",
+      "solutions_en": "India-Pakistan dialogue, autonomy, respect for human rights."
+    },
+    "comparaison_population": {
+      "deplaces": 200000,
+      "victimes": 1500
+    }
+  },
+  {
+    "name": "Insurrection naxalite-maoïste (Inde)",
+    "lat": 20.2738,
+    "lng": 82.0548,
+    "region": "Asie",
+    "type": "Insurrection",
+    "intensity": "basse",
+    "parties": [
+      "Inde",
+      "Parti communiste d'Inde (maoïste)",
+      "Milices tribales"
+    ],
+    "startDate": "1967-05-25",
+    "casualties": 12000,
+    "summary": "L'insurrection maoïste dans le corridor rouge continue de décliner face aux opérations militaires intensifiées, mais des attaques sporadiques persistent dans les régions tribales isolées.",
+    "name_en": "Naxalite-Maoist Insurgency (India)",
+    "summary_en": "The Maoist insurgency in the Red Corridor continues to decline in the face of intensified military operations, but sporadic attacks persist in isolated tribal regions.",
+    "news": [
+      {
+        "title": "Inde : le corridor rouge se rétrécit",
+        "date": "2026-01-20",
+        "source": "Reuters",
+        "url": "https://www.reuters.com/world/india/"
+      },
+      {
+        "title": "Opérations anti-naxalites au Chhattisgarh",
+        "date": "2026-02-01",
+        "source": "BBC News",
+        "url": "https://www.bbc.com/news/world-south-asia"
+      },
+      {
+        "title": "Maoïstes : insurrection en déclin mais persistante",
+        "date": "2026-01-15",
+        "source": "Al Jazeera",
+        "url": "https://www.aljazeera.com/news/asia/"
+      }
+    ],
+    "timeline": [],
+    "temoignages": [
+      {
+        "texte": "Le gouvernement nous appelle des terroristes. Nous demandons juste des droits fonciers et de la dignité.",
+        "texte_en": "The government calls us terrorists. We just ask for land rights and dignity.",
+        "source": "HRW",
+        "profil": "Adivasi, Chhattisgarh",
+        "profil_en": "Adivasi, Chhattisgarh"
+      }
+    ],
+    "fiche_educative": {
+      "qui": "Maoïstes (naxalites) contre les forces de sécurité indiennes dans les zones tribales.",
+      "qui_en": "Maoists (Naxalites) versus Indian security forces in tribal areas.",
+      "pourquoi": "Exploitation des populations tribales (Adivasi), accaparement des terres, inégalités.",
+      "pourquoi_en": "Exploitation of tribal populations (Adivasi), land grabbing, inequality.",
+      "depuis_quand": "Insurrection depuis 1967, affaiblie ces dernières années.",
+      "depuis_quand_en": "Insurgency since 1967, weakened in recent years.",
+      "consequences": "Des milliers de morts, populations tribales déplacées, développement bloqué.",
+      "consequences_en": "Thousands dead, tribal populations displaced, development blocked.",
+      "solutions": "Droits fonciers, développement tribal, dialogue.",
+      "solutions_en": "Land rights, tribal development, dialogue."
+    },
+    "comparaison_population": {
+      "deplaces": 100000,
+      "victimes": 1000
+    }
+  },
+  {
+    "name": "Insurrection aux Philippines (sud)",
+    "lat": 7.1907,
+    "lng": 125.4553,
+    "region": "Asie",
+    "type": "Insurrection",
+    "intensity": "basse",
+    "parties": [
+      "Armée philippine",
+      "Abu Sayyaf",
+      "Groupe Maute",
+      "NPA"
+    ],
+    "startDate": "1969-03-29",
+    "casualties": 30000,
+    "summary": "Malgré l'autonomie de Bangsamoro, des groupes comme Abu Sayyaf continuent d'opérer dans le sud de Mindanao. L'insurrection communiste du NPA s'affaiblit mais n'est pas éliminée.",
+    "name_en": "Southern Philippines Insurgency",
+    "summary_en": "Despite Bangsamoro autonomy, groups like Abu Sayyaf continue to operate in southern Mindanao. The communist NPA insurgency is weakening but has not been eliminated.",
+    "news": [
+      {
+        "title": "Philippines : Abu Sayyaf reste actif à Mindanao",
+        "date": "2026-01-22",
+        "source": "Reuters",
+        "url": "https://www.reuters.com/world/asia-pacific/"
+      },
+      {
+        "title": "Bangsamoro : stabilité fragile malgré l'autonomie",
+        "date": "2026-02-01",
+        "source": "Crisis Group",
+        "url": "https://www.crisisgroup.org/asia/"
+      },
+      {
+        "title": "NPA : insurrection communiste en déclin",
+        "date": "2026-01-10",
+        "source": "Al Jazeera",
+        "url": "https://www.aljazeera.com/news/asia/"
+      }
+    ],
+    "timeline": [],
+    "temoignages": [
+      {
+        "texte": "Marawi a été détruite en 2017. Sept ans après, la ville n'est toujours pas reconstruite.",
+        "texte_en": "Marawi was destroyed in 2017. Seven years later, the city is still not rebuilt.",
+        "source": "UNHCR",
+        "profil": "Amira, déplacée, Marawi",
+        "profil_en": "Amira, displaced, Marawi"
+      }
+    ],
+    "fiche_educative": {
+      "qui": "Groupes islamistes (Abu Sayyaf, BIFF) et NPA communiste contre l'armée philippine.",
+      "qui_en": "Islamist groups (Abu Sayyaf, BIFF) and communist NPA versus the Philippine army.",
+      "pourquoi": "Autonomie de Mindanao, extrémisme, pauvreté, accords de paix fragiles.",
+      "pourquoi_en": "Mindanao autonomy, extremism, poverty, fragile peace agreements.",
+      "depuis_quand": "Insurrection moro depuis les années 1970, bataille de Marawi en 2017.",
+      "depuis_quand_en": "Moro insurgency since the 1970s, Battle of Marawi in 2017.",
+      "consequences": "Milliers de morts, déplacements, développement retardé à Mindanao.",
+      "consequences_en": "Thousands dead, displacement, delayed Mindanao development.",
+      "solutions": "Autonomie du Bangsamoro, développement économique, déradicalisation.",
+      "solutions_en": "Bangsamoro autonomy, economic development, deradicalization."
+    },
+    "comparaison_population": {
+      "deplaces": 300000,
+      "victimes": 1500
+    }
+  },
+  {
+    "name": "Crise au Venezuela",
+    "lat": 10.4806,
+    "lng": -66.9036,
+    "region": "Amériques",
+    "type": "Conflit international",
+    "intensity": "moyenne",
+    "parties": [
+      "Régime Maduro",
+      "États-Unis",
+      "Opposition vénézuélienne",
+      "Groupes armés colombiens"
+    ],
+    "startDate": "2019-01-01",
+    "casualties": 2000,
+    "summary": "Les États-Unis ont déployé leur plus grand dispositif militaire dans les Caraïbes depuis des décennies. Les garde-côtes saisissent des pétroliers vénézuéliens. Le Venezuela est un point chaud en 2026 avec un risque de déstabilisation régionale.",
+    "name_en": "Venezuela Crisis",
+    "summary_en": "The United States has deployed its largest military presence in the Caribbean in decades. The Coast Guard is seizing Venezuelan oil tankers. Venezuela is a hotspot in 2026 with a risk of regional destabilization.",
+    "news": [
+      {
+        "title": "USA : déploiement militaire massif dans les Caraïbes",
+        "date": "2026-01-25",
+        "source": "Crisis Group",
+        "url": "https://www.crisisgroup.org/cmt/global/10-conflicts-watch-2026"
+      },
+      {
+        "title": "Venezuela : tensions avec Washington s'intensifient",
+        "date": "2026-02-03",
+        "source": "Reuters",
+        "url": "https://www.reuters.com/world/americas/"
+      },
+      {
+        "title": "Risque de déstabilisation régionale au Venezuela",
+        "date": "2026-01-18",
+        "source": "Newsweek",
+        "url": "https://www.newsweek.com/world-map-shows-top-conflict-hot-spots-2026-11186250"
+      }
+    ],
+    "timeline": [],
+    "temoignages": [
+      {
+        "texte": "J'ai marché du Venezuela à la Colombie avec mes enfants. Nous n'avions plus rien à manger.",
+        "texte_en": "I walked from Venezuela to Colombia with my children. We had nothing left to eat.",
+        "source": "UNHCR",
+        "profil": "Carolina, 32 ans, réfugiée",
+        "profil_en": "Carolina, 32, refugee"
+      }
+    ],
+    "fiche_educative": {
+      "qui": "Régime de Maduro contre l'opposition, crise migratoire massive.",
+      "qui_en": "Maduro regime versus opposition, massive migration crisis.",
+      "pourquoi": "Effondrement économique, autoritarisme, sanctions internationales.",
+      "pourquoi_en": "Economic collapse, authoritarianism, international sanctions.",
+      "depuis_quand": "Crise depuis 2014, aggravation depuis 2017.",
+      "depuis_quand_en": "Crisis since 2014, worsened since 2017.",
+      "consequences": "7,7 millions de migrants, hyperinflation, système de santé effondré.",
+      "consequences_en": "7.7 million migrants, hyperinflation, collapsed health system.",
+      "solutions": "Transition démocratique, aide humanitaire, accueil des réfugiés.",
+      "solutions_en": "Democratic transition, humanitarian aid, refugee reception."
+    },
+    "comparaison_population": {
+      "deplaces": 7700000,
+      "victimes": 1000
+    }
+  },
+  {
+    "name": "Répression des Ouïghours (Xinjiang, Chine)",
+    "lat": 41.7587,
+    "lng": 84.1377,
+    "region": "Asie",
+    "type": "Conflit interethnique",
+    "intensity": "basse",
+    "parties": [
+      "Gouvernement chinois",
+      "Population ouïghoure",
+      "Mouvement islamique du Turkestan oriental"
+    ],
+    "startDate": "2014-01-01",
+    "casualties": 2000,
+    "summary": "La répression systématique de la minorité ouïghoure (camps de détention, surveillance de masse, travail forcé) est qualifiée de génocide par plusieurs pays. La tension de basse intensité persiste au Xinjiang.",
+    "name_en": "Uyghur Repression (Xinjiang, China)",
+    "summary_en": "The systematic repression of the Uyghur minority (detention camps, mass surveillance, forced labor) has been characterized as genocide by several countries. Low-intensity tension persists in Xinjiang.",
+    "news": [
+      {
+        "title": "Ouïghours : répression continue au Xinjiang",
+        "date": "2026-01-20",
+        "source": "Human Rights Watch",
+        "url": "https://www.hrw.org/world-report/2026/"
+      },
+      {
+        "title": "Camps de détention : nouveaux témoignages",
+        "date": "2026-02-01",
+        "source": "BBC News",
+        "url": "https://www.bbc.com/news/world-asia-china"
+      },
+      {
+        "title": "Xinjiang : surveillance de masse intensifiée",
+        "date": "2026-01-10",
+        "source": "Reuters",
+        "url": "https://www.reuters.com/world/china/"
+      }
+    ],
+    "timeline": [],
+    "temoignages": [
+      {
+        "texte": "J'ai été détenu dans un camp pendant un an. Torture, travail forcé, rééducation. Mes enfants ne me reconnaissaient plus.",
+        "texte_en": "I was detained in a camp for a year. Torture, forced labor, re-education. My children no longer recognized me.",
+        "source": "HRW",
+        "profil": "Mahmut, Ouïghour exilé",
+        "profil_en": "Mahmut, exiled Uyghur"
+      }
+    ],
+    "fiche_educative": {
+      "qui": "Le gouvernement chinois contre la minorité ouïghoure musulmane du Xinjiang.",
+      "qui_en": "The Chinese government versus the Muslim Uyghur minority in Xinjiang.",
+      "pourquoi": "Politique de sinisation, lutte antiterroriste instrumentalisée, contrôle du Xinjiang.",
+      "pourquoi_en": "Sinicization policy, instrumentalized counter-terrorism, Xinjiang control.",
+      "depuis_quand": "Répression massive depuis 2017, tensions depuis les années 2000.",
+      "depuis_quand_en": "Mass repression since 2017, tensions since the 2000s.",
+      "consequences": "1 à 2 millions de détenus dans des camps, surveillance de masse, stérilisations forcées.",
+      "consequences_en": "1 to 2 million detained in camps, mass surveillance, forced sterilizations.",
+      "solutions": "Pression internationale, sanctions, enquête de la CPI.",
+      "solutions_en": "International pressure, sanctions, ICC investigation."
+    },
+    "comparaison_population": {
+      "deplaces": 50000,
+      "victimes": 1000
+    }
+  },
+  {
+    "name": "Conflit Région du Lac Tchad (multinationale)",
+    "lat": 13.4,
+    "lng": 14.0,
+    "region": "Afrique",
+    "type": "Insurrection",
+    "intensity": "moyenne",
+    "parties": [
+      "Nigeria",
+      "Tchad",
+      "Niger",
+      "Cameroun",
+      "Boko Haram",
+      "ISWAP"
+    ],
+    "startDate": "2009-07-01",
+    "casualties": 40000,
+    "summary": "L'insurrection de Boko Haram et de l'ISWAP affecte quatre pays autour du lac Tchad. La Force multinationale mixte n'arrive pas à éradiquer la menace djihadiste.",
+    "name_en": "Lake Chad Region Conflict (Multinational)",
+    "summary_en": "The Boko Haram and ISWAP insurgency affects four countries around Lake Chad. The Multinational Joint Task Force has been unable to eradicate the jihadist threat.",
+    "news": [
+      {
+        "title": "Lac Tchad : la menace ISWAP persiste",
+        "date": "2026-01-28",
+        "source": "ACLED",
+        "url": "https://acleddata.com/series/conflict-watchlist-2026"
+      },
+      {
+        "title": "Force multinationale : résultats mitigés",
+        "date": "2026-02-03",
+        "source": "Crisis Group",
+        "url": "https://www.crisisgroup.org/africa/"
+      },
+      {
+        "title": "Civils pris au piège du conflit au Lac Tchad",
+        "date": "2026-01-10",
+        "source": "ICRC",
+        "url": "https://www.icrc.org/en/article/humanitarian-outlook-2026"
+      }
+    ],
+    "timeline": [],
+    "temoignages": [
+      {
+        "texte": "Le lac rétrécit et Boko Haram avance. Nous avons perdu notre eau, notre terre et notre sécurité.",
+        "texte_en": "The lake is shrinking and Boko Haram advances. We lost our water, our land, and our security.",
+        "source": "UNHCR",
+        "profil": "Madu, pêcheur, région du Lac Tchad",
+        "profil_en": "Madu, fisherman, Lake Chad region"
+      }
+    ],
+    "fiche_educative": {
+      "qui": "Boko Haram et ISWAP contre les armées du Nigeria, Niger, Tchad et Cameroun (Force multinationale mixte).",
+      "qui_en": "Boko Haram and ISWAP versus the armies of Nigeria, Niger, Chad and Cameroon (Multinational Joint Task Force).",
+      "pourquoi": "Expansion de Boko Haram, crise climatique (assèchement du lac), pauvreté extrême.",
+      "pourquoi_en": "Boko Haram expansion, climate crisis (lake drying), extreme poverty.",
+      "depuis_quand": "Depuis 2009, extension régionale depuis 2014.",
+      "depuis_quand_en": "Since 2009, regional extension since 2014.",
+      "consequences": "Plus de 35 000 morts, 3 millions de déplacés dans 4 pays, famine.",
+      "consequences_en": "Over 35,000 dead, 3 million displaced across 4 countries, famine.",
+      "solutions": "Coopération régionale, développement, adaptation climatique.",
+      "solutions_en": "Regional cooperation, development, climate adaptation."
+    },
+    "comparaison_population": {
+      "deplaces": 3000000,
+      "victimes": 35000
+    }
+  },
+  {
+    "name": "Conflit en République centrafricaine",
+    "lat": 6.6111,
+    "lng": 20.9394,
+    "region": "Afrique",
+    "type": "Guerre civile",
+    "intensity": "moyenne",
+    "parties": [
+      "Gouvernement (soutenu par Wagner)",
+      "Coalition CPC",
+      "UPC",
+      "Anti-Balaka"
+    ],
+    "startDate": "2012-12-10",
+    "casualties": 15000,
+    "summary": "Le gouvernement, soutenu par les forces russes Wagner, a repris le contrôle de plusieurs zones, mais les groupes rebelles continuent d'opérer. Les exactions contre les civils se poursuivent.",
+    "name_en": "Central African Republic Conflict",
+    "summary_en": "The government, backed by Russian Wagner forces, has regained control of several areas, but rebel groups continue to operate. Abuses against civilians continue.",
+    "news": [
+      {
+        "title": "RCA : Wagner étend son emprise",
+        "date": "2026-01-22",
+        "source": "Reuters",
+        "url": "https://www.reuters.com/world/africa/"
+      },
+      {
+        "title": "Groupes rebelles actifs malgré les offensives",
+        "date": "2026-02-01",
+        "source": "Crisis Group",
+        "url": "https://www.crisisgroup.org/africa/"
+      },
+      {
+        "title": "Risque élevé d'instabilité en RCA en 2026",
+        "date": "2026-01-15",
+        "source": "Bloomberg",
+        "url": "https://www.bloomberg.com/news/"
+      }
+    ],
+    "timeline": [],
+    "temoignages": [
+      {
+        "texte": "Les groupes armés se battent pour les mines de diamants. Nous, on meurt pour des pierres qu'on ne verra jamais.",
+        "texte_en": "Armed groups fight for diamond mines. We die for stones we'll never see.",
+        "source": "MSF",
+        "profil": "Jean, 28 ans, Bangui",
+        "profil_en": "Jean, 28, Bangui"
+      }
+    ],
+    "fiche_educative": {
+      "qui": "Groupes armés (ex-Séléka, anti-Balaka) contre l'armée centrafricaine soutenue par Wagner.",
+      "qui_en": "Armed groups (ex-Séléka, anti-Balaka) versus the Central African army supported by Wagner.",
+      "pourquoi": "État failli, rivalités communautaires, ressources minières, ingérences étrangères.",
+      "pourquoi_en": "Failed state, communal rivalries, mineral resources, foreign interference.",
+      "depuis_quand": "Instabilité chronique, crise depuis 2013.",
+      "depuis_quand_en": "Chronic instability, crisis since 2013.",
+      "consequences": "Des milliers de morts, 700 000 déplacés, exactions de Wagner documentées.",
+      "consequences_en": "Thousands dead, 700,000 displaced, documented Wagner abuses.",
+      "solutions": "Accord de paix de Khartoum, DDR, justice transitionnelle.",
+      "solutions_en": "Khartoum peace agreement, DDR, transitional justice."
+    },
+    "comparaison_population": {
+      "deplaces": 700000,
+      "victimes": 5000
+    }
+  },
+  {
+    "name": "Narco-violence en Équateur",
+    "lat": -2.171,
+    "lng": -79.9224,
+    "region": "Amériques",
+    "type": "Insurrection",
+    "intensity": "moyenne",
+    "parties": [
+      "Forces armées équatoriennes",
+      "Los Choneros",
+      "Los Lobos",
+      "R7"
+    ],
+    "startDate": "2018-01-01",
+    "casualties": 4000,
+    "summary": "L'Équateur figure parmi les 10 pays les plus violents au monde. L'état d'urgence récurrent et les opérations militaires n'ont pas réussi à endiguer la pénétration des cartels.",
+    "name_en": "Narco-Violence in Ecuador",
+    "summary_en": "Ecuador ranks among the 10 most violent countries in the world. Recurring states of emergency and military operations have failed to contain cartel penetration.",
+    "news": [
+      {
+        "title": "Équateur : top 10 des pays les plus violents",
+        "date": "2026-01-25",
+        "source": "ACLED",
+        "url": "https://acleddata.com/series/acled-conflict-index"
+      },
+      {
+        "title": "Los Choneros : expansion du narco-trafic",
+        "date": "2026-02-01",
+        "source": "Reuters",
+        "url": "https://www.reuters.com/world/americas/"
+      },
+      {
+        "title": "État d'urgence prolongé en Équateur",
+        "date": "2026-01-18",
+        "source": "Al Jazeera",
+        "url": "https://www.aljazeera.com/news/americas/"
+      }
+    ],
+    "timeline": [],
+    "temoignages": [
+      {
+        "texte": "L'Équateur était le pays le plus sûr d'Amérique du Sud. En deux ans, c'est devenu un narco-État.",
+        "texte_en": "Ecuador was the safest country in South America. In two years, it became a narco-state.",
+        "source": "HRW",
+        "profil": "Diego, journaliste, Guayaquil",
+        "profil_en": "Diego, journalist, Guayaquil"
+      }
+    ],
+    "fiche_educative": {
+      "qui": "Cartels de la drogue (Los Choneros, etc.) contre l'État équatorien.",
+      "qui_en": "Drug cartels (Los Choneros, etc.) versus the Ecuadorian state.",
+      "pourquoi": "Position géographique entre Colombie et Pérou, corruption, routes de la drogue.",
+      "pourquoi_en": "Geographic position between Colombia and Peru, corruption, drug routes.",
+      "depuis_quand": "Escalade depuis 2022, état d'urgence en 2024.",
+      "depuis_quand_en": "Escalation since 2022, state of emergency in 2024.",
+      "consequences": "Taux d'homicides multiplié par 5, prisons hors contrôle, tourisme en chute.",
+      "consequences_en": "Homicide rate multiplied by 5, prisons out of control, tourism declining.",
+      "solutions": "Renforcement judiciaire, coopération régionale, réforme pénitentiaire.",
+      "solutions_en": "Judicial strengthening, regional cooperation, prison reform."
+    },
+    "comparaison_population": {
+      "deplaces": 50000,
+      "victimes": 8000
+    }
+  },
+  {
+    "name": "Tensions détroit de Taïwan",
+    "lat": 23.6978,
+    "lng": 120.9605,
+    "region": "Asie",
+    "type": "Conflit international",
+    "intensity": "moyenne",
+    "parties": [
+      "Chine (APL)",
+      "Taïwan",
+      "États-Unis",
+      "Japon"
+    ],
+    "startDate": "2022-08-02",
+    "casualties": 0,
+    "summary": "Les tensions sont au plus haut depuis des décennies. En décembre 2025, plus de 100 avions chinois détectés autour de Taïwan, 90 franchissant la ligne médiane et 27 roquettes tirées depuis le Fujian. Exercices interprétés comme un test de blocus. Vente d'armes US de 11 milliards de dollars à Taïwan.",
+    "name_en": "Taiwan Strait Tensions",
+    "summary_en": "Tensions are at their highest in decades. In December 2025, over 100 Chinese aircraft were detected around Taiwan, 90 crossing the median line and 27 rockets fired from Fujian. The exercises were interpreted as a blockade test run. The US approved an $11 billion arms sale to Taiwan.",
+    "news": [
+      {
+        "title": "Exercices chinois : test de blocus autour de Taïwan",
+        "date": "2026-01-08",
+        "source": "Defense News",
+        "url": "https://www.defensenews.com/global/asia-pacific/2026/01/08/chinese-drill-near-taiwan-seen-as-test-run-for-blockade-message-to-us/"
+      },
+      {
+        "title": "Les USA dénoncent les exercices militaires chinois",
+        "date": "2026-01-01",
+        "source": "Al Jazeera",
+        "url": "https://www.aljazeera.com/news/2026/1/1/us-says-chinese-military-drills-around-taiwan-cause-unnecessary-tensions"
+      },
+      {
+        "title": "Taïwan : la dissuasion sera contournée, pas défaite",
+        "date": "2026-02-05",
+        "source": "War on the Rocks",
+        "url": "https://warontherocks.com/2026/02/deterrence-wont-fail-in-the-taiwan-strait-it-will-be-bypassed/"
+      }
+    ],
+    "timeline": [],
+    "temoignages": [
+      {
+        "texte": "Chaque jour, des avions militaires chinois survolent notre espace. La guerre psychologique est permanente.",
+        "texte_en": "Every day, Chinese military aircraft fly over our space. The psychological warfare is constant.",
+        "source": "HRW",
+        "profil": "Lin, 50 ans, Taipei",
+        "profil_en": "Lin, 50, Taipei"
+      }
+    ],
+    "fiche_educative": {
+      "qui": "Chine populaire contre Taïwan (République de Chine), soutenu par les États-Unis.",
+      "qui_en": "People's Republic of China versus Taiwan (Republic of China), backed by the US.",
+      "pourquoi": "Revendication chinoise sur Taïwan, enjeux géopolitiques des semi-conducteurs.",
+      "pourquoi_en": "Chinese claim on Taiwan, geopolitical semiconductor stakes.",
+      "depuis_quand": "Tensions depuis 1949, intensification depuis 2022.",
+      "depuis_quand_en": "Tensions since 1949, intensification since 2022.",
+      "consequences": "Risque de guerre mondiale, course aux armements, instabilité régionale.",
+      "consequences_en": "Risk of world war, arms race, regional instability.",
+      "solutions": "Maintien du statu quo, diplomatie, désescalade.",
+      "solutions_en": "Maintaining the status quo, diplomacy, de-escalation."
+    },
+    "comparaison_population": {
+      "deplaces": 0,
+      "victimes": 0
+    }
+  },
+  {
+    "name": "Crise de la mer Rouge (attaques Houthis)",
+    "lat": 13.0,
+    "lng": 42.5,
+    "region": "Moyen-Orient",
+    "type": "Conflit international",
+    "intensity": "basse",
+    "parties": [
+      "Houthis (Ansar Allah)",
+      "Coalition navale internationale",
+      "Commerce maritime mondial"
+    ],
+    "startDate": "2023-11-19",
+    "casualties": 18,
+    "summary": "Les attaques Houthis sur le commerce maritime en mer Rouge ont considérablement diminué (7 en 2025 vs 150 en 2024). Aucun incident depuis septembre 2025. Maersk effectue son premier transit en 2 ans en décembre 2025. La reprise du commerce reste progressive.",
+    "name_en": "Red Sea Crisis (Houthi Attacks)",
+    "summary_en": "Houthi attacks on maritime commerce in the Red Sea have dropped significantly (7 in 2025 vs. 150 in 2024). No incidents since September 2025. Maersk completed its first transit in 2 years in December 2025. The resumption of trade remains gradual.",
+    "news": [
+      {
+        "title": "Maersk : premier transit en mer Rouge depuis 2 ans",
+        "date": "2025-12-20",
+        "source": "Times of Israel",
+        "url": "https://www.timesofisrael.com/maersk-ships-traverses-red-sea-for-first-time-in-2-years-as-yemens-houthis-hold-fire/"
+      },
+      {
+        "title": "ONU prolonge le suivi des attaques Houthis",
+        "date": "2026-01-30",
+        "source": "UN",
+        "url": "https://press.un.org/en/2026/sc16274.doc.htm"
+      },
+      {
+        "title": "Mer Rouge : les tensions persistent malgré l'accalmie",
+        "date": "2026-02-01",
+        "source": "ACLED",
+        "url": "https://acleddata.com/report/regional-power-struggles-fuel-simmering-tensions-across-red-sea"
+      }
+    ],
+    "timeline": [],
+    "temoignages": [
+      {
+        "texte": "Notre cargo a été touché par un missile. L'équipage a dû être évacué en pleine mer.",
+        "texte_en": "Our cargo ship was hit by a missile. The crew had to be evacuated at sea.",
+        "source": "HRW",
+        "profil": "Marin, mer Rouge",
+        "profil_en": "Sailor, Red Sea"
+      }
+    ],
+    "fiche_educative": {
+      "qui": "Houthis yéménites contre le trafic maritime international, coalition USA-UK.",
+      "qui_en": "Yemeni Houthis versus international maritime traffic, US-UK coalition.",
+      "pourquoi": "Solidarité des Houthis avec Gaza, contrôle du détroit de Bab el-Mandeb.",
+      "pourquoi_en": "Houthi solidarity with Gaza, control of Bab el-Mandeb strait.",
+      "depuis_quand": "Attaques depuis novembre 2023.",
+      "depuis_quand_en": "Attacks since November 2023.",
+      "consequences": "Commerce mondial perturbé, coûts de transport augmentés de 300%.",
+      "consequences_en": "Global trade disrupted, transport costs increased by 300%.",
+      "solutions": "Cessez-le-feu à Gaza, diplomatie avec les Houthis.",
+      "solutions_en": "Gaza ceasefire, diplomacy with the Houthis."
+    },
+    "comparaison_population": {
+      "deplaces": 0,
+      "victimes": 100
+    }
+  },
+  {
+    "name": "Violence tribale en Papouasie-Nouvelle-Guinée",
+    "lat": -5.5,
+    "lng": 144.0,
+    "region": "Asie",
+    "type": "Conflit interethnique",
+    "intensity": "moyenne",
+    "parties": [
+      "Clans tribaux des Highlands",
+      "Police papouasienne",
+      "Forces de sécurité"
+    ],
+    "startDate": "2020-01-01",
+    "casualties": 2000,
+    "summary": "La violence tribale s'aggrave avec en moyenne 6 incidents violents par semaine, contre 3 un an plus tôt. L'introduction d'armes automatiques amplifie les pertes. Au moins 49 morts dans un seul massacre à Enga. La Nouvelle-Zélande suspend un projet de 6,7M$ à cause de la violence.",
+    "name_en": "Tribal Violence in Papua New Guinea",
+    "summary_en": "Tribal violence is worsening, averaging 6 violent incidents per week, up from 3 a year earlier. The introduction of automatic weapons is amplifying casualties. At least 49 were killed in a single massacre in Enga. New Zealand suspended a $6.7M project due to the violence.",
+    "news": [
+      {
+        "title": "PNG : massacre tribal fait 49 morts à Enga",
+        "date": "2025-12-18",
+        "source": "ACLED",
+        "url": "https://acleddata.com/brief/qa-worsening-trend-violence-papua-new-guinea"
+      },
+      {
+        "title": "Nouvelle-Zélande suspend un projet à cause de la violence",
+        "date": "2026-02-02",
+        "source": "Asia Pacific Report",
+        "url": "https://asiapacificreport.nz/2026/02/02/nz-pulls-plug-on-6-7m-power-project-in-papua-new-guinea-amid-tribal-violence/"
+      },
+      {
+        "title": "Violence tribale : armes automatiques amplifient les pertes",
+        "date": "2026-01-15",
+        "source": "NPR",
+        "url": "https://www.npr.org/2024/02/27/1234271476/tribal-clashes-in-papua-new-guinea-have-become-increasingly-deadly"
+      }
+    ],
+    "timeline": [],
+    "temoignages": [
+      {
+        "texte": "Les guerres tribales reprennent à cause des armes automatiques. Avant c'étaient des flèches, maintenant ce sont des M16.",
+        "texte_en": "Tribal wars resume because of automatic weapons. Before it was arrows, now it's M16s.",
+        "source": "HRW",
+        "profil": "Chef tribal, Enga Province",
+        "profil_en": "Tribal chief, Enga Province"
+      }
+    ],
+    "fiche_educative": {
+      "qui": "Tribus rivales armées d'armes automatiques dans les Highlands.",
+      "qui_en": "Rival tribes armed with automatic weapons in the Highlands.",
+      "pourquoi": "Rivalités traditionnelles amplifiées par les armes modernes, élections contestées.",
+      "pourquoi_en": "Traditional rivalries amplified by modern weapons, contested elections.",
+      "depuis_quand": "Violence chronique, intensification depuis 2020.",
+      "depuis_quand_en": "Chronic violence, intensification since 2020.",
+      "consequences": "Des centaines de morts, villages détruits, déplacements.",
+      "consequences_en": "Hundreds dead, villages destroyed, displacement.",
+      "solutions": "Contrôle des armes, médiation tribale, développement.",
+      "solutions_en": "Arms control, tribal mediation, development."
+    },
+    "comparaison_population": {
+      "deplaces": 90000,
+      "victimes": 500
+    }
+  },
+  {
+    "name": "Tensions Arménie-Azerbaïdjan (post-Karabakh)",
+    "lat": 40.1792,
+    "lng": 44.4991,
+    "region": "Europe",
+    "type": "Conflit international",
+    "intensity": "basse",
+    "parties": [
+      "Arménie",
+      "Azerbaïdjan",
+      "États-Unis (médiateur)",
+      "Turquie"
+    ],
+    "startDate": "2020-09-27",
+    "casualties": 7000,
+    "summary": "Après la dissolution du Nagorno-Karabakh et l'exode de 100 000 Arméniens, un accord de paix a été signé à Washington en août 2025 mais reste bloqué. L'Azerbaïdjan exige la modification de la constitution arménienne. Échange de prisonniers en janvier 2026.",
+    "name_en": "Armenia-Azerbaijan Tensions (Post-Karabakh)",
+    "summary_en": "After the dissolution of Nagorno-Karabakh and the exodus of 100,000 Armenians, a peace deal was signed in Washington in August 2025 but remains stalled. Azerbaijan demands amendments to the Armenian constitution. A prisoner exchange took place in January 2026.",
+    "news": [
+      {
+        "title": "Accord de paix Washington : toujours bloqué",
+        "date": "2026-01-20",
+        "source": "Crisis Group",
+        "url": "https://www.crisisgroup.org/europe-central-asia/caucasus/armenian-azerbaijani-conflict/98-armenia-and-azerbaijan-hard-road-lasting-peace"
+      },
+      {
+        "title": "Échange de prisonniers arméniens du Karabakh",
+        "date": "2026-01-19",
+        "source": "France Diplomatie",
+        "url": "https://www.diplomatie.gouv.fr/en/country-files/azerbaijan/news/article/azerbaijan-handover-to-armenia-of-four-armenian-prisoners-from-nagorno-karabakh"
+      },
+      {
+        "title": "Arménie : 100 000 réfugiés du Karabakh à intégrer",
+        "date": "2026-02-01",
+        "source": "Moscow Times",
+        "url": "https://www.themoscowtimes.com/2025/04/03/the-window-for-an-armenia-azerbaijan-peace-deal-is-closing-a88565"
+      }
+    ],
+    "timeline": [],
+    "temoignages": [
+      {
+        "texte": "120 000 Arméniens ont quitté le Karabakh en une semaine. Nous avons tout perdu, notre terre ancestrale.",
+        "texte_en": "120,000 Armenians left Karabakh in one week. We lost everything, our ancestral land.",
+        "source": "UNHCR",
+        "profil": "Armen, réfugié, Erevan",
+        "profil_en": "Armen, refugee, Yerevan"
+      }
+    ],
+    "fiche_educative": {
+      "qui": "Azerbaïdjan contre Arménie, population arménienne du Karabakh déplacée.",
+      "qui_en": "Azerbaijan versus Armenia, displaced Armenian population of Karabakh.",
+      "pourquoi": "Reconquête du Haut-Karabakh par l'Azerbaïdjan (2023), nettoyage ethnique.",
+      "pourquoi_en": "Azerbaijan's reconquest of Nagorno-Karabakh (2023), ethnic cleansing.",
+      "depuis_quand": "Conflit depuis 1988, offensive azerbaïdjanaise en septembre 2023.",
+      "depuis_quand_en": "Conflict since 1988, Azerbaijani offensive in September 2023.",
+      "consequences": "120 000 Arméniens déplacés, Karabakh vidé, tensions frontalières.",
+      "consequences_en": "120,000 Armenians displaced, Karabakh emptied, border tensions.",
+      "solutions": "Accord de paix, protection des droits, justice internationale.",
+      "solutions_en": "Peace agreement, rights protection, international justice."
+    },
+    "comparaison_population": {
+      "deplaces": 120000,
+      "victimes": 7000
+    }
+  },
+  {
+    "name": "Insurrection séparatiste en Thaïlande du Sud",
+    "lat": 6.87,
+    "lng": 101.25,
+    "region": "Asie",
+    "type": "Insurrection",
+    "intensity": "basse",
+    "parties": [
+      "Armée thaïlandaise",
+      "BRN (Barisan Revolusi Nasional)",
+      "Groupes séparatistes malais"
+    ],
+    "startDate": "2004-01-04",
+    "casualties": 7000,
+    "summary": "L'insurrection séparatiste musulmane dans les provinces de Pattani, Yala et Narathiwat continue de faire des victimes. Les pourparlers de paix avec le BRN progressent lentement. La violence a diminué mais persiste.",
+    "name_en": "Separatist Insurgency in Southern Thailand",
+    "summary_en": "The Muslim separatist insurgency in the Pattani, Yala, and Narathiwat provinces continues to claim lives. Peace talks with the BRN are progressing slowly. Violence has decreased but persists.",
+    "news": [
+      {
+        "title": "Thaïlande du Sud : pourparlers avec le BRN",
+        "date": "2026-01-18",
+        "source": "Reuters",
+        "url": "https://www.reuters.com/world/asia-pacific/"
+      },
+      {
+        "title": "Incidents sporadiques dans les provinces du sud",
+        "date": "2026-02-01",
+        "source": "Al Jazeera",
+        "url": "https://www.aljazeera.com/news/asia/"
+      },
+      {
+        "title": "20 ans d'insurrection : un conflit oublié",
+        "date": "2026-01-04",
+        "source": "BBC News",
+        "url": "https://www.bbc.com/news/world-asia"
+      }
+    ],
+    "timeline": [],
+    "temoignages": [
+      {
+        "texte": "Mon père enseignant a été abattu devant son école. Les séparatistes ciblent les fonctionnaires.",
+        "texte_en": "My teacher father was shot in front of his school. Separatists target civil servants.",
+        "source": "HRW",
+        "profil": "Nisa, 22 ans, Pattani",
+        "profil_en": "Nisa, 22, Pattani"
+      }
+    ],
+    "fiche_educative": {
+      "qui": "Séparatistes malais musulmans contre l'armée thaïlandaise dans les provinces du sud.",
+      "qui_en": "Malay Muslim separatists versus the Thai army in the southern provinces.",
+      "pourquoi": "Annexion contestée de 1909, discrimination culturelle et linguistique.",
+      "pourquoi_en": "Contested 1909 annexation, cultural and linguistic discrimination.",
+      "depuis_quand": "Insurrection depuis 2004, conflit historique depuis 1909.",
+      "depuis_quand_en": "Insurgency since 2004, historical conflict since 1909.",
+      "consequences": "Plus de 7 000 morts, loi martiale, économie paralysée.",
+      "consequences_en": "Over 7,000 dead, martial law, paralyzed economy.",
+      "solutions": "Dialogue de paix, autonomie, droits culturels.",
+      "solutions_en": "Peace dialogue, autonomy, cultural rights."
+    },
+    "comparaison_population": {
+      "deplaces": 20000,
+      "victimes": 7000
+    }
+  },
+  {
+    "name": "Conflit kurde (Turquie-PKK)",
+    "lat": 37.0,
+    "lng": 43.0,
+    "region": "Moyen-Orient",
+    "type": "Insurrection",
+    "intensity": "moyenne",
+    "parties": [
+      "Turquie",
+      "PKK",
+      "YPG/FDS (Syrie)",
+      "Peshmergas (Irak)"
+    ],
+    "startDate": "1984-08-15",
+    "casualties": 45000,
+    "summary": "Le conflit entre la Turquie et le PKK se poursuit sur trois fronts : sud-est de la Turquie, nord de l'Irak et nord-est de la Syrie. La Turquie menace d'intervenir contre les FDS en Syrie post-Assad. Des opérations militaires régulières dans les montagnes du Kurdistan irakien.",
+    "name_en": "Kurdish Conflict (Turkey-PKK)",
+    "summary_en": "The conflict between Turkey and the PKK continues on three fronts: southeastern Turkey, northern Iraq, and northeastern Syria. Turkey threatens to intervene against the SDF in post-Assad Syria. Regular military operations continue in the mountains of Iraqi Kurdistan.",
+    "news": [
+      {
+        "title": "Turquie : menace d'intervention contre les FDS en Syrie",
+        "date": "2026-02-01",
+        "source": "Al Jazeera",
+        "url": "https://www.aljazeera.com/news/middle-east/"
+      },
+      {
+        "title": "Opérations militaires turques au Kurdistan irakien",
+        "date": "2026-01-20",
+        "source": "Reuters",
+        "url": "https://www.reuters.com/world/middle-east/"
+      },
+      {
+        "title": "PKK : 40 ans de conflit avec la Turquie",
+        "date": "2026-01-15",
+        "source": "BBC News",
+        "url": "https://www.bbc.com/news/world-middle-east"
+      }
+    ],
+    "timeline": [],
+    "temoignages": [
+      {
+        "texte": "Notre village a été évacué de force. L'armée turque dit que c'est pour notre sécurité.",
+        "texte_en": "Our village was forcibly evacuated. The Turkish army says it's for our safety.",
+        "source": "HRW",
+        "profil": "Kurde, sud-est de la Turquie",
+        "profil_en": "Kurd, southeastern Turkey"
+      }
+    ],
+    "fiche_educative": {
+      "qui": "PKK (Parti des travailleurs du Kurdistan) contre l'armée turque, opérations en Irak et Syrie.",
+      "qui_en": "PKK (Kurdistan Workers' Party) versus the Turkish army, operations in Iraq and Syria.",
+      "pourquoi": "Revendications d'autonomie kurde, répression culturelle, question identitaire.",
+      "pourquoi_en": "Kurdish autonomy demands, cultural repression, identity question.",
+      "depuis_quand": "Insurrection depuis 1984, reprise après l'échec des pourparlers en 2015.",
+      "depuis_quand_en": "Insurgency since 1984, resumed after failed talks in 2015.",
+      "consequences": "Plus de 40 000 morts au total, villages détruits, déplacements.",
+      "consequences_en": "Over 40,000 total dead, villages destroyed, displacement.",
+      "solutions": "Processus de paix, droits culturels, autonomie.",
+      "solutions_en": "Peace process, cultural rights, autonomy."
+    },
+    "comparaison_population": {
+      "deplaces": 1000000,
+      "victimes": 3000
+    }
+  },
+  {
+    "name": "Crise au Manipur (Inde)",
+    "lat": 24.817,
+    "lng": 93.9368,
+    "region": "Asie",
+    "type": "Conflit interethnique",
+    "intensity": "moyenne",
+    "parties": [
+      "Communauté Meitei",
+      "Communauté Kuki-Zo",
+      "Forces de sécurité indiennes",
+      "Milices tribales"
+    ],
+    "startDate": "2023-05-03",
+    "casualties": 250,
+    "summary": "Depuis mai 2023, le Manipur est en proie à des violences interethniques entre les Meiteis et les Kuki-Zo. Plus de 250 morts et 60 000 déplacés. L'État est de facto divisé, avec des barricades et des milices des deux côtés. Le gouvernement central peine à rétablir l'ordre.",
+    "name_en": "Manipur Crisis (India)",
+    "summary_en": "Since May 2023, Manipur has been gripped by interethnic violence between the Meitei and Kuki-Zo communities. Over 250 killed and 60,000 displaced. The state is de facto divided, with barricades and militias on both sides. The central government is struggling to restore order.",
+    "news": [
+      {
+        "title": "Manipur : violences interethniques persistantes",
+        "date": "2026-01-25",
+        "source": "Reuters",
+        "url": "https://www.reuters.com/world/india/"
+      },
+      {
+        "title": "60 000 déplacés au Manipur : crise humanitaire",
+        "date": "2026-02-01",
+        "source": "BBC News",
+        "url": "https://www.bbc.com/news/world-south-asia"
+      },
+      {
+        "title": "Inde : le Manipur divisé de facto",
+        "date": "2026-01-15",
+        "source": "Al Jazeera",
+        "url": "https://www.aljazeera.com/news/asia/"
+      }
+    ],
+    "timeline": [],
+    "temoignages": [
+      {
+        "texte": "Meitei et Kuki se sont toujours côtoyés. Maintenant, nos voisins brûlent nos maisons.",
+        "texte_en": "Meitei and Kuki always lived side by side. Now our neighbors burn our homes.",
+        "source": "HRW",
+        "profil": "Kuki, déplacé, Churachandpur",
+        "profil_en": "Kuki, displaced, Churachandpur"
+      }
+    ],
+    "fiche_educative": {
+      "qui": "Communautés Meitei contre Kuki-Zo, forces de sécurité indiennes en médiation.",
+      "qui_en": "Meitei communities versus Kuki-Zo, Indian security forces mediating.",
+      "pourquoi": "Demande de statut de tribu répertoriée par les Meitei, tensions foncières.",
+      "pourquoi_en": "Meitei demand for Scheduled Tribe status, land tensions.",
+      "depuis_quand": "Violences depuis mai 2023.",
+      "depuis_quand_en": "Violence since May 2023.",
+      "consequences": "200+ morts, 70 000 déplacés, État divisé physiquement.",
+      "consequences_en": "200+ dead, 70,000 displaced, state physically divided.",
+      "solutions": "Dialogue intercommunautaire, justice, présence militaire.",
+      "solutions_en": "Intercommunal dialogue, justice, military presence."
+    },
+    "comparaison_population": {
+      "deplaces": 70000,
+      "victimes": 200
+    }
+  },
+  {
+    "name": "Tensions en mer de Chine méridionale",
+    "lat": 11.0,
+    "lng": 115.0,
+    "region": "Asie",
+    "type": "Conflit international",
+    "intensity": "basse",
+    "parties": [
+      "Chine",
+      "Philippines",
+      "Vietnam",
+      "États-Unis",
+      "Taïwan",
+      "Malaisie"
+    ],
+    "startDate": "2012-01-01",
+    "casualties": 0,
+    "summary": "Les tensions restent élevées avec des confrontations navales régulières entre les garde-côtes chinois et philippins aux récifs de Scarborough et Second Thomas. La Chine poursuit la militarisation d'îles artificielles. Les patrouilles navales américaines se multiplient.",
+    "name_en": "South China Sea Tensions",
+    "summary_en": "Tensions remain high with regular naval confrontations between Chinese and Philippine coast guards at Scarborough and Second Thomas shoals. China continues militarizing artificial islands. American naval patrols are increasing.",
+    "news": [
+      {
+        "title": "Confrontation navale Chine-Philippines au récif de Scarborough",
+        "date": "2026-01-28",
+        "source": "Reuters",
+        "url": "https://www.reuters.com/world/asia-pacific/"
+      },
+      {
+        "title": "Chine : militarisation des îles artificielles continue",
+        "date": "2026-02-03",
+        "source": "Al Jazeera",
+        "url": "https://www.aljazeera.com/news/asia/"
+      },
+      {
+        "title": "US Navy : patrouilles en mer de Chine méridionale",
+        "date": "2026-01-15",
+        "source": "Defense News",
+        "url": "https://www.defensenews.com/naval/"
+      }
+    ],
+    "timeline": [],
+    "temoignages": [
+      {
+        "texte": "Les garde-côtes chinois nous bloquent l'accès à nos zones de pêche traditionnelles.",
+        "texte_en": "Chinese coast guard blocks access to our traditional fishing grounds.",
+        "source": "HRW",
+        "profil": "Pêcheur philippin, Palawan",
+        "profil_en": "Filipino fisherman, Palawan"
+      }
+    ],
+    "fiche_educative": {
+      "qui": "Chine contre Philippines, Vietnam, Malaisie, États-Unis (liberté de navigation).",
+      "qui_en": "China versus Philippines, Vietnam, Malaysia, US (freedom of navigation).",
+      "pourquoi": "Revendications territoriales chinoises ('ligne en neuf traits'), ressources, routes commerciales.",
+      "pourquoi_en": "Chinese territorial claims ('nine-dash line'), resources, trade routes.",
+      "depuis_quand": "Tensions depuis les années 1990, intensification depuis 2012.",
+      "depuis_quand_en": "Tensions since the 1990s, intensification since 2012.",
+      "consequences": "Risque de conflit majeur, pêcheurs harcelés, militarisation d'îlots.",
+      "consequences_en": "Risk of major conflict, harassed fishermen, islet militarization.",
+      "solutions": "Respect du droit de la mer (UNCLOS), diplomatie ASEAN.",
+      "solutions_en": "Respect for the law of the sea (UNCLOS), ASEAN diplomacy."
+    },
+    "comparaison_population": {
+      "deplaces": 0,
+      "victimes": 0
+    }
+  },
+  {
+    "name": "Expansion djihadiste au Sahel côtier",
+    "lat": 8.0,
+    "lng": 1.0,
+    "region": "Afrique",
+    "type": "Insurrection",
+    "intensity": "moyenne",
+    "parties": [
+      "Togo",
+      "Bénin",
+      "Ghana",
+      "JNIM",
+      "État islamique au Sahel"
+    ],
+    "startDate": "2021-01-01",
+    "casualties": 2000,
+    "summary": "Les groupes djihadistes du Sahel s'étendent vers les pays côtiers du golfe de Guinée. Le Togo, le Bénin et le Ghana font face à des incursions croissantes depuis le Burkina Faso. Bloomberg classe ces pays parmi les plus à risque d'instabilité civile en 2026.",
+    "name_en": "Jihadist Expansion in the Coastal Sahel",
+    "summary_en": "Sahel jihadist groups are expanding toward the coastal Gulf of Guinea countries. Togo, Benin, and Ghana face growing incursions from Burkina Faso. Bloomberg ranks these countries among the most at risk of civil instability in 2026.",
+    "news": [
+      {
+        "title": "Sahel côtier : l'expansion djihadiste menace le golfe de Guinée",
+        "date": "2026-01-25",
+        "source": "ACLED",
+        "url": "https://acleddata.com/series/conflict-watchlist-2026"
+      },
+      {
+        "title": "Togo et Bénin : incursions croissantes depuis le Burkina",
+        "date": "2026-02-01",
+        "source": "Crisis Group",
+        "url": "https://www.crisisgroup.org/africa/"
+      },
+      {
+        "title": "Ghana en alerte face à la menace djihadiste",
+        "date": "2026-01-18",
+        "source": "Reuters",
+        "url": "https://www.reuters.com/world/africa/"
+      }
+    ],
+    "timeline": [],
+    "temoignages": [
+      {
+        "texte": "Les attaques ont commencé au nord du Bénin. Maintenant, les djihadistes sont aux portes de la côte.",
+        "texte_en": "Attacks started in northern Benin. Now jihadists are at the coast's doorstep.",
+        "source": "HRW",
+        "profil": "Enseignant, nord du Togo",
+        "profil_en": "Teacher, northern Togo"
+      }
+    ],
+    "fiche_educative": {
+      "qui": "JNIM et EIGS (djihadistes sahéliens) s'étendant vers le Bénin, Togo, Ghana, Côte d'Ivoire.",
+      "qui_en": "JNIM and ISGS (Sahel jihadists) expanding toward Benin, Togo, Ghana, Côte d'Ivoire.",
+      "pourquoi": "Débordement de l'insurrection sahélienne, frontières poreuses, zones marginalisées.",
+      "pourquoi_en": "Spillover of the Sahel insurgency, porous borders, marginalized areas.",
+      "depuis_quand": "Extension depuis 2019, accélération en 2023-2024.",
+      "depuis_quand_en": "Extension since 2019, acceleration in 2023-2024.",
+      "consequences": "Centaines de morts, parcs nationaux infiltrés, économies locales perturbées.",
+      "consequences_en": "Hundreds dead, national parks infiltrated, local economies disrupted.",
+      "solutions": "Initiative d'Accra, coopération côtière, développement des zones frontalières.",
+      "solutions_en": "Accra Initiative, coastal cooperation, border area development."
+    },
+    "comparaison_population": {
+      "deplaces": 200000,
+      "victimes": 1000
+    }
+  },
+  {
+    "name": "Insurrection ADF (Ouganda/est RDC)",
+    "lat": 0.5,
+    "lng": 30.0,
+    "region": "Afrique",
+    "type": "Insurrection",
+    "intensity": "moyenne",
+    "parties": [
+      "Forces alliées démocratiques (ADF/ISCAP)",
+      "Armée ougandaise (UPDF)",
+      "FARDC (RDC)",
+      "MONUSCO"
+    ],
+    "startDate": "1996-01-01",
+    "casualties": 8000,
+    "summary": "Les Forces alliées démocratiques (ADF), affiliées à l'État islamique comme Province d'Afrique centrale (ISCAP), mènent des attaques meurtrières dans l'est de la RDC et l'Ouganda. Malgré les opérations conjointes UPDF-FARDC, le groupe reste actif et meurtrier.",
+    "name_en": "ADF Insurgency (Uganda/Eastern DRC)",
+    "summary_en": "The Allied Democratic Forces (ADF), affiliated with the Islamic State as the Central Africa Province (ISCAP), carry out deadly attacks in eastern DRC and Uganda. Despite joint UPDF-FARDC operations, the group remains active and lethal.",
+    "news": [
+      {
+        "title": "ADF : attaques meurtrières au Nord-Kivu",
+        "date": "2026-01-22",
+        "source": "Reuters",
+        "url": "https://www.reuters.com/world/africa/"
+      },
+      {
+        "title": "ISCAP : menace croissante en Afrique centrale",
+        "date": "2026-02-01",
+        "source": "ACLED",
+        "url": "https://acleddata.com/series/conflict-watchlist-2026"
+      },
+      {
+        "title": "Opérations conjointes UPDF-FARDC contre l'ADF",
+        "date": "2026-01-10",
+        "source": "Al Jazeera",
+        "url": "https://www.aljazeera.com/news/africa/"
+      }
+    ],
+    "timeline": [],
+    "temoignages": [
+      {
+        "texte": "Les ADF ont attaqué notre village de nuit. Ils ont tué à la machette. C'est la terreur pure.",
+        "texte_en": "The ADF attacked our village at night. They killed with machetes. It's pure terror.",
+        "source": "MSF",
+        "profil": "Katembo, survivant, Beni",
+        "profil_en": "Katembo, survivor, Beni"
+      }
+    ],
+    "fiche_educative": {
+      "qui": "ADF (Forces démocratiques alliées, affiliées à l'EI) contre les armées congolaise et ougandaise.",
+      "qui_en": "ADF (Allied Democratic Forces, ISIS-affiliated) versus Congolese and Ugandan armies.",
+      "pourquoi": "Groupe rebelle ougandais devenu djihadiste, refuge dans les forêts de l'est du Congo.",
+      "pourquoi_en": "Ugandan rebel group turned jihadist, hiding in eastern Congo forests.",
+      "depuis_quand": "Actifs depuis 1996, affiliés à l'EI depuis 2019.",
+      "depuis_quand_en": "Active since 1996, ISIS-affiliated since 2019.",
+      "consequences": "Des milliers de civils massacrés, déplacements massifs dans le Nord-Kivu.",
+      "consequences_en": "Thousands of civilians massacred, mass displacement in North Kivu.",
+      "solutions": "Opérations militaires conjointes, protection des civils, développement.",
+      "solutions_en": "Joint military operations, civilian protection, development."
+    },
+    "comparaison_population": {
+      "deplaces": 500000,
+      "victimes": 6000
+    }
+  },
+  {
+    "name": "Révolte et massacres en Iran (2025-2026)",
+    "lat": 35.6892,
+    "lng": 51.389,
+    "region": "Moyen-Orient",
+    "type": "Conflit interethnique",
+    "intensity": "haute",
+    "parties": [
+      "Régime iranien (IRGC, Basij)",
+      "Manifestants / société civile",
+      "Minorités ethniques"
+    ],
+    "startDate": "2025-12-28",
+    "casualties": 7000,
+    "summary": "Le plus grand soulèvement depuis 1979. Manifestations massives à partir du 28 décembre 2025, réprimées dans le sang les 8-9 janvier 2026 avec 6 000 à 36 500 morts. Internet coupé, couvre-feu nocturne, disparitions forcées. Le régime annonce la suppression des protestations le 21 janvier.",
+    "name_en": "Uprising and Massacres in Iran (2025-2026)",
+    "summary_en": "The largest uprising since 1979. Mass protests beginning December 28, 2025 were bloodily suppressed on January 8-9, 2026 with 6,000 to 36,500 killed. Internet shut down, nighttime curfews, forced disappearances. The regime declared the protests crushed on January 21.",
+    "news": [
+      {
+        "title": "Iran : 6 941 morts confirmés dans la répression",
+        "date": "2026-02-05",
+        "source": "Human Rights Watch",
+        "url": "https://www.hrw.org/news/2026/02/04/iran-human-rights-situation-spirals-deeper-into-crisis"
+      },
+      {
+        "title": "Massacres en Iran : l'ONU demande des comptes",
+        "date": "2026-01-27",
+        "source": "NPR",
+        "url": "https://www.npr.org/2026/01/27/nx-s1-5689793/6-126-iran-crackdown-protests-death-toll"
+      },
+      {
+        "title": "Iran : répression militarisée après les massacres",
+        "date": "2026-01-25",
+        "source": "Amnesty International",
+        "url": "https://www.amnesty.org/en/latest/news/2026/01/iran-authorities-unleash-heavily-militarized-clampdown-to-hide-protest-massacres/"
+      }
+    ],
+    "timeline": [
+      {
+        "date": "2025-12-28",
+        "event": "Début des manifestations massives",
+        "event_en": "Start of mass protests"
+      },
+      {
+        "date": "2026-01-08",
+        "event": "Massacres des 8-9 janvier — 6 000 à 36 500 morts",
+        "event_en": "January 8-9 massacres — 6,000 to 36,500 killed"
+      },
+      {
+        "date": "2026-01-10",
+        "event": "Coupure totale d'Internet",
+        "event_en": "Total Internet shutdown"
+      },
+      {
+        "date": "2026-01-15",
+        "event": "Couvre-feu nocturne dans tout le pays",
+        "event_en": "Nationwide nighttime curfew"
+      },
+      {
+        "date": "2026-01-21",
+        "event": "Le régime déclare la fin des protestations",
+        "event_en": "Regime declares protests crushed"
+      },
+      {
+        "date": "2026-02-05",
+        "event": "6 941 morts confirmés (HRW)",
+        "event_en": "6,941 deaths confirmed (HRW)"
+      }
+    ],
+    "temoignages": [
+      {
+        "texte": "Ils ont tiré sur les manifestants à balles réelles. Ma sœur est morte sur le chemin de l'hôpital.",
+        "texte_en": "They fired live rounds at protesters. My sister died on the way to the hospital.",
+        "source": "HRW",
+        "profil": "Iranienne, 25 ans, Téhéran",
+        "profil_en": "Iranian woman, 25, Tehran"
+      }
+    ],
+    "fiche_educative": {
+      "qui": "Le régime islamique iranien contre le mouvement de protestation populaire, mené notamment par les femmes.",
+      "qui_en": "The Iranian Islamic regime versus the popular protest movement, led notably by women.",
+      "pourquoi": "Répression des libertés, crise économique, mort de Mahsa Amini (2022), frustration accumulée.",
+      "pourquoi_en": "Repression of freedoms, economic crisis, death of Mahsa Amini (2022), accumulated frustration.",
+      "depuis_quand": "Révolte de 2022, nouvelle vague en 2025-2026.",
+      "depuis_quand_en": "2022 revolt, new wave in 2025-2026.",
+      "consequences": "Des centaines de morts, milliers d'arrestations, exécutions, internet coupé.",
+      "consequences_en": "Hundreds dead, thousands arrested, executions, internet shut down.",
+      "solutions": "Transition démocratique, fin de la répression, droits des femmes.",
+      "solutions_en": "Democratic transition, end of repression, women's rights."
+    },
+    "comparaison_population": {
+      "deplaces": 50000,
+      "victimes": 1500
+    }
+  },
+  {
+    "name": "Tensions péninsule coréenne",
+    "lat": 37.5665,
+    "lng": 126.978,
+    "region": "Asie",
+    "type": "Conflit international",
+    "intensity": "basse",
+    "parties": [
+      "Corée du Nord",
+      "Corée du Sud",
+      "États-Unis",
+      "Japon"
+    ],
+    "startDate": "1953-07-27",
+    "casualties": 0,
+    "summary": "Les tensions restent élevées avec les essais balistiques nord-coréens réguliers et l'envoi de soldats nord-coréens en Ukraine aux côtés de la Russie. La coopération militaire Pyongyang-Moscou inquiète Washington et Séoul. L'expiration du traité New START en février 2026 aggrave les risques.",
+    "name_en": "Korean Peninsula Tensions",
+    "summary_en": "Tensions remain high with regular North Korean ballistic tests and the deployment of North Korean soldiers to Ukraine alongside Russia. The Pyongyang-Moscow military cooperation worries Washington and Seoul. The expiration of the New START treaty in February 2026 heightens the risks.",
+    "news": [
+      {
+        "title": "Corée du Nord : soldats envoyés en Ukraine",
+        "date": "2026-01-15",
+        "source": "Reuters",
+        "url": "https://www.reuters.com/world/asia-pacific/"
+      },
+      {
+        "title": "Expiration du traité New START : course aux armements",
+        "date": "2026-02-05",
+        "source": "CIDOB",
+        "url": "https://www.cidob.org/en/publications/world-2026-ten-issues-will-shape-international-agenda"
+      },
+      {
+        "title": "Pyongyang-Moscou : coopération militaire croissante",
+        "date": "2026-01-28",
+        "source": "Al Jazeera",
+        "url": "https://www.aljazeera.com/news/asia/"
+      }
+    ],
+    "timeline": [],
+    "temoignages": [
+      {
+        "texte": "Vivre à Séoul, c'est vivre avec la menace constante d'un missile nord-coréen.",
+        "texte_en": "Living in Seoul means living with the constant threat of a North Korean missile.",
+        "source": "HRW",
+        "profil": "Habitant, Séoul",
+        "profil_en": "Resident, Seoul"
+      }
+    ],
+    "fiche_educative": {
+      "qui": "Corée du Nord (Kim Jong-un) contre Corée du Sud et États-Unis.",
+      "qui_en": "North Korea (Kim Jong-un) versus South Korea and the United States.",
+      "pourquoi": "Programme nucléaire nord-coréen, partition depuis 1953, alliance avec la Russie.",
+      "pourquoi_en": "North Korean nuclear program, partition since 1953, alliance with Russia.",
+      "depuis_quand": "Division depuis 1945, armistice depuis 1953 (pas de traité de paix).",
+      "depuis_quand_en": "Division since 1945, armistice since 1953 (no peace treaty).",
+      "consequences": "Course aux armements, sanctions, soldats nord-coréens en Ukraine.",
+      "consequences_en": "Arms race, sanctions, North Korean soldiers in Ukraine.",
+      "solutions": "Diplomatie, dénucléarisation, traité de paix.",
+      "solutions_en": "Diplomacy, denuclearization, peace treaty."
+    },
+    "comparaison_population": {
+      "deplaces": 0,
+      "victimes": 0
+    }
+  },
+  {
+    "name": "Conflit au Casamance (Sénégal)",
+    "lat": 12.5,
+    "lng": -15.5,
+    "region": "Afrique",
+    "type": "Insurrection",
+    "intensity": "basse",
+    "parties": [
+      "Armée sénégalaise",
+      "MFDC (Mouvement des forces démocratiques de Casamance)",
+      "Factions dissidentes"
+    ],
+    "startDate": "1982-12-26",
+    "casualties": 5000,
+    "summary": "Le conflit séparatiste le plus ancien d'Afrique de l'Ouest. Les tensions entre l'armée sénégalaise et les factions du MFDC persistent malgré des cessez-le-feu. La violence a diminué mais des incidents sporadiques et le trafic d'armes continuent.",
+    "name_en": "Casamance Conflict (Senegal)",
+    "summary_en": "West Africa's longest-running separatist conflict. Tensions between the Senegalese army and MFDC factions persist despite ceasefires. Violence has decreased but sporadic incidents and arms trafficking continue.",
+    "news": [
+      {
+        "title": "Casamance : incidents sporadiques malgré le cessez-le-feu",
+        "date": "2026-01-20",
+        "source": "Reuters",
+        "url": "https://www.reuters.com/world/africa/"
+      },
+      {
+        "title": "MFDC : le conflit oublié du Sénégal",
+        "date": "2026-02-01",
+        "source": "Crisis Group",
+        "url": "https://www.crisisgroup.org/africa/"
+      },
+      {
+        "title": "Sénégal : efforts de désarmement en Casamance",
+        "date": "2026-01-10",
+        "source": "Al Jazeera",
+        "url": "https://www.aljazeera.com/news/africa/"
+      }
+    ],
+    "timeline": [],
+    "temoignages": [
+      {
+        "texte": "La Casamance est oubliée. Le conflit dure depuis que je suis né et personne n'en parle.",
+        "texte_en": "Casamance is forgotten. The conflict has lasted since I was born and nobody talks about it.",
+        "source": "HRW",
+        "profil": "Moussa, 40 ans, Ziguinchor",
+        "profil_en": "Moussa, 40, Ziguinchor"
+      }
+    ],
+    "fiche_educative": {
+      "qui": "MFDC (Mouvement des forces démocratiques de Casamance) contre l'armée sénégalaise.",
+      "qui_en": "MFDC (Movement of Democratic Forces of Casamance) versus the Senegalese army.",
+      "pourquoi": "Revendications indépendantistes, marginalisation économique, identité culturelle.",
+      "pourquoi_en": "Independence claims, economic marginalization, cultural identity.",
+      "depuis_quand": "Insurrection depuis 1982, le plus vieux conflit d'Afrique de l'Ouest.",
+      "depuis_quand_en": "Insurgency since 1982, the oldest conflict in West Africa.",
+      "consequences": "Des milliers de morts, mines antipersonnel, développement bloqué.",
+      "consequences_en": "Thousands dead, landmines, blocked development.",
+      "solutions": "Dialogue, déminage, développement économique de la Casamance.",
+      "solutions_en": "Dialogue, demining, economic development of Casamance."
+    },
+    "comparaison_population": {
+      "deplaces": 20000,
+      "victimes": 500
+    }
+  },
+  {
+    "name": "Tensions frontalières Inde-Chine (LAC)",
+    "lat": 34.5,
+    "lng": 78.5,
+    "region": "Asie",
+    "type": "Conflit international",
+    "intensity": "basse",
+    "parties": [
+      "Inde",
+      "Chine"
+    ],
+    "startDate": "2020-05-05",
+    "casualties": 24,
+    "summary": "Les tensions persistent à la Ligne de contrôle effectif (LAC) malgré les désengagements partiels. L'affrontement de Galwan (2020) a fait 20 morts indiens et 4 chinois. Les deux armées maintiennent des déploiements massifs le long de la frontière himalayenne.",
+    "name_en": "India-China Border Tensions (LAC)",
+    "summary_en": "Tensions persist along the Line of Actual Control (LAC) despite partial disengagements. The Galwan clash (2020) killed 20 Indian and 4 Chinese soldiers. Both armies maintain massive deployments along the Himalayan border.",
+    "news": [
+      {
+        "title": "Inde-Chine : désengagement partiel à la LAC",
+        "date": "2026-01-18",
+        "source": "Reuters",
+        "url": "https://www.reuters.com/world/india/"
+      },
+      {
+        "title": "Déploiements militaires massifs dans l'Himalaya",
+        "date": "2026-02-01",
+        "source": "Al Jazeera",
+        "url": "https://www.aljazeera.com/news/asia/"
+      },
+      {
+        "title": "LAC : la normalisation reste un mirage",
+        "date": "2026-01-25",
+        "source": "BBC News",
+        "url": "https://www.bbc.com/news/world-south-asia"
+      }
+    ],
+    "timeline": [],
+    "temoignages": [
+      {
+        "texte": "Les soldats se battent à coups de bâton à 5 000 mètres d'altitude. C'est surréaliste.",
+        "texte_en": "Soldiers fight with sticks at 5,000 meters altitude. It's surreal.",
+        "source": "HRW",
+        "profil": "Soldat indien, Ladakh",
+        "profil_en": "Indian soldier, Ladakh"
+      }
+    ],
+    "fiche_educative": {
+      "qui": "Inde contre Chine le long de la Ligne de contrôle effectif (LAC) dans l'Himalaya.",
+      "qui_en": "India versus China along the Line of Actual Control (LAC) in the Himalayas.",
+      "pourquoi": "Frontière non délimitée, rivalité stratégique, infrastructure contestée.",
+      "pourquoi_en": "Undelimited border, strategic rivalry, contested infrastructure.",
+      "depuis_quand": "Tensions depuis 1962, affrontement meurtrier en 2020 (Galwan).",
+      "depuis_quand_en": "Tensions since 1962, deadly clash in 2020 (Galwan).",
+      "consequences": "Militarisation de la frontière, 20 soldats indiens tués à Galwan, course aux armements.",
+      "consequences_en": "Border militarization, 20 Indian soldiers killed at Galwan, arms race.",
+      "solutions": "Démilitarisation, mécanismes de confiance, diplomatie bilatérale.",
+      "solutions_en": "Demilitarization, confidence-building measures, bilateral diplomacy."
+    },
+    "comparaison_population": {
+      "deplaces": 0,
+      "victimes": 20
+    }
+  }
+]

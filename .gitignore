@@ -1,0 +1,11 @@
+# IDE / tools
+.playwright-mcp/
+.claude/
+
+# Windows artifacts
+nul
+Thumbs.db
+desktop.ini
+
+# OS
+.DS_Store
