@@ -1503,8 +1503,8 @@ body.focus-mode .timeline { left: 0; }
   .legend h3 { font-size: 8px; }
   .legend-item { font-size: 10px; }
 
-  .timeline { left: 0; right: 8px; bottom: 56px; border-radius: 0 6px 6px 0; z-index: 800; }
-  .lang-switch { bottom: 56px; right: 8px; z-index: 801; }
+  .timeline { left: 0; right: 72px; bottom: 56px; border-radius: 0 6px 6px 0; z-index: 800; }
+  .lang-switch { bottom: 56px !important; right: 8px !important; z-index: 900 !important; }
   .timeline-marks { left: 120px; }
 
   .sidebar-partners { display: none !important; }
@@ -1552,7 +1552,8 @@ body.focus-mode .timeline { left: 0; }
 
   .mobile-action-btn { width: 32px; height: 32px; }
 
-  .timeline { bottom: 52px; }
+  .timeline { bottom: 52px; right: 68px; }
+  .lang-switch { bottom: 52px !important; }
 }
 
 /* === SEO noscript fallback === */
