@@ -1503,11 +1503,12 @@ body.focus-mode .timeline { left: 0; }
   .legend h3 { font-size: 8px; }
   .legend-item { font-size: 10px; }
 
-  .timeline { left: 0; right: 8px; bottom: 40px; border-radius: 0 6px 6px 0; z-index: 800; }
+  .timeline { left: 0; right: 70px; bottom: 56px; border-radius: 0 6px 6px 0; z-index: 800; }
+  .lang-switch { bottom: 58px; right: 8px; }
   .timeline-marks { left: 120px; }
 
-  .sidebar-partners { display: none; }
-  .filter-toggle-btn { display: none; }
+  .sidebar-partners { display: none !important; }
+  .filter-toggle-btn { display: none !important; }
   .filter-advanced { display: none !important; }
 
   .focus-toggle { right: 8px; }
@@ -1541,7 +1542,7 @@ body.focus-mode .timeline { left: 0; }
 
   .mobile-action-btn { width: 32px; height: 32px; }
 
-  .timeline { bottom: 36px; }
+  .timeline { bottom: 52px; }
 }
 
 /* === SEO noscript fallback === */
