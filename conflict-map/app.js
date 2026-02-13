@@ -1264,10 +1264,15 @@
     if (/\b(summit|sommet|diplomatic|diplomatie|bilateral|r[ée]unir .{0,20}dirigeant|meeting with leaders|state visit|visite d.[ée]tat|trade talk|n[ée]gociation commerciale|G7|G20|OTAN|NATO|ambassador|ambassadeur|sondage|poll results|approval rating|debate|primary election|campagne [ée]lectorale|r[ée]forme|projet de loi|vote de confiance|inaugurat|investi[gt]ure|[ée]lection|election result|swearing.in)\b/.test(t2) && !/\b(violen|protest|[ée]meute|riot|clash|attack|attentat|bomb|kill|dead|mort|tu[ée]|explos|frappe|strike|assault|armed)\b/.test(t2)) return null;
 
     // ---- Positive classification: specific conflict terms (EN + FR) ----
+    // Evidence of casualties/injuries in the title
+    var hasCasualties = /\b(killed|dead|deaths?|dies?\b|died|casualties|wounded|injured|bless[ée]s?|tu[ée]s?|mort[s]?\b|victim[es]?|fatalities|body|bodies|massacre|slaughter|carnage)\b/.test(t2);
+
     // Protests
     if (/\b(protest|demonstrat|anti-government|uprising|mobiliz|manifestation|cort[èe]ge|gr[èe]ve g[ée]n[ée]rale|soul[èe]vement|mouvement populaire)\b/.test(t2)) return 'manifestation';
-    // Attacks
-    if (/\b(bombing|airstrike|shelling|terrorist|suicide attack|car bomb|missile strike|gunmen|insurgent attack|ambush|attentat|bombardement|frappe[s]?\s|kamikaze|tir de roquette|embuscade|explosion meurtri[èe]re|attaque arm[ée]e|fusillade|drone strike|frappe de drone|artillerie|obus|roquette|raid a[ée]rien|d[ée]truit|d[ée]truite)\b/.test(t2)) return 'attentat';
+    // Attacks — ONLY if clear evidence of violence with casualties, or unambiguous military strikes
+    if (/\b(bombing|airstrike|shelling|suicide attack|car bomb|missile strike|kamikaze|bombardement|tir de roquette|explosion meurtri[èe]re|fusillade|drone strike|frappe de drone|artillerie|obus|roquette|raid a[ée]rien)\b/.test(t2)) return 'attentat';
+    // Attacks — ambiguous terms only count if casualties are confirmed in title
+    if (hasCasualties && /\b(gunmen|insurgent attack|ambush|attentat|attaque arm[ée]e|embuscade|frappe[s]?\s|d[ée]truit|d[ée]truite|terrorist)\b/.test(t2)) return 'attentat';
     // Riots
     if (/\b(riot|civil unrest|violent clash|loot|[ée]meute|violences urbaines|pillage|affrontements violents)\b/.test(t2)) return 'emeute';
     // Humanitarian
@@ -1277,8 +1282,13 @@
     // Political / coup
     if (/\b(coup|overthrow|junta|martial law|military takeover|seize power|coup d.[ée]tat|junte|loi martiale|putsch|prise de pouvoir)\b/.test(t2)) return 'coup_etat';
 
-    // General conflict terms: use fallback category from GDELT query if title clearly about conflict
-    if (/\b(guerre|war|offensive|combat|conflit|conflict|arm[ée]e|army|militaire|military|tu[ée]s?|killed|mort[s]?\b|dead|victim|victime|wounded|bless[ée]|assault|assaut|invasion|occup|si[èe]ge|siege|r[ée]sistance|milice|militia|insurr|guerr?illa|terroris)\b/.test(t2)) return fallback || null;
+    // General conflict terms: if casualties are mentioned → use fallback, otherwise → politique
+    if (/\b(guerre|war|offensive|combat|conflit|conflict|arm[ée]e|army|militaire|military|assault|assaut|invasion|occup|si[èe]ge|siege|r[ée]sistance|milice|militia|insurr|guerr?illa|terroris)\b/.test(t2)) {
+      return hasCasualties ? (fallback || 'coup_etat') : 'coup_etat';
+    }
+
+    // Casualties mentioned but no specific category matched → fallback or politique
+    if (hasCasualties) return fallback || 'coup_etat';
 
     // No match at all → reject
     return null;
