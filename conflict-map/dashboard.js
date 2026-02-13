@@ -4,6 +4,12 @@
   var charts = {};
   var dashboardOpen = false;
 
+  var conflictTypeMapEn = { 'Guerre civile': 'Civil war', 'Conflit international': 'International conflict', 'Insurrection': 'Insurgency', 'Conflit interethnique': 'Ethnic conflict' };
+  var regionMapEn = { 'Afrique': 'Africa', 'Moyen-Orient': 'Middle East', 'Asie': 'Asia', 'Europe': 'Europe', 'Amériques': 'Americas' };
+
+  function trType(t) { var l = (window.GCT && window.GCT.currentLang) || 'fr'; return l === 'en' ? (conflictTypeMapEn[t] || t) : t; }
+  function trRegion(r) { var l = (window.GCT && window.GCT.currentLang) || 'fr'; return l === 'en' ? (regionMapEn[r] || r) : r; }
+
   // ============================================================
   // ---- Create Dashboard Panel ----
   // ============================================================
@@ -271,7 +277,7 @@
     charts.region = new Chart(document.getElementById('chart-region'), {
       type: 'doughnut',
       data: {
-        labels: Object.keys(regionMap),
+        labels: Object.keys(regionMap).map(trRegion),
         datasets: [{
           data: Object.values(regionMap),
           backgroundColor: Object.keys(regionMap).map(function (r) { return regionColors[r] || '#5c6878'; }),
@@ -308,7 +314,7 @@
     charts.type = new Chart(document.getElementById('chart-type'), {
       type: 'doughnut',
       data: {
-        labels: Object.keys(typeMap),
+        labels: Object.keys(typeMap).map(trType),
         datasets: [{
           data: Object.values(typeMap),
           backgroundColor: Object.keys(typeMap).map(function (t) { return typeColors[t] || '#5c6878'; }),

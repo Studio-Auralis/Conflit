@@ -13,6 +13,11 @@
   function fmt(n) { return G().formatNumber ? G().formatNumber(n) : String(n); }
   function lang() { return (G().currentLang) || 'fr'; }
 
+  var typeMapEn = { 'Guerre civile': 'Civil war', 'Conflit international': 'International conflict', 'Insurrection': 'Insurgency', 'Conflit interethnique': 'Ethnic conflict' };
+  var regionMapEn = { 'Afrique': 'Africa', 'Moyen-Orient': 'Middle East', 'Asie': 'Asia', 'Europe': 'Europe', 'Amériques': 'Americas' };
+  function trType(t2) { return lang() === 'en' ? (typeMapEn[t2] || t2) : t2; }
+  function trRegion(r) { return lang() === 'en' ? (regionMapEn[r] || r) : r; }
+
   function createPanel() {
     if (document.getElementById('quiz-panel')) return;
     var panel = document.createElement('div');
@@ -101,8 +106,10 @@
     // Type 3: In which region?
     pool.push(function () {
       var c = pickRandom(conflicts);
-      var regions = ['Afrique', 'Moyen-Orient', 'Asie', 'Europe', 'Am\u00e9riques'];
-      var correct = c.region;
+      var regions = lang() === 'fr'
+        ? ['Afrique', 'Moyen-Orient', 'Asie', 'Europe', 'Am\u00e9riques']
+        : ['Africa', 'Middle East', 'Asia', 'Europe', 'Americas'];
+      var correct = lang() === 'fr' ? c.region : trRegion(c.region);
       var others = regions.filter(function (r) { return r !== correct; });
       var options = shuffle([correct].concat(shuffle(others).slice(0, 3)));
       return {
@@ -170,8 +177,10 @@
     // Type 6: What type of conflict?
     pool.push(function () {
       var c = pickRandom(conflicts);
-      var types = ['Guerre civile', 'Conflit international', 'Insurrection', 'Conflit interethnique'];
-      var correct = c.type;
+      var types = lang() === 'fr'
+        ? ['Guerre civile', 'Conflit international', 'Insurrection', 'Conflit interethnique']
+        : ['Civil war', 'International conflict', 'Insurgency', 'Ethnic conflict'];
+      var correct = lang() === 'fr' ? c.type : trType(c.type);
       var others = types.filter(function (t2) { return t2 !== correct; });
       var options = shuffle([correct].concat(others.slice(0, 3)));
       return {

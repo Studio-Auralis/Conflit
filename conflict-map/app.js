@@ -81,6 +81,8 @@
       months: ['', 'janvier', 'février', 'mars', 'avril', 'mai', 'juin', 'juillet', 'août', 'septembre', 'octobre', 'novembre', 'décembre'],
       typeLabels: { manifestation: 'Manifestation', emeute: 'Émeute', attentat: 'Attaque', catastrophe_humanitaire: 'Crise humanitaire', cessez_le_feu: 'Cessez-le-feu', coup_etat: 'Évt politique' },
       intensityLabels: { haute: 'Haute', moyenne: 'Moyenne', basse: 'Basse' },
+      conflictTypes: { 'Guerre civile': 'Guerre civile', 'Conflit international': 'Conflit international', 'Insurrection': 'Insurrection', 'Conflit interethnique': 'Conflit interethnique' },
+      regionNames: { 'Afrique': 'Afrique', 'Moyen-Orient': 'Moyen-Orient', 'Asie': 'Asie', 'Europe': 'Europe', 'Amériques': 'Amériques' },
       btnDashboard: 'Dashboard',
       btnRiskZones: 'Risques',
       filterDateRange: 'Début du conflit',
@@ -248,6 +250,8 @@
       months: ['', 'January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December'],
       typeLabels: { manifestation: 'Protest', emeute: 'Riot', attentat: 'Attack', catastrophe_humanitaire: 'Humanitarian crisis', cessez_le_feu: 'Ceasefire', coup_etat: 'Political event' },
       intensityLabels: { haute: 'High', moyenne: 'Medium', basse: 'Low' },
+      conflictTypes: { 'Guerre civile': 'Civil war', 'Conflit international': 'International conflict', 'Insurrection': 'Insurgency', 'Conflit interethnique': 'Ethnic conflict' },
+      regionNames: { 'Afrique': 'Africa', 'Moyen-Orient': 'Middle East', 'Asie': 'Asia', 'Europe': 'Europe', 'Amériques': 'Americas' },
       btnDashboard: 'Dashboard',
       btnRiskZones: 'Risk Zones',
       filterDateRange: 'Start date',
@@ -348,6 +352,16 @@
   function getLocalizedField(obj, field) {
     if (currentLang === 'en' && obj[field + '_en']) return obj[field + '_en'];
     return obj[field];
+  }
+
+  function translateConflictType(type) {
+    var ct = t('conflictTypes');
+    return (ct && ct[type]) || type;
+  }
+
+  function translateRegion(region) {
+    var rn = t('regionNames');
+    return (rn && rn[region]) || region;
   }
 
   function applyLanguage() {
@@ -1572,12 +1586,12 @@
       '<div class="popup-tab-infos" style="display:block">' +
         '<div class="popup-content">' +
           '<div class="popup-title">' + esc(conflictName) + '</div>' +
-          '<span class="popup-type-badge ' + tagClass + '">' + esc(c.type) + ' \u2014 ' + intensityLabel + '</span>' +
+          '<span class="popup-type-badge ' + tagClass + '">' + esc(translateConflictType(c.type)) + ' \u2014 ' + intensityLabel + '</span>' +
           '<dl class="popup-meta">' +
             '<dt>' + t('popupParties') + '</dt><dd>' + c.parties.map(esc).join(', ') + '</dd>' +
             '<dt>' + t('popupSince') + '</dt><dd>' + formatDate(c.startDate) + '</dd>' +
             '<dt>' + t('popupCasualties') + '</dt><dd class="casualties-val">' + formatNumber(c.casualties) + '</dd>' +
-            '<dt>' + t('popupRegion') + '</dt><dd>' + esc(c.region) + '</dd>' +
+            '<dt>' + t('popupRegion') + '</dt><dd>' + esc(translateRegion(c.region)) + '</dd>' +
           '</dl>' +
           '<p class="popup-summary">' + esc(conflictSummary) + '</p>' +
           hzHtml +
@@ -1640,9 +1654,9 @@
       card.innerHTML =
         '<div class="conflict-card-name">' + esc(cName) + '</div>' +
         '<div class="conflict-card-detail">' +
-          '<span>' + esc(c.type) + '</span>' +
+          '<span>' + esc(translateConflictType(c.type)) + '</span>' +
           '<span class="conflict-card-sep">\u00b7</span>' +
-          '<span>' + esc(c.region) + '</span>' +
+          '<span>' + esc(translateRegion(c.region)) + '</span>' +
           '<span class="conflict-card-sep">\u00b7</span>' +
           '<span>' + t('since') + formatDate(c.startDate) + '</span>' +
         '</div>' +

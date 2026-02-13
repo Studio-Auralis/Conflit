@@ -101,8 +101,8 @@
       '<div class="cp-meta-grid">' +
         '<div class="cp-meta-item"><span class="cp-meta-icon">&#9876;</span><span class="cp-meta-label">' + (lang === 'fr' ? 'Parties' : 'Parties') + '</span><span class="cp-meta-val">' + c.parties.map(esc).join(', ') + '</span></div>' +
         '<div class="cp-meta-item"><span class="cp-meta-icon">&#128200;</span><span class="cp-meta-label">' + (lang === 'fr' ? 'Victimes' : 'Casualties') + '</span><span class="cp-meta-val cp-meta-red">' + formatNum(c.casualties) + '</span></div>' +
-        '<div class="cp-meta-item"><span class="cp-meta-icon">&#127758;</span><span class="cp-meta-label">' + (lang === 'fr' ? 'Region' : 'Region') + '</span><span class="cp-meta-val">' + esc(c.region) + '</span></div>' +
-        '<div class="cp-meta-item"><span class="cp-meta-icon">&#128336;</span><span class="cp-meta-label">' + (lang === 'fr' ? 'Type' : 'Type') + '</span><span class="cp-meta-val">' + esc(c.type) + '</span></div>' +
+        '<div class="cp-meta-item"><span class="cp-meta-icon">&#127758;</span><span class="cp-meta-label">' + (lang === 'fr' ? 'Région' : 'Region') + '</span><span class="cp-meta-val">' + esc(translateRegion(c.region, lang)) + '</span></div>' +
+        '<div class="cp-meta-item"><span class="cp-meta-icon">&#128336;</span><span class="cp-meta-label">' + (lang === 'fr' ? 'Type' : 'Type') + '</span><span class="cp-meta-val">' + esc(translateType(c.type, lang)) + '</span></div>' +
       '</div>' +
     '</section>';
 
@@ -569,6 +569,17 @@
     var div = document.createElement('div');
     div.textContent = String(str || '');
     return div.innerHTML;
+  }
+
+  var conflictTypeMap = { 'Guerre civile': 'Civil war', 'Conflit international': 'International conflict', 'Insurrection': 'Insurgency', 'Conflit interethnique': 'Ethnic conflict' };
+  var regionMap = { 'Afrique': 'Africa', 'Moyen-Orient': 'Middle East', 'Asie': 'Asia', 'Europe': 'Europe', 'Amériques': 'Americas' };
+
+  function translateType(type, lang) {
+    return lang === 'en' ? (conflictTypeMap[type] || type) : type;
+  }
+
+  function translateRegion(region, lang) {
+    return lang === 'en' ? (regionMap[region] || region) : region;
   }
 
   // ============================================================
