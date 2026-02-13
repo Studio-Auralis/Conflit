@@ -26,3 +26,7 @@ desktop.ini
 # Logs
 *.log
 npm-debug.log*
+
+# Temporary screenshots & misc
+*.png
+icons-final*.html
