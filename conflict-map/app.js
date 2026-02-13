@@ -83,26 +83,26 @@
       intensityLabels: { haute: 'Haute', moyenne: 'Moyenne', basse: 'Basse' },
       btnDashboard: 'Dashboard',
       btnRiskZones: 'Risques',
-      filterDateRange: 'Debut du conflit',
+      filterDateRange: 'Début du conflit',
       filterCasualties: 'Victimes',
-      filterReset: 'Reinitialiser les filtres',
-      notifTitle: 'Nouvel evenement',
-      notifEnabled: 'Notifications activees',
-      notifDisabled: 'Notifications desactivees',
-      btnAbout: 'A propos',
+      filterReset: 'Réinitialiser les filtres',
+      notifTitle: 'Nouvel événement',
+      notifEnabled: 'Notifications activées',
+      notifDisabled: 'Notifications désactivées',
+      btnAbout: 'À propos',
       btnSupport: 'Soutenir',
       partnersTitle: 'Nos Partenaires',
       partnerSlot: 'Votre logo ici',
       partnerCta: 'Devenir partenaire \u2192',
-      footerDesc: 'Un projet Studio Auralis. Cartographie interactive des conflits dans le monde en temps reel.',
+      footerDesc: 'Un projet Studio Auralis. Cartographie interactive des conflits dans le monde en temps réel.',
       footerNav: 'Navigation',
       footerMap: 'Carte',
       footerDashboard: 'Dashboard',
-      footerAbout: 'A propos',
+      footerAbout: 'À propos',
       footerContact: 'Contact',
       footerSources: 'Sources',
       footerFollow: 'Suivez-nous',
-      footerCopyright: '\u00a9 2026 Studio Auralis \u2014 Donnees actualisees en temps reel',
+      footerCopyright: '\u00a9 2026 Studio Auralis \u2014 Données actualisées en temps réel',
       footerSupport: '\u2615 Soutenir le projet',
       headerSlogan: 'Les conflits du monde, expliqu\u00e9s et visualis\u00e9s',
       tickerDisplaced: 'millions de personnes d\u00e9plac\u00e9es dans le monde',
@@ -138,7 +138,41 @@
       layerHumanitarian: 'Zones humanitaires',
       layerHeatmap: 'Heatmap',
       filterMore: 'Filtres avancés',
-      filterLess: 'Masquer les filtres'
+      filterLess: 'Masquer les filtres',
+      regionAfrica: 'Afrique',
+      regionMiddleEast: 'Moyen-Orient',
+      regionAsia: 'Asie',
+      regionEurope: 'Europe',
+      regionAmericas: 'Amériques',
+      titleLiveToggle: 'Activer/désactiver GDELT temps réel',
+      titleDashboard: 'Dashboard Analytics',
+      titleNotifications: 'Notifications',
+      titleTimelapse: 'Timelapse',
+      titleRefugees: 'Réfugiés',
+      titleRefugeesFull: 'Tous les flux',
+      titleQuiz: 'Quiz',
+      titleAbout: 'À propos',
+      titleSupport: 'Soutenir le projet',
+      titleTheme: 'Thème clair / sombre',
+      titleExport: 'Exporter',
+      titleLang: 'Langue',
+      ariaOpenPanel: 'Ouvrir le panneau',
+      ariaClosePanel: 'Fermer',
+      ariaSearchConflict: 'Rechercher un conflit',
+      ariaFilterRegion: 'Filtrer par région',
+      ariaFilterType: 'Filtrer par type de conflit',
+      ariaFilterIntensity: 'Filtrer par intensité',
+      ariaTimeline: 'Période temporelle des événements',
+      ariaChangeLang: 'Changer de langue',
+      ariaTabs: 'Onglets de contenu',
+      ariaNavPanel: 'Panneau de navigation des conflits',
+      titleHaute: 'Haute intensité',
+      titleMoyenne: 'Moyenne intensité',
+      titleBasse: 'Basse intensité',
+      contactSend: 'Envoyer',
+      contactErrorSend: "Erreur lors de l'envoi. Veuillez réessayer.",
+      contactErrorNetwork: 'Erreur réseau. Veuillez réessayer.',
+      timelineMarks: ['24h', '7j', '30j', '90j', '1an', '2a', '5a']
     },
     en: {
       headerDate: 'Real-time data — February 2026',
@@ -271,7 +305,41 @@
       layerHumanitarian: 'Humanitarian zones',
       layerHeatmap: 'Heatmap',
       filterMore: 'Advanced filters',
-      filterLess: 'Hide filters'
+      filterLess: 'Hide filters',
+      regionAfrica: 'Africa',
+      regionMiddleEast: 'Middle East',
+      regionAsia: 'Asia',
+      regionEurope: 'Europe',
+      regionAmericas: 'Americas',
+      titleLiveToggle: 'Toggle GDELT real-time',
+      titleDashboard: 'Dashboard Analytics',
+      titleNotifications: 'Notifications',
+      titleTimelapse: 'Timelapse',
+      titleRefugees: 'Refugees',
+      titleRefugeesFull: 'All flows',
+      titleQuiz: 'Quiz',
+      titleAbout: 'About',
+      titleSupport: 'Support the project',
+      titleTheme: 'Light / Dark theme',
+      titleExport: 'Export',
+      titleLang: 'Language',
+      ariaOpenPanel: 'Open panel',
+      ariaClosePanel: 'Close',
+      ariaSearchConflict: 'Search a conflict',
+      ariaFilterRegion: 'Filter by region',
+      ariaFilterType: 'Filter by conflict type',
+      ariaFilterIntensity: 'Filter by intensity',
+      ariaTimeline: 'Event time period',
+      ariaChangeLang: 'Change language',
+      ariaTabs: 'Content tabs',
+      ariaNavPanel: 'Conflict navigation panel',
+      titleHaute: 'High intensity',
+      titleMoyenne: 'Medium intensity',
+      titleBasse: 'Low intensity',
+      contactSend: 'Send',
+      contactErrorSend: 'Error sending. Please try again.',
+      contactErrorNetwork: 'Network error. Please try again.',
+      timelineMarks: ['24h', '7d', '30d', '90d', '1yr', '2yr', '5yr']
     }
   };
 
@@ -295,6 +363,30 @@
       var pkey = placeholders[j].getAttribute('data-i18n-placeholder');
       if (i18n[currentLang] && i18n[currentLang][pkey]) {
         placeholders[j].placeholder = i18n[currentLang][pkey];
+      }
+    }
+    // Update title attributes
+    var titleEls = document.querySelectorAll('[data-i18n-title]');
+    for (var ti = 0; ti < titleEls.length; ti++) {
+      var tkey = titleEls[ti].getAttribute('data-i18n-title');
+      if (i18n[currentLang] && i18n[currentLang][tkey]) {
+        titleEls[ti].title = i18n[currentLang][tkey];
+      }
+    }
+    // Update aria-label attributes
+    var ariaEls = document.querySelectorAll('[data-i18n-aria]');
+    for (var ai = 0; ai < ariaEls.length; ai++) {
+      var akey = ariaEls[ai].getAttribute('data-i18n-aria');
+      if (i18n[currentLang] && i18n[currentLang][akey]) {
+        ariaEls[ai].setAttribute('aria-label', i18n[currentLang][akey]);
+      }
+    }
+    // Update timeline marks
+    var marks = t('timelineMarks');
+    if (marks && Array.isArray(marks)) {
+      var spans = document.querySelectorAll('.timeline-marks span');
+      for (var tm = 0; tm < spans.length && tm < marks.length; tm++) {
+        spans[tm].textContent = marks[tm];
       }
     }
     // Update lang switch active state
@@ -2029,10 +2121,13 @@
     });
     document.getElementById('btn-refugees').addEventListener('click', toggleRefugees);
     document.getElementById('btn-refugees-full').addEventListener('click', toggleRefugeesFull);
-    document.getElementById('btn-lang').addEventListener('click', function () {
-      currentLang = currentLang === 'fr' ? 'en' : 'fr';
-      localStorage.setItem('lang', currentLang);
-      applyLanguage();
+    document.getElementById('btn-lang').addEventListener('click', function (e) {
+      var opt = e.target.closest('.lang-switch-option');
+      if (opt && opt.dataset.lang && opt.dataset.lang !== currentLang) {
+        currentLang = opt.dataset.lang;
+        localStorage.setItem('lang', currentLang);
+        applyLanguage();
+      }
     });
 
     document.getElementById('btn-theme').addEventListener('click', toggleTheme);

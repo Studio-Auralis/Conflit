@@ -80,7 +80,7 @@
       <div class="stat-box stat-box-live">
         <div class="stat-live-row">
           <span class="stat-number stat-events" id="event-count">0</span>
-          <button class="live-badge" id="live-badge" title="Activer/désactiver GDELT temps réel">
+          <button class="live-badge" id="live-badge" title="Activer/désactiver GDELT temps réel" data-i18n-title="titleLiveToggle">
             <span class="live-dot"></span>
             <span>LIVE</span>
           </button>
@@ -91,21 +91,21 @@
     </div>
     <div class="header-actions" id="header-actions">
       <!-- Dashboard -->
-      <button class="header-btn" id="btn-dashboard" title="Dashboard Analytics">
+      <button class="header-btn" id="btn-dashboard" title="Dashboard Analytics" data-i18n-title="titleDashboard">
         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="16" height="16">
           <rect x="3" y="3" width="7" height="7"/><rect x="14" y="3" width="7" height="7"/><rect x="3" y="14" width="7" height="7"/><rect x="14" y="14" width="7" height="7"/>
         </svg>
         <span class="header-btn-label" data-i18n="btnDashboard">Dashboard</span>
       </button>
       <!-- Notifications -->
-      <button class="header-btn notif-btn" id="btn-notif" title="Notifications">
+      <button class="header-btn notif-btn" id="btn-notif" title="Notifications" data-i18n-title="titleNotifications">
         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="16" height="16">
           <path d="M18 8A6 6 0 0 0 6 8c0 7-3 9-3 9h18s-3-2-3-9"/><path d="M13.73 21a2 2 0 0 1-3.46 0"/>
         </svg>
         <span class="notif-badge" id="notif-badge" style="display:none">0</span>
       </button>
       <!-- Timelapse -->
-      <button class="header-btn" id="btn-timelapse" title="Timelapse">
+      <button class="header-btn" id="btn-timelapse" title="Timelapse" data-i18n-title="titleTimelapse">
         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="16" height="16">
           <circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/>
         </svg>
@@ -113,35 +113,35 @@
       </button>
       <!-- Refugees -->
       <div class="refugee-btn-group">
-        <button class="header-btn" id="btn-refugees" title="Réfugiés">
+        <button class="header-btn" id="btn-refugees" title="Réfugiés" data-i18n-title="titleRefugees">
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="16" height="16">
             <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/>
           </svg>
           <span class="header-btn-label" data-i18n="btnRefugees">Réfugiés</span>
         </button>
-        <button class="header-btn refugee-full-btn" id="btn-refugees-full" title="Tous les flux" style="display:none" data-i18n="btnRefugeesFull">100%</button>
+        <button class="header-btn refugee-full-btn" id="btn-refugees-full" title="Tous les flux" data-i18n-title="titleRefugeesFull" style="display:none" data-i18n="btnRefugeesFull">100%</button>
       </div>
       <!-- Quiz -->
-      <button class="header-btn" id="btn-quiz" title="Quiz">
+      <button class="header-btn" id="btn-quiz" title="Quiz" data-i18n-title="titleQuiz">
         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="16" height="16">
           <circle cx="12" cy="12" r="10"/><path d="M9.09 9a3 3 0 0 1 5.83 1c0 2-3 3-3 3"/><line x1="12" y1="17" x2="12.01" y2="17"/>
         </svg>
         <span class="header-btn-label" data-i18n="btnQuiz">Quiz</span>
       </button>
       <!-- About -->
-      <button class="header-btn" id="btn-about" title="À propos">
+      <button class="header-btn" id="btn-about" title="À propos" data-i18n-title="titleAbout">
         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="16" height="16">
           <circle cx="12" cy="12" r="10"/><line x1="12" y1="16" x2="12" y2="12"/><line x1="12" y1="8" x2="12.01" y2="8"/>
         </svg>
         <span class="header-btn-label" data-i18n="btnAbout">À propos</span>
       </button>
       <!-- Support -->
-      <button class="header-btn header-btn-support" id="btn-support" title="Soutenir le projet">
+      <button class="header-btn header-btn-support" id="btn-support" title="Soutenir le projet" data-i18n-title="titleSupport">
         <span class="support-coffee-icon">&#9749;</span>
         <span class="header-btn-label" data-i18n="btnSupport">Soutenir</span>
       </button>
       <!-- Theme -->
-      <button class="header-btn" id="btn-theme" title="Thème">
+      <button class="header-btn" id="btn-theme" title="Thème" data-i18n-title="titleTheme">
         <svg class="icon-moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="16" height="16">
           <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/>
         </svg>
@@ -152,7 +152,7 @@
       </button>
       <!-- Export -->
       <div class="export-wrapper" id="export-wrapper">
-        <button class="header-btn" id="btn-export" title="Exporter">
+        <button class="header-btn" id="btn-export" title="Exporter" data-i18n-title="titleExport">
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="16" height="16">
             <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/>
           </svg>
@@ -174,16 +174,16 @@
         </div>
       </div>
     </div>
-    <button class="sidebar-toggle" id="sidebar-toggle" aria-label="Ouvrir le panneau">
+    <button class="sidebar-toggle" id="sidebar-toggle" aria-label="Ouvrir le panneau" data-i18n-aria="ariaOpenPanel">
       <span></span><span></span><span></span>
     </button>
   </header>
 
   <!-- Intensity Bar -->
   <div class="intensity-bar" id="intensity-bar">
-    <div class="intensity-fill haute" id="bar-haute" title="Haute intensité"></div>
-    <div class="intensity-fill moyenne" id="bar-moyenne" title="Moyenne intensité"></div>
-    <div class="intensity-fill basse" id="bar-basse" title="Basse intensité"></div>
+    <div class="intensity-fill haute" id="bar-haute" title="Haute intensité" data-i18n-title="titleHaute"></div>
+    <div class="intensity-fill moyenne" id="bar-moyenne" title="Moyenne intensité" data-i18n-title="titleMoyenne"></div>
+    <div class="intensity-fill basse" id="bar-basse" title="Basse intensité" data-i18n-title="titleBasse"></div>
   </div>
 
   <!-- Human Impact Ticker -->
@@ -200,48 +200,48 @@
   </div>
 
   <!-- Sidebar -->
-  <aside id="sidebar" class="sidebar" role="navigation" aria-label="Panneau de navigation des conflits">
+  <aside id="sidebar" class="sidebar" role="navigation" aria-label="Panneau de navigation des conflits" data-i18n-aria="ariaNavPanel">
     <!-- Mobile actions (visible <=900px) -->
     <div class="mobile-actions" id="mobile-actions">
-      <button class="mobile-action-btn" id="mob-dashboard" title="Dashboard">
+      <button class="mobile-action-btn" id="mob-dashboard" title="Dashboard" data-i18n-title="titleDashboard">
         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="16" height="16"><rect x="3" y="3" width="7" height="7"/><rect x="14" y="3" width="7" height="7"/><rect x="3" y="14" width="7" height="7"/><rect x="14" y="14" width="7" height="7"/></svg>
       </button>
-      <button class="mobile-action-btn notif-btn" id="mob-notif" title="Notifications">
+      <button class="mobile-action-btn notif-btn" id="mob-notif" title="Notifications" data-i18n-title="titleNotifications">
         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="16" height="16"><path d="M18 8A6 6 0 0 0 6 8c0 7-3 9-3 9h18s-3-2-3-9"/><path d="M13.73 21a2 2 0 0 1-3.46 0"/></svg>
         <span class="notif-badge mob-notif-badge" id="mob-notif-badge" style="display:none">0</span>
       </button>
-      <button class="mobile-action-btn" id="mob-timelapse" title="Timelapse">
+      <button class="mobile-action-btn" id="mob-timelapse" title="Timelapse" data-i18n-title="titleTimelapse">
         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="16" height="16"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
       </button>
-      <button class="mobile-action-btn" id="mob-refugees" title="Réfugiés">
+      <button class="mobile-action-btn" id="mob-refugees" title="Réfugiés" data-i18n-title="titleRefugees">
         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="16" height="16"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
       </button>
-      <button class="mobile-action-btn mob-refugees-full" id="mob-refugees-full" title="Tous les flux" style="display:none">100%</button>
-      <button class="mobile-action-btn" id="mob-lang" title="Langue">
+      <button class="mobile-action-btn mob-refugees-full" id="mob-refugees-full" title="Tous les flux" data-i18n-title="titleRefugeesFull" style="display:none">100%</button>
+      <button class="mobile-action-btn" id="mob-lang" title="Langue" data-i18n-title="titleLang">
         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="16" height="16"><circle cx="12" cy="12" r="10"/><path d="M2 12h20"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg>
       </button>
-      <button class="mobile-action-btn" id="mob-theme" title="Thème">
+      <button class="mobile-action-btn" id="mob-theme" title="Thème" data-i18n-title="titleTheme">
         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="16" height="16"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
       </button>
-      <button class="mobile-action-btn" id="mob-export" title="Exporter">
+      <button class="mobile-action-btn" id="mob-export" title="Exporter" data-i18n-title="titleExport">
         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="16" height="16"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
       </button>
     </div>
 
     <div class="sidebar-header">
-      <nav class="sidebar-tabs" aria-label="Onglets de contenu">
+      <nav class="sidebar-tabs" aria-label="Onglets de contenu" data-i18n-aria="ariaTabs">
         <button class="sidebar-tab active" id="tab-conflicts" data-tab="conflicts" data-i18n="tabConflicts">Conflits</button>
         <button class="sidebar-tab" id="tab-news" data-tab="news" data-i18n="tabNews">Actualités</button>
         <button class="sidebar-tab" id="tab-gdelt" data-tab="gdelt"><span class="tab-live-dot"></span>Live</button>
       </nav>
-      <button class="sidebar-close" id="sidebar-close" aria-label="Fermer">&times;</button>
+      <button class="sidebar-close" id="sidebar-close" aria-label="Fermer" data-i18n-aria="ariaClosePanel">&times;</button>
     </div>
 
     <div class="search-box">
       <svg class="search-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
         <circle cx="11" cy="11" r="8"/><path d="m21 21-4.35-4.35"/>
       </svg>
-      <input type="text" id="search-input" placeholder="Rechercher un conflit..." aria-label="Rechercher un conflit" data-i18n-placeholder="searchPlaceholder">
+      <input type="text" id="search-input" placeholder="Rechercher un conflit..." aria-label="Rechercher un conflit" data-i18n-placeholder="searchPlaceholder" data-i18n-aria="ariaSearchConflict">
     </div>
 
     <div class="layer-toggles" id="layer-toggles">
@@ -259,18 +259,18 @@
     <div class="filters" id="filters-section">
       <div class="filter-group">
         <label data-i18n="filterRegion">Région</label>
-        <select id="filter-region" aria-label="Filtrer par région">
+        <select id="filter-region" aria-label="Filtrer par région" data-i18n-aria="ariaFilterRegion">
           <option value="all" data-i18n="filterAllRegions">Toutes les régions</option>
-          <option value="Afrique">Afrique</option>
-          <option value="Moyen-Orient">Moyen-Orient</option>
-          <option value="Asie">Asie</option>
-          <option value="Europe">Europe</option>
-          <option value="Amériques">Amériques</option>
+          <option value="Afrique" data-i18n="regionAfrica">Afrique</option>
+          <option value="Moyen-Orient" data-i18n="regionMiddleEast">Moyen-Orient</option>
+          <option value="Asie" data-i18n="regionAsia">Asie</option>
+          <option value="Europe" data-i18n="regionEurope">Europe</option>
+          <option value="Amériques" data-i18n="regionAmericas">Amériques</option>
         </select>
       </div>
       <div class="filter-group">
         <label data-i18n="filterType">Type</label>
-        <select id="filter-type" aria-label="Filtrer par type de conflit">
+        <select id="filter-type" aria-label="Filtrer par type de conflit" data-i18n-aria="ariaFilterType">
           <option value="all" data-i18n="filterAllTypes">Tous les types</option>
           <option value="Guerre civile" data-i18n="typeCivilWar">Guerre civile</option>
           <option value="Conflit international" data-i18n="typeInternational">Conflit international</option>
@@ -280,7 +280,7 @@
       </div>
       <div class="filter-group">
         <label data-i18n="filterIntensity">Intensité</label>
-        <select id="filter-intensity" aria-label="Filtrer par intensité">
+        <select id="filter-intensity" aria-label="Filtrer par intensité" data-i18n-aria="ariaFilterIntensity">
           <option value="all" data-i18n="filterAll">Toutes</option>
           <option value="haute" data-i18n="intensityHigh">Haute</option>
           <option value="moyenne" data-i18n="intensityMedium">Moyenne</option>
@@ -426,7 +426,7 @@
   <!-- Timeline -->
   <div class="timeline glass" id="timeline">
     <label class="timeline-label" id="timeline-label">Dernières 24h</label>
-    <input type="range" id="timeline-slider" min="1" max="1825" value="1" step="1" aria-label="Période temporelle des événements">
+    <input type="range" id="timeline-slider" min="1" max="1825" value="1" step="1" aria-label="Période temporelle des événements" data-i18n-aria="ariaTimeline">
     <div class="timeline-marks">
       <span>24h</span>
       <span>7j</span>
@@ -484,18 +484,23 @@
   <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js" integrity="sha384-ZZ1pncU3bQe8y31yfZdMFdSpttDoPmOZg2wguVK9almUodir1PghgT0eY7Mrty8H" crossorigin="anonymous"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js" integrity="sha384-JcnsjUPPylna1s1fvi1u12X5qjY5OL56iySh75FdtrwhO/SWXgMjoVqcKyIIWOLk" crossorigin="anonymous"></script>
   <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.7/dist/chart.umd.min.js" integrity="sha384-vsrfeLOOY6KuIYKDlmVH5UiBmgIdB1oEf7p01YgWHuqmOHfZr374+odEv96n9tNC" crossorigin="anonymous"></script>
-  <script src="app.js?v=13"></script>
+  <script src="app.js?v=14"></script>
   <script src="dashboard.js?v=2"></script>
   <script src="conflict-page.js?v=2"></script>
-  <script src="pages.js?v=3"></script>
+  <script src="pages.js?v=4"></script>
   <script src="quiz.js?v=2"></script>
   <script src="glossaire.js?v=1"></script>
 
   <!-- Language Switch — bottom right -->
-  <button class="lang-switch" id="btn-lang" title="Langue / Language" aria-label="Changer de langue">
-    <span class="lang-switch-option" data-lang="fr">FR</span>
-    <span class="lang-switch-sep">|</span>
-    <span class="lang-switch-option" data-lang="en">EN</span>
-  </button>
+  <div class="lang-switch" id="btn-lang" role="radiogroup" aria-label="Change language" data-i18n-aria="ariaChangeLang">
+    <button class="lang-switch-option" data-lang="fr" title="Français">
+      <svg viewBox="0 0 36 24" width="22" height="15" aria-hidden="true"><rect width="12" height="24" fill="#002395"/><rect x="12" width="12" height="24" fill="#fff"/><rect x="24" width="12" height="24" fill="#ED2939"/></svg>
+      <span>FR</span>
+    </button>
+    <button class="lang-switch-option" data-lang="en" title="English">
+      <svg viewBox="0 0 60 30" width="22" height="15" aria-hidden="true"><clipPath id="s"><path d="M0 0v30h60V0z"/></clipPath><clipPath id="t"><path d="M30 15h30v15zv15H0zH0V0zV0h30z"/></clipPath><g clip-path="url(#s)"><path d="M0 0v30h60V0z" fill="#012169"/><path d="M0 0l60 30m0-30L0 30" stroke="#fff" stroke-width="6"/><path d="M0 0l60 30m0-30L0 30" clip-path="url(#t)" stroke="#C8102E" stroke-width="4"/><path d="M30 0v30M0 15h60" stroke="#fff" stroke-width="10"/><path d="M30 0v30M0 15h60" stroke="#C8102E" stroke-width="6"/></g></svg>
+      <span>EN</span>
+    </button>
+  </div>
 </body>
 </html>

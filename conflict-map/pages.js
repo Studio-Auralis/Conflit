@@ -316,13 +316,13 @@
           btn.style.display = 'none';
         } else {
           btn.disabled = false;
-          btn.textContent = 'Envoyer';
-          alert('Erreur lors de l\'envoi. Veuillez réessayer.');
+          btn.textContent = window.GCT && window.GCT.t ? window.GCT.t('contactSend') : 'Envoyer';
+          alert(window.GCT && window.GCT.t ? window.GCT.t('contactErrorSend') : 'Error sending. Please try again.');
         }
       }).catch(function () {
         btn.disabled = false;
-        btn.textContent = 'Envoyer';
-        alert('Erreur réseau. Veuillez réessayer.');
+        btn.textContent = window.GCT && window.GCT.t ? window.GCT.t('contactSend') : 'Envoyer';
+        alert(window.GCT && window.GCT.t ? window.GCT.t('contactErrorNetwork') : 'Network error. Please try again.');
       });
     });
   }
