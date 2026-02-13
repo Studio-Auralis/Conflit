@@ -1135,6 +1135,15 @@
   // ---- GDELT API Integration ----
   // ============================================================
   var GDELT_GEO = 'https://api.gdeltproject.org/api/v2/geo/geo';
+  var CONFLICT_ZONE_RADIUS_KM = 500;
+
+  // Check if coordinates are near any known conflict zone
+  function isNearConflictZone(lat, lng) {
+    for (var i = 0; i < conflicts.length; i++) {
+      if (haversineKm(lat, lng, conflicts[i].lat, conflicts[i].lng) < CONFLICT_ZONE_RADIUS_KM) return true;
+    }
+    return false;
+  }
 
   var GDELT_QUERIES = [
     { q: '(bombing OR airstrike OR "suicide attack" OR "terrorist attack" OR shelling OR "car bomb" OR "missile strike")', dt: 'attentat' },
@@ -1194,6 +1203,12 @@
 
           var classifiedType = classifyGdelt(firstArticle.title || featureName, res.dt);
           if (classifiedType === null) continue;
+
+          // GDELT geolocates to the news source, not the event location.
+          // Reclassify violent events (attentat/emeute) as politique if far from any conflict zone.
+          if ((classifiedType === 'attentat' || classifiedType === 'emeute') && !isNearConflictZone(coords[1], coords[0])) {
+            classifiedType = 'coup_etat';
+          }
 
           raw.push({
             type: classifiedType,
