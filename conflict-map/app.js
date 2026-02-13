@@ -1876,10 +1876,10 @@
       if (window.GCT_Pages) window.GCT_Pages.openAbout();
     });
 
-    // ---- Support button ----
+    // ---- Support button (coming soon) ----
     var btnSupport = document.getElementById('btn-support');
     if (btnSupport) btnSupport.addEventListener('click', function () {
-      if (window.GCT_Pages) window.GCT_Pages.openSupport();
+      showFeedback(currentLang === 'fr' ? 'Bientôt disponible !' : 'Coming soon!');
     });
 
     // ---- Sponsor CTA ----
@@ -1903,7 +1903,7 @@
     var footerSupport = document.getElementById('footer-support');
     if (footerSupport) footerSupport.addEventListener('click', function (e) {
       e.preventDefault();
-      if (window.GCT_Pages) window.GCT_Pages.openSupport();
+      showFeedback(currentLang === 'fr' ? 'Bientôt disponible !' : 'Coming soon!');
     });
 
     // ---- Risk zones button (removed from UI) ----
