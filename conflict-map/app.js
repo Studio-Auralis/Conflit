@@ -1810,13 +1810,6 @@
     closeExportDropdown();
   }
 
-  function shareTwitter() {
-    var text = 'Global Conflict Tracker: ' + conflicts.length + ' active conflicts worldwide. Real-time data from ACLED, GDELT & humanitarian sources.';
-    var url = window.location.href;
-    window.open('https://twitter.com/intent/tweet?text=' + encodeURIComponent(text) + '&url=' + encodeURIComponent(url), '_blank', 'width=550,height=420');
-    closeExportDropdown();
-  }
-
   function shareLinkedIn() {
     var url = window.location.href;
     window.open('https://www.linkedin.com/sharing/share-offsite/?url=' + encodeURIComponent(url), '_blank', 'width=550,height=420');
@@ -2047,7 +2040,6 @@
 
     // Export options
     document.getElementById('export-pdf').addEventListener('click', exportPdf);
-    document.getElementById('export-twitter').addEventListener('click', shareTwitter);
     document.getElementById('export-linkedin').addEventListener('click', shareLinkedIn);
     document.getElementById('export-link').addEventListener('click', copyLink);
 

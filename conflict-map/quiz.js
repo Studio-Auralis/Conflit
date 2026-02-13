@@ -338,15 +338,11 @@
       '<div class="quiz-message">' + esc(msg) + '</div>' +
       '<div class="quiz-actions">' +
         '<button class="quiz-next" id="quiz-restart">' + (lang() === 'fr' ? 'Recommencer' : 'Try again') + '</button>' +
-        '<button class="quiz-share-btn" id="quiz-share-twitter">Twitter / X</button>' +
         '<button class="quiz-share-btn" id="quiz-share-linkedin">LinkedIn</button>' +
       '</div>' +
     '</div>';
 
     document.getElementById('quiz-restart').addEventListener('click', startNewQuiz);
-    document.getElementById('quiz-share-twitter').addEventListener('click', function () {
-      window.open('https://twitter.com/intent/tweet?text=' + encodeURIComponent(shareText) + '&url=' + encodeURIComponent(shareUrl), '_blank', 'width=550,height=420');
-    });
     document.getElementById('quiz-share-linkedin').addEventListener('click', function () {
       window.open('https://www.linkedin.com/sharing/share-offsite/?url=' + encodeURIComponent(shareUrl), '_blank', 'width=550,height=420');
     });
