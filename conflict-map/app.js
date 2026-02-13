@@ -332,7 +332,7 @@
   var showConflicts = true;
   var showEvents = true;
   var activeTab = 'conflicts';
-  var timelineDays = 30;
+  var timelineDays = 1;
   var cachedEscDiv = document.createElement('div');
 
   // GDELT state
@@ -1136,16 +1136,22 @@
   async function fetchGdelt() {
     try {
       var sourceLang = currentLang === 'fr' ? 'sourcelang:french' : 'sourcelang:english';
-      var tsMins = Math.min(timelineDays * 24 * 60, 525600);
+      // GDELT PointData mode: min 2 days (API errors below), max 7 days
+      var tsMins = Math.max(Math.min(timelineDays * 24 * 60, 10080), 2880);
       var promises = GDELT_QUERIES.map(function (item) {
         var url = GDELT_GEO +
           '?query=' + encodeURIComponent(item.q + ' ' + sourceLang) +
-          '&mode=PointData&format=GeoJSON&timespan=' + tsMins + '&MAXROWS=75';
+          '&mode=PointData&format=GeoJSON&timespan=' + tsMins + '&MAXROWS=75&_cb=' + Date.now();
         return fetch(url).then(function (r) {
           if (!r.ok) throw new Error(r.status);
           return r.json();
         }).then(function (json) {
-          return { features: (json && json.features) || [], dt: item.dt };
+          var feats = (json && json.features) || [];
+          // Reject GDELT error responses (error text in feature names)
+          if (feats.length > 0 && feats[0].properties && /^ERROR:/i.test(feats[0].properties.name || '')) {
+            return { features: [], dt: item.dt };
+          }
+          return { features: feats, dt: item.dt };
         }).catch(function () { return { features: [], dt: item.dt }; });
       });
 
@@ -1160,20 +1166,25 @@
           if (!f.geometry || !f.geometry.coordinates) continue;
           var coords = f.geometry.coordinates;
           var props = f.properties || {};
+
+          // Skip features with error or empty names
+          var featureName = props.name || '';
+          if (!featureName || /^ERROR:/i.test(featureName)) continue;
+
           var articles = parseGdeltHtml(props.html);
           var firstArticle = articles[0] || {};
 
-          var classifiedType = classifyGdelt(firstArticle.title || props.name || '', res.dt);
+          var classifiedType = classifyGdelt(firstArticle.title || featureName, res.dt);
           if (classifiedType === null) continue;
 
           raw.push({
             type: classifiedType,
-            name: firstArticle.title || props.name || 'Événement',
-            location: props.name || '',
+            name: firstArticle.title || featureName || 'Événement',
+            location: featureName,
             lat: coords[1],
             lng: coords[0],
             date: todayStr(),
-            summary: firstArticle.title || props.name || '',
+            summary: firstArticle.title || featureName || '',
             source: domainFromUrl(firstArticle.url || ''),
             url: firstArticle.url || '',
             count: props.count || 1,
@@ -1206,9 +1217,8 @@
 
   function parseGdeltHtml(html) {
     if (!html) return [];
-    var div = document.createElement('div');
-    div.innerHTML = html;
-    var links = div.querySelectorAll('a');
+    var doc = new DOMParser().parseFromString(html, 'text/html');
+    var links = doc.querySelectorAll('a');
     var articles = [];
     for (var i = 0; i < links.length && i < 3; i++) {
       var title = links[i].textContent.trim();
@@ -1226,20 +1236,20 @@
     if (/\b(nfl|nba|nhl|mlb|fifa|premier league|champions league|world cup|super bowl|tennis|golf|cricket|boxing|mma|ufc|ligue 1|ligue des champions|coupe du monde|rugby|olympi|ballon d.or|transfert|match nul|victoire .* but|football|basket|handball)\b/.test(t2)) return null;
     // Entertainment / celebrity
     if (/\b(movie|film|album|concert|grammy|oscar|emmy|celebrity|hollywood|broadway|netflix|spotify|acteur|actrice|cin[ée]ma|chanson|chanteur|chanteuse|spectacle|festival|s[ée]rie t[ée]l[ée])\b/.test(t2)) return null;
-    // Business / finance
-    if (/\b(stock market|wall street|nasdaq|dow jones|ipo|quarterly earnings|startup|venture capital|cryptocurrency|bitcoin|bourse|cac 40|action en bourse|chiffre d.affaires|b[ée]n[ée]fice net|introduction en bourse)\b/.test(t2)) return null;
+    // Business / finance / trade
+    if (/\b(stock market|wall street|nasdaq|dow jones|ipo|quarterly earnings|startup|venture capital|cryptocurrency|bitcoin|bourse|cac 40|action en bourse|chiffre d.affaires|b[ée]n[ée]fice net|introduction en bourse|tariff|trade war|trade deal|import duties|economic sanction|customs|droits de douane|guerre commerciale|accord commercial)\b/.test(t2)) return null;
     // Obituary / natural death / general news
     if (/\b(d[ée]c[èe]d[ée]|mort .{0,15}(ans|[âa]ge)|doyenne?|obituary|passed away|dies at|dead at|fun[ée]railles|obs[èe]ques|hommage .{0,10}(d[ée]c[èe]s|mort)|repose en paix|rip)\b/.test(t2)) return null;
     // Weather / lifestyle / misc
     if (/\b(weather forecast|recipe|fashion|diet|fitness|real estate|mortgage|m[ée]t[ée]o|recette|immobilier|horoscope|soldes|vacances)\b/.test(t2)) return null;
-    // Politics without conflict (elections, debates, polls)
-    if (/\b(sondage|poll results|approval rating|debate|primary election|campagne [ée]lectorale|r[ée]forme|projet de loi|vote de confiance)\b/.test(t2) && !/\b(violen|protest|[ée]meute|riot|clash|attack|attentat|bomb)\b/.test(t2)) return null;
+    // Diplomacy / summits / routine politics (without violence terms)
+    if (/\b(summit|sommet|diplomatic|diplomatie|bilateral|r[ée]unir .{0,20}dirigeant|meeting with leaders|state visit|visite d.[ée]tat|trade talk|n[ée]gociation commerciale|G7|G20|OTAN|NATO|ambassador|ambassadeur|sondage|poll results|approval rating|debate|primary election|campagne [ée]lectorale|r[ée]forme|projet de loi|vote de confiance|inaugurat|investi[gt]ure|[ée]lection|election result|swearing.in)\b/.test(t2) && !/\b(violen|protest|[ée]meute|riot|clash|attack|attentat|bomb|kill|dead|mort|tu[ée]|explos|frappe|strike|assault|armed)\b/.test(t2)) return null;
 
     // ---- Positive classification: specific conflict terms (EN + FR) ----
     // Protests
     if (/\b(protest|demonstrat|anti-government|uprising|mobiliz|manifestation|cort[èe]ge|gr[èe]ve g[ée]n[ée]rale|soul[èe]vement|mouvement populaire)\b/.test(t2)) return 'manifestation';
     // Attacks
-    if (/\b(bombing|airstrike|shelling|terrorist|suicide attack|car bomb|missile strike|gunmen|insurgent attack|ambush|attentat|bombardement|frappe a[ée]rienne|kamikaze|tir de roquette|embuscade|explosion meurtri[èe]re|attaque arm[ée]e|fusillade)\b/.test(t2)) return 'attentat';
+    if (/\b(bombing|airstrike|shelling|terrorist|suicide attack|car bomb|missile strike|gunmen|insurgent attack|ambush|attentat|bombardement|frappe[s]?\s|kamikaze|tir de roquette|embuscade|explosion meurtri[èe]re|attaque arm[ée]e|fusillade|drone strike|frappe de drone|artillerie|obus|roquette|raid a[ée]rien|d[ée]truit|d[ée]truite)\b/.test(t2)) return 'attentat';
     // Riots
     if (/\b(riot|civil unrest|violent clash|loot|[ée]meute|violences urbaines|pillage|affrontements violents)\b/.test(t2)) return 'emeute';
     // Humanitarian
@@ -1249,8 +1259,11 @@
     // Political / coup
     if (/\b(coup|overthrow|junta|martial law|military takeover|seize power|coup d.[ée]tat|junte|loi martiale|putsch|prise de pouvoir)\b/.test(t2)) return 'coup_etat';
 
-    // Passed negative filter but no specific match → trust the GDELT query category
-    return fallback || null;
+    // General conflict terms: use fallback category from GDELT query if title clearly about conflict
+    if (/\b(guerre|war|offensive|combat|conflit|conflict|arm[ée]e|army|militaire|military|tu[ée]s?|killed|mort[s]?\b|dead|victim|victime|wounded|bless[ée]|assault|assaut|invasion|occup|si[èe]ge|siege|r[ée]sistance|milice|militia|insurr|guerr?illa|terroris)\b/.test(t2)) return fallback || null;
+
+    // No match at all → reject
+    return null;
   }
 
   function todayStr() {
@@ -1267,7 +1280,7 @@
     var out = [];
     for (var i = 0; i < arr.length; i++) {
       var e = arr[i];
-      var key = Math.round(e.lat) + ',' + Math.round(e.lng) + ',' + e.type;
+      var key = (e.lat).toFixed(1) + ',' + (e.lng).toFixed(1) + ',' + e.type + ',' + e.name.substring(0, 60);
       if (!seen[key]) { seen[key] = true; out.push(e); }
     }
     return out;
