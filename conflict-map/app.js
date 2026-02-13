@@ -354,6 +354,7 @@
   var timelapseSpeed = 1;
   var timelapseRAF = null;
   var timelapseLastTime = 0;
+  var timelapseMarkerMap = {}; // keyed by conflict index, tracks existing timelapse markers
   var TIMELAPSE_START_YEAR = 2020;
   var TIMELAPSE_START_MONTH = 1;
   var TIMELAPSE_END_YEAR = 2026;
@@ -747,6 +748,7 @@
 
     clearMarkers();
     clearEventMarkers();
+    timelapseMarkerMap = {};
     if (showHeatmap) { if (heatLayer) map.removeLayer(heatLayer); }
 
     timelapseLastTime = 0;
@@ -776,14 +778,13 @@
   function renderTimelapseFrame() {
     var year = TIMELAPSE_START_YEAR + Math.floor((TIMELAPSE_START_MONTH - 1 + timelapseMonth) / 12);
     var month = ((TIMELAPSE_START_MONTH - 1 + timelapseMonth) % 12) + 1;
-    var dateStr = year + '-' + String(month).padStart(2, '0');
 
     document.getElementById('timelapse-date').textContent = t('months')[month] + ' ' + year;
-    var progress = (timelapseMonth / TIMELAPSE_TOTAL_MONTHS) * 100;
-    document.getElementById('timelapse-progress').style.width = progress + '%';
+    var progress = timelapseMonth / TIMELAPSE_TOTAL_MONTHS;
+    var progressBar = document.getElementById('timelapse-progress');
+    progressBar.style.transform = 'scaleX(' + progress + ')';
 
-    // Show conflicts whose startDate <= current month
-    clearMarkers();
+    // Incremental rendering: only add NEW markers, update size of existing ones
     var currentDate = new Date(year, month - 1, 28);
     for (var i = 0; i < filteredConflicts.length; i++) {
       var c = filteredConflicts[i];
@@ -791,19 +792,34 @@
       if (start <= currentDate) {
         var durationMonths = (currentDate - start) / (30 * 24 * 60 * 60 * 1000);
         var sizeClass = durationMonths < 12 ? 'tl-small' : (durationMonths < 36 ? 'tl-medium' : 'tl-large');
-        var isNew = Math.abs(start.getFullYear() - year) === 0 && Math.abs(start.getMonth() + 1 - month) <= 1;
 
-        var icon = L.divIcon({
-          className: 'pulse-marker',
-          html: '<div class="pulse-dot ' + c.intensity + ' ' + sizeClass + (isNew ? ' tl-fadein' : '') + '"></div>',
-          iconSize: [0, 0],
-          iconAnchor: [0, 0],
-        });
-        var marker = L.marker([c.lat, c.lng], { icon: icon }).addTo(map);
-        (function (conflict, mk, idx) {
-          mk.on('click', function () { openPopup(conflict, mk, idx); });
-        })(c, marker, i);
-        markers.push(marker);
+        if (timelapseMarkerMap[i]) {
+          // Marker exists — just update size class without recreating
+          var dot = timelapseMarkerMap[i].getElement();
+          if (dot) {
+            var inner = dot.querySelector('.pulse-dot');
+            if (inner) {
+              inner.classList.remove('tl-small', 'tl-medium', 'tl-large');
+              inner.classList.add(sizeClass);
+              // Remove fadein class after first frame
+              inner.classList.remove('tl-fadein');
+            }
+          }
+        } else {
+          // New marker — create with fadein animation
+          var icon = L.divIcon({
+            className: 'pulse-marker',
+            html: '<div class="pulse-dot ' + c.intensity + ' ' + sizeClass + ' tl-fadein"></div>',
+            iconSize: [0, 0],
+            iconAnchor: [0, 0],
+          });
+          var marker = L.marker([c.lat, c.lng], { icon: icon }).addTo(map);
+          (function (conflict, mk, idx) {
+            mk.on('click', function () { openPopup(conflict, mk, idx); });
+          })(c, marker, i);
+          markers.push(marker);
+          timelapseMarkerMap[i] = marker;
+        }
       }
     }
   }
@@ -828,8 +844,10 @@
     timelapsePlaying = false;
     if (timelapseRAF) cancelAnimationFrame(timelapseRAF);
     timelapseRAF = null;
+    timelapseMarkerMap = {};
 
     document.getElementById('timelapse-overlay').style.display = 'none';
+    document.getElementById('timelapse-progress').style.transform = 'scaleX(0)';
     var _bh2 = document.getElementById('btn-heatmap'); if (_bh2) _bh2.disabled = false;
     document.getElementById('btn-refugees').disabled = false;
     var _bhu2 = document.getElementById('btn-humanitarian'); if (_bhu2) _bhu2.disabled = false;
@@ -1802,10 +1820,10 @@
   // ---- Events / Bindings ----
   // ============================================================
   function bindEvents() {
-    document.getElementById('filter-region').addEventListener('change', applyFilters);
-    document.getElementById('filter-type').addEventListener('change', applyFilters);
-    document.getElementById('filter-intensity').addEventListener('change', applyFilters);
-    document.getElementById('search-input').addEventListener('input', applyFiltersDebounced);
+    document.getElementById('filter-region').addEventListener('change', applyFilters, { passive: true });
+    document.getElementById('filter-type').addEventListener('change', applyFilters, { passive: true });
+    document.getElementById('filter-intensity').addEventListener('change', applyFilters, { passive: true });
+    document.getElementById('search-input').addEventListener('input', applyFiltersDebounced, { passive: true });
 
     document.getElementById('sidebar-toggle').addEventListener('click', function () {
       document.getElementById('sidebar').classList.toggle('open');
@@ -1863,7 +1881,7 @@
       // Debounced GDELT re-fetch with updated timespan
       clearTimeout(gdeltRefetchTimer);
       gdeltRefetchTimer = setTimeout(function () { fetchGdelt(); }, 1500);
-    });
+    }, { passive: true });
 
     // ---- Dashboard button ----
     document.getElementById('btn-dashboard').addEventListener('click', function () {
@@ -1951,10 +1969,10 @@
     var dateMaxSlider = document.getElementById('filter-date-max');
     var casMinSlider = document.getElementById('filter-cas-min');
     var casMaxSlider = document.getElementById('filter-cas-max');
-    if (dateMinSlider) dateMinSlider.addEventListener('input', applyFiltersDebounced);
-    if (dateMaxSlider) dateMaxSlider.addEventListener('input', applyFiltersDebounced);
-    if (casMinSlider) casMinSlider.addEventListener('input', applyFiltersDebounced);
-    if (casMaxSlider) casMaxSlider.addEventListener('input', applyFiltersDebounced);
+    if (dateMinSlider) dateMinSlider.addEventListener('input', applyFiltersDebounced, { passive: true });
+    if (dateMaxSlider) dateMaxSlider.addEventListener('input', applyFiltersDebounced, { passive: true });
+    if (casMinSlider) casMinSlider.addEventListener('input', applyFiltersDebounced, { passive: true });
+    if (casMaxSlider) casMaxSlider.addEventListener('input', applyFiltersDebounced, { passive: true });
 
     // ---- Advanced filter toggle ----
     var filterToggle = document.getElementById('filter-toggle-btn');

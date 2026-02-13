@@ -926,6 +926,7 @@ body.light-theme .btn-theme .icon-sun { display: block !important; }
   contain: layout style;
   animation: dotFadeIn 0.5s ease forwards;
   opacity: 0;
+  will-change: transform, opacity;
 }
 
 @keyframes dotFadeIn {
@@ -942,6 +943,7 @@ body.light-theme .btn-theme .icon-sun { display: block !important; }
   opacity: 0;
   animation: pulse-ring 3.5s cubic-bezier(0.4, 0, 0.2, 1) 0.5s infinite;
   animation-fill-mode: backwards;
+  will-change: transform, opacity;
 }
 
 .pulse-dot::after { animation-delay: 2.25s; }
@@ -956,6 +958,9 @@ body.light-theme .btn-theme .icon-sun { display: block !important; }
 .pulse-dot.basse::before, .pulse-dot.basse::after { width: 24px; height: 24px; border: 1px solid var(--yellow-low); }
 
 /* Timelapse marker sizes */
+.pulse-dot.tl-small, .pulse-dot.tl-medium, .pulse-dot.tl-large {
+  transition: transform 0.4s ease;
+}
 .pulse-dot.tl-small { transform: translate(-50%, -50%) scale(0.6); }
 .pulse-dot.tl-medium { transform: translate(-50%, -50%) scale(1); }
 .pulse-dot.tl-large { transform: translate(-50%, -50%) scale(1.4); }
@@ -1317,6 +1322,7 @@ body.light-theme .btn-theme .icon-sun { display: block !important; }
   padding: 20px 32px;
   text-align: center;
   min-width: 280px;
+  will-change: opacity, transform;
 }
 
 .timelapse-date {
@@ -1342,8 +1348,11 @@ body.light-theme .btn-theme .icon-sun { display: block !important; }
   height: 100%;
   background: var(--accent);
   border-radius: 2px;
-  width: 0%;
-  transition: width 0.1s linear;
+  width: 100%;
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform 0.1s linear;
+  will-change: transform;
 }
 
 .timelapse-controls {
@@ -2731,6 +2740,7 @@ body.light-theme .human-ticker {
   white-space: nowrap;
   animation: tickerScroll 40s linear infinite;
   padding-left: 100%;
+  will-change: transform;
 }
 
 @keyframes tickerScroll {
